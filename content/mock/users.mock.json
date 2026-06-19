@@ -1,0 +1,10 @@
+{
+  "userId": "user_demo_acme",
+  "companyName": "Acme Foods Inc.",
+  "taxExempt": false,
+  "poRequired": false,
+  "customPrices": {
+    "ESM-N05-2K-BLU-M": 168,
+    "ESM-N05-2K-BLU-L": 168
+  }
+}

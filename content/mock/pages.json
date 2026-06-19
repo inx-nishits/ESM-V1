@@ -1,0 +1,229 @@
+[
+  {
+    "slug": "about",
+    "title": "About ESM Products",
+    "seo": {
+      "title": "About Us",
+      "description": "Learn about ESM Products — a certified women-owned PPE supplier serving food processing, healthcare, and industrial buyers since 1998."
+    },
+    "blocks": [
+      {
+        "type": "hero",
+        "data": {
+          "overline": "About ESM",
+          "headline": "West Chicago roots. Nationwide reach.",
+          "subheadline": "Since 1998, ESM Products has supplied disposable PPE to procurement teams who can't afford downtime — with case pricing, lot traceability, and same-day fulfillment on in-stock SKUs.",
+          "image": "https://esmproducts.com/cdn/shop/files/ESM_Graphic_1066x.png?v=1673985411"
+        }
+      },
+      {
+        "type": "stat_row",
+        "data": {
+          "stats": [
+            { "value": "1998", "label": "Founded" },
+            { "value": "27+", "label": "SKUs in stock" },
+            { "value": "1 day", "label": "Standard ship time" },
+            { "value": "WBE", "label": "Certified supplier" }
+          ]
+        }
+      },
+      {
+        "type": "rich_text",
+        "data": {
+          "html": "<p>ESM Products grew from a regional glove distributor into a trusted B2B partner for food processors, healthcare systems, and industrial operators across the Midwest and beyond. As a certified women-owned and minority-owned business, we help procurement teams meet diversity spend goals without compromising on quality or service.</p><p>Our West Chicago warehouse stocks case-quantity gloves, masks, hairnets, gowns, and our exclusive FDA Gear line — all with published tier pricing and documentation available for vendor qualification packages.</p>"
+        }
+      },
+      {
+        "type": "image_text",
+        "data": {
+          "headline": "Built for regulated environments",
+          "body": "Our FDA Gear brand is engineered for SQF-audited food plants, cleanrooms, and USDA-inspected facilities. Every case is lot-coded for traceability — because your auditor will ask.",
+          "image": "https://esmproducts.com/cdn/shop/files/FDA_GearImage_1066x.png?v=1675288609",
+          "imagePosition": "right"
+        }
+      },
+      {
+        "type": "cta_band",
+        "data": {
+          "headline": "Ready to set up a business account?",
+          "subheadline": "Get tiered pricing, dedicated support, and contract rates for qualified procurement teams.",
+          "primaryCtaLabel": "Contact sales",
+          "primaryCtaHref": "/contact",
+          "secondaryCtaLabel": "Browse catalog",
+          "secondaryCtaHref": "/shop"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "contact",
+    "title": "Contact Us",
+    "seo": {
+      "title": "Contact",
+      "description": "Contact ESM Products for quotes, account setup, and product questions. Call 630-915-4569 or email sales@esmproducts.com."
+    },
+    "blocks": [
+      {
+        "type": "hero",
+        "data": {
+          "overline": "Get in touch",
+          "headline": "Talk to a real person in West Chicago",
+          "subheadline": "Whether you need a formal quote, contract pricing, or help choosing the right SKU for your audit program — our team responds same business day."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "faq",
+    "title": "FAQ",
+    "seo": {
+      "title": "FAQ",
+      "description": "Frequently asked questions about ESM Products ordering, shipping, case pricing, and FDA Gear compliance."
+    },
+    "blocks": [
+      {
+        "type": "hero",
+        "data": {
+          "overline": "Support",
+          "headline": "Frequently asked questions",
+          "subheadline": "Answers for procurement teams, plant managers, and operations buyers."
+        }
+      },
+      {
+        "type": "faq_group",
+        "data": {
+          "title": "Ordering & pricing",
+          "items": [
+            {
+              "question": "What is the minimum order quantity?",
+              "answer": "Most SKUs have a minimum order of 1 case. Case quantities vary by product — typically 500 to 2,000 units per case. MOQ is shown on each product page."
+            },
+            {
+              "question": "Do you offer volume discounts?",
+              "answer": "Yes. Published tier pricing is available on product pages. Qualified accounts may receive custom contract rates — contact sales for a formal quote."
+            },
+            {
+              "question": "Can I request a formal quote for vendor approval?",
+              "answer": "Absolutely. Use the contact form or call 630-915-4569. We provide quotes with SKU details, case pricing, and lead times for your procurement workflow."
+            }
+          ]
+        }
+      },
+      {
+        "type": "faq_group",
+        "data": {
+          "title": "Shipping & fulfillment",
+          "items": [
+            {
+              "question": "How fast do in-stock orders ship?",
+              "answer": "In-stock cases ship within 1 business day from our West Chicago warehouse. Made-to-order lines have transparent lead times listed at checkout."
+            },
+            {
+              "question": "Do you ship nationwide?",
+              "answer": "Yes. We ship throughout the United States via common carriers. Midwest and Great Lakes customers benefit from reduced transit times from our regional hub."
+            }
+          ]
+        }
+      },
+      {
+        "type": "faq_group",
+        "data": {
+          "title": "FDA Gear & compliance",
+          "items": [
+            {
+              "question": "What is FDA Gear?",
+              "answer": "FDA Gear is ESM's exclusive line of food-safe PPE — bouffants, hairnets, aprons, and apparel engineered for regulated environments with 21 CFR compliant materials and lot-coded cases."
+            },
+            {
+              "question": "Are lot numbers available for audits?",
+              "answer": "Yes. FDA Gear cases include lot numbers for traceability. Documentation is available on request for SQF, USDA, and vendor qualification packages."
+            }
+          ]
+        }
+      },
+      {
+        "type": "cta_band",
+        "data": {
+          "headline": "Still have questions?",
+          "subheadline": "Our West Chicago sales team responds same business day — by phone, email, or contact form.",
+          "primaryCtaLabel": "Contact sales",
+          "primaryCtaHref": "/contact",
+          "secondaryCtaLabel": "Browse catalog",
+          "secondaryCtaHref": "/shop"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "terms",
+    "title": "Terms & Conditions",
+    "seo": {
+      "title": "Terms & Conditions",
+      "description": "Terms and conditions for purchasing from ESM Products."
+    },
+    "blocks": [
+      {
+        "type": "hero",
+        "data": {
+          "overline": "Legal",
+          "headline": "Terms & Conditions",
+          "subheadline": "Last updated: January 2026"
+        }
+      },
+      {
+        "type": "rich_text",
+        "data": {
+          "html": "<h3>1. Orders & acceptance</h3><p>All orders are subject to acceptance by ESM Products. We reserve the right to refuse or cancel orders for any reason, including product availability, pricing errors, or suspected fraudulent activity.</p><h3>2. Pricing</h3><p>Prices are listed per case in USD unless otherwise noted. Published prices may change without notice. Contract pricing applies only to approved business accounts with signed agreements.</p><h3>3. Payment</h3><p>Payment terms are net 30 for approved accounts unless otherwise agreed. First-time orders may require prepayment. All invoices are due per agreed payment terms.</p><h3>4. Shipping & risk of loss</h3><p>Title and risk of loss pass to the buyer upon delivery to the carrier. Shipping charges are calculated at checkout based on weight, destination, and service level.</p><h3>5. Returns</h3><p>Due to the nature of disposable PPE, returns are accepted only for defective or mis-shipped products within 14 days of delivery. Contact sales@esmproducts.com to initiate a return authorization.</p><h3>6. Limitation of liability</h3><p>ESM Products' liability is limited to the purchase price of the products ordered. We are not liable for indirect, incidental, or consequential damages.</p>"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "privacy",
+    "title": "Privacy Policy",
+    "seo": {
+      "title": "Privacy Policy",
+      "description": "How ESM Products collects, uses, and protects your information."
+    },
+    "blocks": [
+      {
+        "type": "hero",
+        "data": {
+          "overline": "Legal",
+          "headline": "Privacy Policy",
+          "subheadline": "Last updated: January 2026"
+        }
+      },
+      {
+        "type": "rich_text",
+        "data": {
+          "html": "<h3>Information we collect</h3><p>We collect information you provide when creating an account, placing an order, or contacting us — including name, company, email, phone, shipping address, and order history.</p><h3>How we use your information</h3><p>We use your information to process orders, provide customer support, send order confirmations, and — with your consent — share product updates and promotional offers relevant to business accounts.</p><h3>Cookies</h3><p>We use essential cookies to maintain your cart and session. Optional analytics cookies help us improve our storefront. You can manage preferences via the cookie banner.</p><h3>Data sharing</h3><p>We do not sell your personal information. We share data only with service providers necessary to fulfill orders (carriers, payment processors) and as required by law.</p><h3>Contact</h3><p>For privacy questions, email sales@esmproducts.com or call 630-915-4569.</p>"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "disclaimer",
+    "title": "Disclaimer",
+    "seo": {
+      "title": "Disclaimer",
+      "description": "Product and website disclaimer for ESM Products."
+    },
+    "blocks": [
+      {
+        "type": "hero",
+        "data": {
+          "overline": "Legal",
+          "headline": "Disclaimer",
+          "subheadline": "Important information about product use, specifications, and website content."
+        }
+      },
+      {
+        "type": "rich_text",
+        "data": {
+          "html": "<h3>Product information</h3><p>Product descriptions, specifications, and images on this website are provided for general reference. Always verify SKU details, case quantities, and compliance documentation against your internal requirements before placing an order.</p><h3>No professional advice</h3><p>Content on this site does not constitute legal, regulatory, or safety advice. Customers are responsible for determining suitability of products for their intended use and operating environment.</p><h3>Availability & pricing</h3><p>Inventory levels and published case pricing may change without notice. ESM Products reserves the right to correct pricing errors and limit quantities.</p><h3>External links</h3><p>Links to third-party sites are provided for convenience. ESM Products is not responsible for the content or policies of external websites.</p><h3>Contact</h3><p>For clarification on product specifications or compliance documentation, contact sales@esmproducts.com or call 630-915-4569.</p>"
+        }
+      }
+    ]
+  }
+]

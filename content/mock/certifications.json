@@ -1,0 +1,17 @@
+[
+  {
+    "id": "wbe",
+    "label": "Women-Owned Business",
+    "description": "Certified women-owned and minority-owned business"
+  },
+  {
+    "id": "fda-reg",
+    "label": "FDA Registered",
+    "description": "Products manufactured in FDA registered facilities"
+  },
+  {
+    "id": "lot-trace",
+    "label": "Lot Traceability",
+    "description": "All FDA Gear cases coded with lot numbers"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "primary": [
+    { "label": "Shop", "href": "/shop" },
+    { "label": "Collections", "href": "/collections" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "footer": {
+    "shop": [
+      { "label": "All Products", "href": "/shop" },
+      { "label": "Collections", "href": "/collections" },
+      { "label": "FDA Gear", "href": "/collections/fda-gear" }
+    ],
+    "company": [
+      { "label": "About Us", "href": "/about" },
+      { "label": "Contact", "href": "/contact" },
+      { "label": "FAQ", "href": "/faq" },
+      { "label": "Disclaimer", "href": "/disclaimer" },
+      { "label": "Terms & Conditions", "href": "/terms" },
+      { "label": "Privacy Policy", "href": "/privacy" }
+    ]
+  }
+}

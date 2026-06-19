@@ -1,0 +1,1867 @@
+[
+  {
+    "id": "prod_7696729669798",
+    "slug": "fishnet-hair-nets",
+    "sku": "ESM-7696729669798",
+    "name": "Fishnet - Hair Nets",
+    "categorySlug": "head-protection",
+    "shortDescription": "Fishnet / Honeycomb Cap Honeycomb / nylon - hand made, in compliance with 21CFR 177 for food contact. 2,000 pieces per case",
+    "description": "Fishnet / Honeycomb Cap Honeycomb / nylon - hand made, in compliance with 21CFR 177 for food contact. 2,000 pieces per case",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-27.jpg?v=1677516630",
+        "alt": "Fishnet - Hair Nets",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-51.jpg?v=1677516656",
+        "alt": "Fishnet - Hair Nets",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-54.jpg?v=1677516681",
+        "alt": "Fishnet - Hair Nets",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-27_d5c70a87-483f-4882-91bb-2c251569654f.jpg?v=1677516717",
+        "alt": "Fishnet - Hair Nets",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 120.71,
+    "pricingStatus": "standard",
+    "fdaGear": true,
+    "certifications": [
+      "fda-registered",
+      "21-cfr-177"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": true,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43988582334630",
+        "sku": "fishnet-hair-nets",
+        "attributes": {},
+        "price": 120.71,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43988582367398",
+        "sku": "fishnet-hair-nets",
+        "attributes": {},
+        "price": 120.71,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43988582400166",
+        "sku": "fishnet-hair-nets",
+        "attributes": {},
+        "price": 120.71,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43988582432934",
+        "sku": "fishnet-hair-nets",
+        "attributes": {},
+        "price": 120.71,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 120.71
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7680218824870",
+    "slug": "knit-cotton-work-gloves",
+    "sku": "KG-W",
+    "name": "Knit Cotton - Work Gloves - 300 pairs",
+    "categorySlug": "hand-protection",
+    "shortDescription": "Knit White Cotton Gloves Cotton blend, Multi-purpose gloves generally used in Food Industry. Packaging: 300 pairs / 25 DZ Available in Women's and Men's Sizes",
+    "description": "Knit White Cotton Gloves Cotton blend, Multi-purpose gloves generally used in Food Industry. Packaging: 300 pairs / 25 DZ Available in Women's and Men's Sizes",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-66_9fb24fd7-44d6-4fb1-86d7-1edbd5e4afdd.jpg?v=1675446214",
+        "alt": "Knit Cotton - Work Gloves - 300 pairs",
+        "isPrimary": true
+      }
+    ],
+    "basePrice": 123.5,
+    "pricingStatus": "standard",
+    "fdaGear": false,
+    "certifications": [
+      "fda-registered"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": true,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43947224170662",
+        "sku": "KG-W",
+        "attributes": {},
+        "price": 123.5,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43947224203430",
+        "sku": "KG-M",
+        "attributes": {},
+        "price": 126.1,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 123.5
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7680212172966",
+    "slug": "protective-sleeves-premium",
+    "sku": "SL-Y-18",
+    "name": "Protective Sleeves - 4.5 mil",
+    "categorySlug": "body-protection",
+    "shortDescription": "Yellow - POLYETHYLENE SLEEVES Excellent Fluid Barrier, FFDCA Certified, Non-Linting, Clean Room Compatible, General Purpose, Multiple Sizes, Strong/Durable, Cos",
+    "description": "Yellow - POLYETHYLENE SLEEVES Excellent Fluid Barrier, FFDCA Certified, Non-Linting, Clean Room Compatible, General Purpose, Multiple Sizes, Strong/Durable, Cost Effective, Premium Fabrics, Regulatory Compliance. Splash resistant, light chemical barrier. Excellent protection in low risk wet or hazardous dry environments. Durable, lightweight polyethylene-coated Premium fabric. Elastic wrist and arm.",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/YelllowProtectiveSleeve.jpg?v=1675445183",
+        "alt": "Protective Sleeves - 4.5 mil",
+        "isPrimary": true
+      }
+    ],
+    "basePrice": 110.5,
+    "pricingStatus": "standard",
+    "fdaGear": false,
+    "certifications": [
+      "fda-registered"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": true,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43947197235366",
+        "sku": "SL-Y-18",
+        "attributes": {},
+        "price": 110.5,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 110.5
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7680196837542",
+    "slug": "nitrile-glove-7-mil-disposable-glove",
+    "sku": "GL-074-B-S",
+    "name": "Nitrile Glove 7 mil - Disposable Glove - 2,000pcs",
+    "categorySlug": "hand-protection",
+    "shortDescription": "Disposable Blue Nitrile Glove 7 mil. Thicker and More Durable! Stretchy Nitrile for Added Comfort and Durability features of puncture-resistance, anti-bacteria'",
+    "description": "Disposable Blue Nitrile Glove 7 mil. Thicker and More Durable! Stretchy Nitrile for Added Comfort and Durability features of puncture-resistance, anti-bacteria's penetration, chemical-proof and long duration. Textured Finger Tips, Powder Free, Ambidextrous, FDA Registered /Compliant. Packaging: 100pc / Box, 20 boxes / Case 2,000 pieces",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-61_2d56c1a8-aeb7-4f96-818e-eae9a43a989b.jpg?v=1675442609",
+        "alt": "Nitrile Glove 7 mil - Disposable Glove - 2,000pcs",
+        "isPrimary": true
+      }
+    ],
+    "basePrice": 362.7,
+    "pricingStatus": "standard",
+    "fdaGear": false,
+    "certifications": [
+      "fda-registered"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": true,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43947162304678",
+        "sku": "GL-074-B-S",
+        "attributes": {},
+        "price": 362.7,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43947162337446",
+        "sku": "GL-074-B-M",
+        "attributes": {},
+        "price": 362.7,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43947162370214",
+        "sku": "GL-074-B-L",
+        "attributes": {},
+        "price": 362.7,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43947162402982",
+        "sku": "GL-074-B-XL",
+        "attributes": {},
+        "price": 362.7,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 362.7
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7680195002534",
+    "slug": "nitrile-glove-5-mil-disposable-glove",
+    "sku": "GL-076-B-XS",
+    "name": "Nitrile Glove 5 mil - Disposable Glove - 2,000pcs",
+    "categorySlug": "hand-protection",
+    "shortDescription": "Disposable Blue Nitrile Glove 5 mil. features of puncture-resistance, anti-bacteria's penetration, chemical-proof and long duration. Textured Finger Tips, Powde",
+    "description": "Disposable Blue Nitrile Glove 5 mil. features of puncture-resistance, anti-bacteria's penetration, chemical-proof and long duration. Textured Finger Tips, Powder Free, Ambidextrous, FDA Registered /Compliant. Packaging: 100pc / Box, 20 boxes / Case 2,000 pieces",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-61.jpg?v=1675442172",
+        "alt": "Nitrile Glove 5 mil - Disposable Glove - 2,000pcs",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-65.jpg?v=1675442182",
+        "alt": "Nitrile Glove 5 mil - Disposable Glove - 2,000pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ProductImageComingSoon_bf438034-331e-49e4-8c06-fe148e51353e.png?v=1675448546",
+        "alt": "Nitrile Glove 5 mil - Disposable Glove - 2,000pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/files/1_3cf9ffa4-6e2b-4cc8-9c2e-58f0091cb8e9.png?v=1744119929",
+        "alt": "Nitrile Glove 5 mil - Disposable Glove - 2,000pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/files/2_c2f0df3b-2b7c-45cd-bb3c-81b977c6ab12.png?v=1744119946",
+        "alt": "Nitrile Glove 5 mil - Disposable Glove - 2,000pcs",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 192,
+    "pricingStatus": "standard",
+    "fdaGear": false,
+    "certifications": [
+      "fda-registered"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": true,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_46283622908070",
+        "sku": "GL-076-B-XS",
+        "attributes": {},
+        "price": 192,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43947152703654",
+        "sku": "GL-076-B-S",
+        "attributes": {},
+        "price": 192,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43947152736422",
+        "sku": "GL-075-G-S",
+        "attributes": {},
+        "price": 192,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_46283623071910",
+        "sku": "GL-068-S",
+        "attributes": {},
+        "price": 192,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 192
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7680188907686",
+    "slug": "nitrile-glove-4-mil-disposable-glove",
+    "sku": "GL-077-B-S",
+    "name": "Nitrile Glove 4 mil - Disposable Glove - 2,000pcs",
+    "categorySlug": "hand-protection",
+    "shortDescription": "Disposable Blue Nitrile Glove 4 mil. Textured Finger Tips, Powder Free, Ambidextrous, FDA Registered /Compliant. Packaging: 100pc / Box, 20 boxes / Case 2,000 p",
+    "description": "Disposable Blue Nitrile Glove 4 mil. Textured Finger Tips, Powder Free, Ambidextrous, FDA Registered /Compliant. Packaging: 100pc / Box, 20 boxes / Case 2,000 pieces",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-62.jpg?v=1675441578",
+        "alt": "Nitrile Glove 4 mil - Disposable Glove - 2,000pcs",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-64.jpg?v=1675441601",
+        "alt": "Nitrile Glove 4 mil - Disposable Glove - 2,000pcs",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 182,
+    "pricingStatus": "standard",
+    "fdaGear": false,
+    "certifications": [
+      "fda-registered"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": true,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43947136450726",
+        "sku": "GL-077-B-S",
+        "attributes": {},
+        "price": 182,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43947136516262",
+        "sku": "GL-065-B-S",
+        "attributes": {},
+        "price": 182,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43947136549030",
+        "sku": "GL-077-B-M",
+        "attributes": {},
+        "price": 182,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43947136614566",
+        "sku": "GL-065-B-M",
+        "attributes": {},
+        "price": 182,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 182
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7680185139366",
+    "slug": "work-gloves-sandy-green-nitrile-gloves",
+    "sku": "GL-22-XS",
+    "name": "Work Gloves - Sandy Green Nitrile Gloves - 144 pairs",
+    "categorySlug": "hand-protection",
+    "shortDescription": "Polyester base dipped in Nitrile Sandy coating, Excellent for handling packaging materials. Touch-screen, High visibility, Soft on touch, Washable glove! Packag",
+    "description": "Polyester base dipped in Nitrile Sandy coating, Excellent for handling packaging materials. Touch-screen, High visibility, Soft on touch, Washable glove! Packaging: 12 Dozens / 144pairs per Case",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/WorkGloves.jpg?v=1675447985",
+        "alt": "Work Gloves - Sandy Green Nitrile Gloves - 144 pairs",
+        "isPrimary": true
+      }
+    ],
+    "basePrice": 146.05,
+    "pricingStatus": "standard",
+    "fdaGear": false,
+    "certifications": [
+      "fda-registered"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_46283541217446",
+        "sku": "GL-22-XS",
+        "attributes": {},
+        "price": 146.05,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43947128160422",
+        "sku": "GL-22-S",
+        "attributes": {},
+        "price": 146.05,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43947128193190",
+        "sku": "GL-22-M",
+        "attributes": {},
+        "price": 146.05,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43947128225958",
+        "sku": "GL-22-L",
+        "attributes": {},
+        "price": 146.05,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 146.05
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7680151421094",
+    "slug": "pu-work-gloves",
+    "sku": "GL-20-XS",
+    "name": "Work Gloves - PU - 240 pairs",
+    "categorySlug": "hand-protection",
+    "shortDescription": "Knit wrist cuffs. Breathable comfort for general maintenance and assembly work. PU - Polyurethane light weight glove. 240 pairs / case",
+    "description": "Knit wrist cuffs. Breathable comfort for general maintenance and assembly work. PU - Polyurethane light weight glove. 240 pairs / case",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-74_8ab01649-e70b-49d8-a7ae-f03b49910c41.jpg?v=1675445411",
+        "alt": "Work Gloves - PU - 240 pairs",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-74_c8e234ba-978d-4456-b7b9-43e279874a4c.jpg?v=1675445423",
+        "alt": "Work Gloves - PU - 240 pairs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/PUBox.png?v=1675784675",
+        "alt": "Work Gloves - PU - 240 pairs",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 171.6,
+    "pricingStatus": "standard",
+    "fdaGear": false,
+    "certifications": [
+      "fda-registered"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_46283540103334",
+        "sku": "GL-20-XS",
+        "attributes": {},
+        "price": 171.6,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43947025924262",
+        "sku": "GL-20-S",
+        "attributes": {},
+        "price": 171.6,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43947025957030",
+        "sku": "GL-20-M",
+        "attributes": {},
+        "price": 171.6,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43947025989798",
+        "sku": "GL-20-L",
+        "attributes": {},
+        "price": 171.6,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 171.6
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7680124387494",
+    "slug": "3-ply-face-mask-2-000-pcs",
+    "sku": "FM-Blue-50",
+    "name": "3-Ply Face Mask - 2,000pcs or 50pcs",
+    "categorySlug": "face-protection",
+    "shortDescription": "3-Ply Blue, Disposable Face Mask, General Use. Spun-Bonded Polypropylene with 20 GSM Filter Actual Size: 6\"-3/4\"\" x 3-7/8\" Ac 50 Pack / Poly bag",
+    "description": "3-Ply Blue, Disposable Face Mask, General Use. Spun-Bonded Polypropylene with 20 GSM Filter Actual Size: 6\"-3/4\"\" x 3-7/8\" Ac 50 Pack / Poly bag",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/FaceMask.jpg?v=1675430760",
+        "alt": "3-Ply Face Mask - 2,000pcs or 50pcs",
+        "isPrimary": true
+      }
+    ],
+    "basePrice": 28.6,
+    "pricingStatus": "standard",
+    "fdaGear": false,
+    "certifications": [
+      "fda-registered"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43988562739366",
+        "sku": "FM-Blue-50",
+        "attributes": {},
+        "price": 28.6,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43988562772134",
+        "sku": "FM-Blue-2000",
+        "attributes": {},
+        "price": 253.5,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 28.6
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7680114491558",
+    "slug": "cpe-shoe-covers",
+    "sku": "CPE / HD/-BSC-16",
+    "name": "Heavy Duty, Shoe Cover with Rubber Seals 500pcs",
+    "categorySlug": "foot-protection",
+    "shortDescription": "CPE* Blue Disposable Shoe Covers 16\". Very durable plastic for exterior and interior applications. Packaging: 500pcs / Case",
+    "description": "CPE* Blue Disposable Shoe Covers 16\". Very durable plastic for exterior and interior applications. Packaging: 500pcs / Case",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-92.jpg?v=1675445987",
+        "alt": "Heavy Duty, Shoe Cover with Rubber Seals 500pcs",
+        "isPrimary": true
+      }
+    ],
+    "basePrice": 250.25,
+    "pricingStatus": "standard",
+    "fdaGear": false,
+    "certifications": [
+      "fda-registered"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43946914447526",
+        "sku": "CPE / HD/-BSC-16",
+        "attributes": {},
+        "price": 250.25,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 250.25
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7680113377446",
+    "slug": "water-resistant-shoe-covers",
+    "sku": "YSC-PP/PE -18",
+    "name": "Water Resistant - Shoe Covers",
+    "categorySlug": "foot-protection",
+    "shortDescription": "Protects against grease, oil and chemicals. Thick and tough poly-coated polypropylene. Latex-free. Water resistant.\"",
+    "description": "Protects against grease, oil and chemicals. Thick and tough poly-coated polypropylene. Latex-free. Water resistant.\"",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-84_9dd2363e-6bdc-4dcb-8c2f-66bfd0591fe4.jpg?v=1675429162",
+        "alt": "Water Resistant - Shoe Covers",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-85_59800eb7-177c-48f0-9a70-f3df20be1cc7.jpg?v=1675429176",
+        "alt": "Water Resistant - Shoe Covers",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 250.12,
+    "pricingStatus": "standard",
+    "fdaGear": false,
+    "certifications": [
+      "fda-registered"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43946910679206",
+        "sku": "YSC-PP/PE -18",
+        "attributes": {},
+        "price": 250.12,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43946910711974",
+        "sku": "GSC-PP/PE -18",
+        "attributes": {},
+        "price": 250.12,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 250.12
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7680112132262",
+    "slug": "35-gsm-shoe-cover-with-rubber-seals",
+    "sku": "BSC-16",
+    "name": "CPE - Shoe Cover with Rubber Seals",
+    "categorySlug": "foot-protection",
+    "shortDescription": "Blue Shoe Covers Economy 35gm/ non-woven material // rubber seals on bottom and top make sure this is perfect fit to different shoe sizes!",
+    "description": "Blue Shoe Covers Economy 35gm/ non-woven material // rubber seals on bottom and top make sure this is perfect fit to different shoe sizes!",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-86_044c294e-854b-4e08-a843-1bcfcfff31c5.jpg?v=1675428761",
+        "alt": "CPE - Shoe Cover with Rubber Seals",
+        "isPrimary": true
+      }
+    ],
+    "basePrice": 192.4,
+    "pricingStatus": "standard",
+    "fdaGear": false,
+    "certifications": [
+      "fda-registered"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43946907467942",
+        "sku": "BSC-16",
+        "attributes": {},
+        "price": 192.4,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43946907500710",
+        "sku": "BSC-18",
+        "attributes": {},
+        "price": 211.9,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 192.4
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7653803065510",
+    "slug": "hairnet-2-000-pcs",
+    "sku": "HT-21-W",
+    "name": "Hairnet - 2,000pcs",
+    "categorySlug": "head-protection",
+    "shortDescription": "Pleated PP Hairnet is widely use in Food Industry. Elastic closure and pleated design ensures easy application / unisex use. Packaging: 2000 pcs",
+    "description": "Pleated PP Hairnet is widely use in Food Industry. Elastic closure and pleated design ensures easy application / unisex use. Packaging: 2000 pcs",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-50.jpg?v=1673908121",
+        "alt": "Hairnet - 2,000pcs",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-76.jpg?v=1674493123",
+        "alt": "Hairnet - 2,000pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-79.jpg?v=1674493134",
+        "alt": "Hairnet - 2,000pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-78.jpg?v=1674493149",
+        "alt": "Hairnet - 2,000pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-77.jpg?v=1674493159",
+        "alt": "Hairnet - 2,000pcs",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 162.24,
+    "pricingStatus": "standard",
+    "fdaGear": true,
+    "certifications": [
+      "fda-registered",
+      "21-cfr-177"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_46283592532134",
+        "sku": "HT-21-W",
+        "attributes": {},
+        "price": 162.24,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43901811818662",
+        "sku": "HT-24-W",
+        "attributes": {},
+        "price": 162.24,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43901811851430",
+        "sku": "HT-26-W",
+        "attributes": {},
+        "price": 162.24,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_46283592564902",
+        "sku": "HT-28-W",
+        "attributes": {},
+        "price": 162.24,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 162.24
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7650139799718",
+    "slug": "disposable-coverall",
+    "sku": "Coverall -H-W-Medium",
+    "name": "Disposable Coverall - 50pcs",
+    "categorySlug": "body-protection",
+    "shortDescription": "Disposable White Coverall with Hood // without shoes Microporous Breathable Film 60gsm / Non Sterile, Elastic Cuffs, Ankle &amp; Waist with Zipper and Sticky Se",
+    "description": "Disposable White Coverall with Hood // without shoes Microporous Breathable Film 60gsm / Non Sterile, Elastic Cuffs, Ankle &amp; Waist with Zipper and Sticky Seal over it. Seams are Stitched. Single Use, Fluid-Proof, Breathable, Great for extended periods of wear. Disposable Wh ite Coverall No Hood // without shoes Microporous Breathable Film 60gsm / Non Sterile, Elastic Cuffs, Ankle &amp; Waist with Zipper and Sticky Seal over it. Seams are Stitched. Single Use, Fluid-Proof, Breathable, Great for extended periods of wear.",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-100.jpg?v=1673545841",
+        "alt": "Disposable Coverall - 50pcs",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-34.jpg?v=1673545936",
+        "alt": "Disposable Coverall - 50pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-97.jpg?v=1673990446",
+        "alt": "Disposable Coverall - 50pcs",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 299.19,
+    "pricingStatus": "standard",
+    "fdaGear": true,
+    "certifications": [
+      "fda-registered",
+      "21-cfr-177"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43891998720166",
+        "sku": "Coverall -H-W-Medium",
+        "attributes": {},
+        "price": 299.19,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43891998752934",
+        "sku": "Coverall - C -W-Medium",
+        "attributes": {},
+        "price": 189.22,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43891998785702",
+        "sku": "Coverall - H-W-Large",
+        "attributes": {},
+        "price": 302.32,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43891998818470",
+        "sku": "Coverall - C -W-Large",
+        "attributes": {},
+        "price": 191.76,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 299.19
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7650131771558",
+    "slug": "boot-cover",
+    "sku": "BC-B-XL",
+    "name": "Boot Cover - 500 pairs",
+    "categorySlug": "foot-protection",
+    "shortDescription": "Polyethylene Embossed Economy Boot Cover 3 mil thick. This Boot Cover is used in Food Facilities, Agriculture, Hospitals, Laboratories and even suitable for Pai",
+    "description": "Polyethylene Embossed Economy Boot Cover 3 mil thick. This Boot Cover is used in Food Facilities, Agriculture, Hospitals, Laboratories and even suitable for Painting. It provides economical solid barrier from various partials and non-hazardous splashes. 100% LDPE new materials. Color is Clear/Translucent. It is water resistant and it has elastic-sealed top. This Product comes in two sizes. Packaging: 1000pcs / Case Case Size: 23.7\" x 16.6\" x 11.9\" tall",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-93.jpg?v=1673989472",
+        "alt": "Boot Cover - 500 pairs",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-17.jpg?v=1674493963",
+        "alt": "Boot Cover - 500 pairs",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 105,
+    "pricingStatus": "standard",
+    "fdaGear": false,
+    "certifications": [
+      "fda-registered"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43891959201958",
+        "sku": "BC-B-XL",
+        "attributes": {},
+        "price": 105,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43891959267494",
+        "sku": "BC-B-XXL",
+        "attributes": {},
+        "price": 127,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 105
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7649360543910",
+    "slug": "disposable-pants-box-of-50pcs",
+    "sku": "DP-50",
+    "name": "Disposable Pants - 50pcs",
+    "categorySlug": "body-protection",
+    "shortDescription": "Recommended for agriculture, food processing and environmental cleanup. Superior protection against hazardous dry dust and aerosols and non-hazardous liquid spl",
+    "description": "Recommended for agriculture, food processing and environmental cleanup. Superior protection against hazardous dry dust and aerosols and non-hazardous liquid splash.",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-96.jpg?v=1673990268",
+        "alt": "Disposable Pants - 50pcs",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-32.jpg?v=1673990268",
+        "alt": "Disposable Pants - 50pcs",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 42.1,
+    "pricingStatus": "standard",
+    "fdaGear": true,
+    "certifications": [
+      "fda-registered",
+      "21-cfr-177"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43888945528998",
+        "sku": "DP-50",
+        "attributes": {},
+        "price": 42.1,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 42.1
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7615446450342",
+    "slug": "disposable-gown",
+    "sku": "ISO-B-24g",
+    "name": "Disposable Isolation Gown - 100pcs",
+    "categorySlug": "body-protection",
+    "shortDescription": "\"Disposable Gown, Neck Tie, Waist Tie, Knit White Cuff Weight 24gsm, Size: 120cm x 140cm Material PP, Medium Duty, Splash Resistant Made in FDA registered facil",
+    "description": "\"Disposable Gown, Neck Tie, Waist Tie, Knit White Cuff Weight 24gsm, Size: 120cm x 140cm Material PP, Medium Duty, Splash Resistant Made in FDA registered facility, Listing OEA \"Disposable White Gown, Neck Tie, Waist Tie, Elastic Cuffs Weight 45gsm, Size: 120cm x 140cm Material PP+PE, Heavy Duty, Fluid Proof Made in FDA registered facility, Listing OEA 100pcs per Case, individually packed \"",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-101.jpg?v=1673547894",
+        "alt": "Disposable Isolation Gown - 100pcs",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-98.jpg?v=1673547915",
+        "alt": "Disposable Isolation Gown - 100pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-23.jpg?v=1673547966",
+        "alt": "Disposable Isolation Gown - 100pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-41.jpg?v=1673548001",
+        "alt": "Disposable Isolation Gown - 100pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-42.jpg?v=1673548015",
+        "alt": "Disposable Isolation Gown - 100pcs",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 202.8,
+    "pricingStatus": "standard",
+    "fdaGear": true,
+    "certifications": [
+      "fda-registered",
+      "21-cfr-177"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43760818978982",
+        "sku": "ISO-B-24g",
+        "attributes": {},
+        "price": 202.8,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43760819306662",
+        "sku": "ISO-Y-24g",
+        "attributes": {},
+        "price": 202.8,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43892099481766",
+        "sku": "ISO-G-24g",
+        "attributes": {},
+        "price": 202.8,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43892099547302",
+        "sku": "ISO-W-45g",
+        "attributes": {},
+        "price": 202.8,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 202.8
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7615440847014",
+    "slug": "disposable-glove",
+    "sku": "GL-15-S",
+    "name": "Work Gloves - Latex",
+    "categorySlug": "hand-protection",
+    "shortDescription": "",
+    "description": "",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-67.jpg?v=1675448174",
+        "alt": "Work Gloves - Latex",
+        "isPrimary": true
+      }
+    ],
+    "basePrice": 136.5,
+    "pricingStatus": "standard",
+    "fdaGear": false,
+    "certifications": [
+      "fda-registered"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43947242094758",
+        "sku": "GL-15-S",
+        "attributes": {},
+        "price": 136.5,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43947242127526",
+        "sku": "GL-15-M",
+        "attributes": {},
+        "price": 136.5,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43947242160294",
+        "sku": "GL-15-L",
+        "attributes": {},
+        "price": 136.5,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43947242193062",
+        "sku": "GL-15-XL",
+        "attributes": {},
+        "price": 136.5,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 136.5
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7608794251430",
+    "slug": "face-mask",
+    "sku": "N95-8225",
+    "name": "N95 Face Masks - 2 Style Options - 20pcs",
+    "categorySlug": "face-protection",
+    "shortDescription": "Foldable: NIOSH N95 - MS8225 // TC-84A-7447 Benehal Brand Ties go around the head! Individually packed ! Color White weight 9.3g +-0.5, Soft foam nosepiece - Bl",
+    "description": "Foldable: NIOSH N95 - MS8225 // TC-84A-7447 Benehal Brand Ties go around the head! Individually packed ! Color White weight 9.3g +-0.5, Soft foam nosepiece - Black PU Foam 3-Plys, PP spunbond outer layer, PP melt blown high filtration inner layer, PP needle-punched nonwoven inner layer. Carton has 400pcs / 20pcs per Box Cup Style: NIOSH N95 - MS61115 // TC-84A-5530 Benehal Brand, Ties go around the head! Color White weight 9.3g +-0.5 Soft foam nosepiece - Black PU Foam 3-Plys, PP spunbond outer layer, PP melt blown high filtration inner layer, PP needle-punched nonwoven inner layer. Carton has 400pcs / 20pcs per Box",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-83.jpg?v=1673479027",
+        "alt": "N95 Face Masks - 2 Style Options - 20pcs",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-110.jpg?v=1675430601",
+        "alt": "N95 Face Masks - 2 Style Options - 20pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-81.jpg?v=1675430601",
+        "alt": "N95 Face Masks - 2 Style Options - 20pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-109.jpg?v=1675430601",
+        "alt": "N95 Face Masks - 2 Style Options - 20pcs",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 19.5,
+    "pricingStatus": "standard",
+    "fdaGear": false,
+    "certifications": [
+      "fda-registered"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43888967057574",
+        "sku": "N95-8225",
+        "attributes": {},
+        "price": 19.5,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43888970170534",
+        "sku": "N95 -6115",
+        "attributes": {},
+        "price": 59.61,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 19.5
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7608784650406",
+    "slug": "garbage-bags",
+    "sku": "BGB",
+    "name": "Garbage Bags",
+    "categorySlug": "hand-protection",
+    "shortDescription": "Black 38x58 1.2 mil 200pc. Clear 33x39 0.6 mil. 33 gal. 250 pcs.",
+    "description": "Black 38x58 1.2 mil 200pc. Clear 33x39 0.6 mil. 33 gal. 250 pcs.",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-21.jpg?v=1673989293",
+        "alt": "Garbage Bags",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-22.jpg?v=1673989293",
+        "alt": "Garbage Bags",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/files/Screenshot_2024-02-20_142832.png?v=1744122549",
+        "alt": "Garbage Bags",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/files/Screenshot_2024-02-20_142846_59c765e2-8444-457e-bc73-ee5ce3f3a7a4.png?v=1744122564",
+        "alt": "Garbage Bags",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 48.1,
+    "pricingStatus": "standard",
+    "fdaGear": false,
+    "certifications": [
+      "fda-registered"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43735079256230",
+        "sku": "BGB",
+        "attributes": {},
+        "price": 48.1,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43735079288998",
+        "sku": "CGB",
+        "attributes": {},
+        "price": 41.6,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 48.1
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7608783143078",
+    "slug": "work-gloves",
+    "sku": "KC-BD-W",
+    "name": "Cotton PVC Dots - Work Gloves - 240 pairs",
+    "categorySlug": "hand-protection",
+    "shortDescription": "Knit White Cotton Blue PVC Dots Gloves Cotton blend, Multi-purpose gloves generally used in Food Industry. Packaging: 240 pairs / 20 DZ Available in Women's and",
+    "description": "Knit White Cotton Blue PVC Dots Gloves Cotton blend, Multi-purpose gloves generally used in Food Industry. Packaging: 240 pairs / 20 DZ Available in Women's and Men's Sizes",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-70.jpg?v=1673898300",
+        "alt": "Cotton PVC Dots - Work Gloves - 240 pairs",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-71.jpg?v=1673898329",
+        "alt": "Cotton PVC Dots - Work Gloves - 240 pairs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-28.jpg?v=1673906522",
+        "alt": "Cotton PVC Dots - Work Gloves - 240 pairs",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 123.5,
+    "pricingStatus": "standard",
+    "fdaGear": false,
+    "certifications": [
+      "fda-registered"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43735106650278",
+        "sku": "KC-BD-W",
+        "attributes": {},
+        "price": 123.5,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43735106683046",
+        "sku": "KC-BD-M",
+        "attributes": {},
+        "price": 123.5,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 123.5
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7608780521638",
+    "slug": "pe-apron",
+    "sku": "AP-B-26/42",
+    "name": "PE Apron - 1000pcs",
+    "categorySlug": "body-protection",
+    "shortDescription": "100% PE material. Smooth, 26\" wide and 42\" long is standard in food industry across US. Packaging: 1000pcs /Case ( 10 poly bags)",
+    "description": "100% PE material. Smooth, 26\" wide and 42\" long is standard in food industry across US. Packaging: 1000pcs /Case ( 10 poly bags)",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/BluePlasticApron.jpg?v=1673045544",
+        "alt": "PE Apron - 1000pcs",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/WhitePlasticApron.jpg?v=1673045564",
+        "alt": "PE Apron - 1000pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/RedPlasticApron.jpg?v=1673045613",
+        "alt": "PE Apron - 1000pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-105.jpg?v=1675720252",
+        "alt": "PE Apron - 1000pcs",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 97.5,
+    "pricingStatus": "standard",
+    "fdaGear": true,
+    "certifications": [
+      "fda-registered",
+      "21-cfr-177"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43735044096166",
+        "sku": "AP-B-26/42",
+        "attributes": {},
+        "price": 97.5,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43735044128934",
+        "sku": "AP-R-26/42",
+        "attributes": {},
+        "price": 84.5,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43735044161702",
+        "sku": "AP-W-26/42",
+        "attributes": {},
+        "price": 92.3,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 97.5
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7603324747942",
+    "slug": "lab-coats",
+    "sku": "LC-W-S",
+    "name": "Lab Coats -100pcs",
+    "categorySlug": "body-protection",
+    "shortDescription": "Lab Coat with Velcro buttons, No Pockets, Non-woven economy 30 g/m. Each Lab Coat is individually packed in poly bag.",
+    "description": "Lab Coat with Velcro buttons, No Pockets, Non-woven economy 30 g/m. Each Lab Coat is individually packed in poly bag.",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-43.jpg?v=1673905796",
+        "alt": "Lab Coats -100pcs",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-44.jpg?v=1673905811",
+        "alt": "Lab Coats -100pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-30.jpg?v=1673906554",
+        "alt": "Lab Coats -100pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ProductImageComingSoon_bf438034-331e-49e4-8c06-fe148e51353e.png?v=1675448546",
+        "alt": "Lab Coats -100pcs",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 201.5,
+    "pricingStatus": "standard",
+    "fdaGear": true,
+    "certifications": [
+      "fda-registered",
+      "21-cfr-177"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_46283749851302",
+        "sku": "LC-W-S",
+        "attributes": {},
+        "price": 201.5,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43707626389670",
+        "sku": "LC-W-M",
+        "attributes": {},
+        "price": 201.5,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43707626356902",
+        "sku": "LC-G-M",
+        "attributes": {},
+        "price": 195,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43707626455206",
+        "sku": "LC-W-L",
+        "attributes": {},
+        "price": 208,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 201.5
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7603281330342",
+    "slug": "protective-sleeves",
+    "sku": "SL-B-16",
+    "name": "Protective Sleeves - Smooth - 2,000pcs",
+    "categorySlug": "body-protection",
+    "shortDescription": "PE Sleeves - Smooth Used in Food Processing facilities. Made out of 100% virgin LDPE. Packaging: 2000pcs /Case",
+    "description": "PE Sleeves - Smooth Used in Food Processing facilities. Made out of 100% virgin LDPE. Packaging: 2000pcs /Case",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/WhiteProtectiveSleeve.jpg?v=1673044798",
+        "alt": "Protective Sleeves - Smooth - 2,000pcs",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/RedProtectiveSleeve.jpg?v=1673044872",
+        "alt": "Protective Sleeves - Smooth - 2,000pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/BlueProtectiveSleeve.jpg?v=1673044899",
+        "alt": "Protective Sleeves - Smooth - 2,000pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/PESmoothSleevesBox.jpg?v=1675701142",
+        "alt": "Protective Sleeves - Smooth - 2,000pcs",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 110.5,
+    "pricingStatus": "standard",
+    "fdaGear": false,
+    "certifications": [
+      "fda-registered"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43891804045478",
+        "sku": "SL-B-16",
+        "attributes": {},
+        "price": 110.5,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43891804078246",
+        "sku": "SL-R-16",
+        "attributes": {},
+        "price": 110.5,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43891804111014",
+        "sku": "SL-W-16",
+        "attributes": {},
+        "price": 110.5,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43891804209318",
+        "sku": "SL-B-18",
+        "attributes": {},
+        "price": 110.5,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 110.5
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7603269566630",
+    "slug": "bouffants-cap",
+    "sku": "BFF-21-W",
+    "name": "Bouffant Cap - 2000pcs",
+    "categorySlug": "head-protection",
+    "shortDescription": "Latex Free Bouffant Cap / Breathable, Elastic band, Non-Woven / polypropylene material. Used in Food Industry, Laboratories, Farming.",
+    "description": "Latex Free Bouffant Cap / Breathable, Elastic band, Non-Woven / polypropylene material. Used in Food Industry, Laboratories, Farming.",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-57.jpg?v=1673907252",
+        "alt": "Bouffant Cap - 2000pcs",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-56.jpg?v=1673907332",
+        "alt": "Bouffant Cap - 2000pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-53.jpg?v=1673907518",
+        "alt": "Bouffant Cap - 2000pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-59.jpg?v=1673907596",
+        "alt": "Bouffant Cap - 2000pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-75.jpg?v=1673989937",
+        "alt": "Bouffant Cap - 2000pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/files/ESM-51_210d70eb-5012-4a4b-9d0c-f1904d4abfe8.jpg?v=1744124355",
+        "alt": "Bouffant Cap - 2000pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/files/ESM-51_225ed03e-809f-476a-9962-0b371dd3ac1a.jpg?v=1744124468",
+        "alt": "Bouffant Cap - 2000pcs",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 136.5,
+    "pricingStatus": "standard",
+    "fdaGear": true,
+    "certifications": [
+      "fda-registered",
+      "21-cfr-177"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43707549057190",
+        "sku": "BFF-21-W",
+        "attributes": {},
+        "price": 136.5,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43707549089958",
+        "sku": "BFF-24-W",
+        "attributes": {},
+        "price": 143,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43707549122726",
+        "sku": "BFF-26-W",
+        "attributes": {},
+        "price": 195,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43946890231974",
+        "sku": "BFF-28-W",
+        "attributes": {},
+        "price": 201,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 136.5
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7563807621286",
+    "slug": "balaclava-hood-ninja-cap",
+    "sku": "NC-2XL-W",
+    "name": "Balaclava Hood / Ninja Cap - 2000pcs",
+    "categorySlug": "head-protection",
+    "shortDescription": "Full face cover. Polypropylene material / Non-woven Breathable, Disposable White color. Packing: 2000pcs / Carton Carton Size: 13\" x 11.4\" 26.4\"",
+    "description": "Full face cover. Polypropylene material / Non-woven Breathable, Disposable White color. Packing: 2000pcs / Carton Carton Size: 13\" x 11.4\" 26.4\"",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-58.jpg?v=1675182195",
+        "alt": "Balaclava Hood / Ninja Cap - 2000pcs",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-80.jpg?v=1675182195",
+        "alt": "Balaclava Hood / Ninja Cap - 2000pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-31.jpg?v=1673548226",
+        "alt": "Balaclava Hood / Ninja Cap - 2000pcs",
+        "isPrimary": false
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ProductImageComingSoon_bf438034-331e-49e4-8c06-fe148e51353e.png?v=1675448546",
+        "alt": "Balaclava Hood / Ninja Cap - 2000pcs",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 245,
+    "pricingStatus": "standard",
+    "fdaGear": true,
+    "certifications": [
+      "fda-registered",
+      "21-cfr-177"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43892094894246",
+        "sku": "NC-2XL-W",
+        "attributes": {},
+        "price": 245,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43571052642470",
+        "sku": "NC-2XL-R",
+        "attributes": {},
+        "price": 255,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_46283562483878",
+        "sku": "NC-2XL-B",
+        "attributes": {},
+        "price": 245,
+        "inventoryStatus": "in_stock"
+      },
+      {
+        "id": "var_43892094927014",
+        "sku": "NC-3XL-W",
+        "attributes": {},
+        "price": 245,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 245
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  },
+  {
+    "id": "prod_7563807064230",
+    "slug": "ear-plugs",
+    "sku": "EP-M-100",
+    "name": "Earplugs Metal Detectable - 100pcs",
+    "categorySlug": "head-protection",
+    "shortDescription": "Metal detectable earplugs are a specialized type of earplug that contain a small metal component within them. Sold by Case only! Packaging : 1000pcs/Case // 10 ",
+    "description": "Metal detectable earplugs are a specialized type of earplug that contain a small metal component within them. Sold by Case only! Packaging : 1000pcs/Case // 10 Boxes Carton size: 22.7\" x 13.8\" x 8.3\" Weight: 12lb",
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/EarplugsMetalDetectable.jpg?v=1673044106",
+        "alt": "Earplugs Metal Detectable - 100pcs",
+        "isPrimary": true
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/EarplugsMetalDetectable-Case.jpg?v=1673044193",
+        "alt": "Earplugs Metal Detectable - 100pcs",
+        "isPrimary": false
+      }
+    ],
+    "basePrice": 280,
+    "pricingStatus": "standard",
+    "fdaGear": false,
+    "certifications": [
+      "fda-registered"
+    ],
+    "caseQuantity": 2000,
+    "moqCases": 1,
+    "inventoryStatus": "in_stock",
+    "featured": false,
+    "variantOptions": {},
+    "variants": [
+      {
+        "id": "var_43571051397286",
+        "sku": "EP-M-100",
+        "attributes": {},
+        "price": 280,
+        "inventoryStatus": "in_stock"
+      }
+    ],
+    "volumeTiers": [
+      {
+        "minCases": 1,
+        "maxCases": null,
+        "pricePerCase": 280
+      }
+    ],
+    "specifications": [],
+    "relatedProductIds": [],
+    "frequentlyBoughtTogetherIds": []
+  }
+]

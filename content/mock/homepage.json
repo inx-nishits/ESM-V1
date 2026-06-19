@@ -1,0 +1,393 @@
+{
+  "announcementBar": {
+    "enabled": true,
+    "messages": [
+      {
+        "id": "ship",
+        "text": "Stock ships within 1 business day"
+      },
+      {
+        "id": "bulk",
+        "text": "Bulk & contract pricing available"
+      },
+      {
+        "id": "phone",
+        "text": "Call 630-915-4569",
+        "href": "tel:6309154569"
+      }
+    ]
+  },
+  "heroSlides": [
+    {
+      "id": "hero-1",
+      "tabLabel": "Overview",
+      "overline": "Certified women-owned · Since 1998",
+      "headline": "Professional PPE. Shipped next day.",
+      "subheadline": "Case-quantity gloves, masks & FDA Gear — in stock with published B2B pricing.",
+      "primaryCtaLabel": "Shop all products",
+      "primaryCtaHref": "/shop",
+      "secondaryCtaLabel": "Request a quote",
+      "secondaryCtaHref": "/contact",
+      "image": "https://esmproducts.com/cdn/shop/files/shutterstock_1229815867_copy-1_1500x.png?v=1672851678",
+      "video": "https://cdn.shopify.com/videos/c/o/v/7bdb3afd3303466d84be2147c0341bdc.mp4",
+      "trustPoints": [
+        "In-stock cases ship within 1 business day",
+        "Tiered case pricing — no surprise invoices",
+        "WBE/MBE certified for diversity spend programs"
+      ],
+      "productSpotlights": [
+        {
+          "slug": "nitrile-glove-5-mil-disposable-glove",
+          "name": "Nitrile Glove 5 mil - Disposable Glove - 2,000pcs",
+          "sku": "GL-076-B-XS",
+          "price": 192,
+          "image": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-61.jpg?v=1675442172"
+        },
+        {
+          "slug": "3-ply-face-mask-2-000-pcs",
+          "name": "3-Ply Face Mask - 2,000pcs or 50pcs",
+          "sku": "FM-Blue-50",
+          "price": 28.6,
+          "image": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/FaceMask.jpg?v=1675430760"
+        },
+        {
+          "slug": "bouffants-cap",
+          "name": "Bouffant Cap - 2000pcs",
+          "sku": "BFF-21-W",
+          "price": 136.5,
+          "image": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-57.jpg?v=1673907252"
+        }
+      ],
+      "categoryLinks": [
+        {
+          "label": "Hand Protection",
+          "href": "/collections/hand-protection"
+        },
+        {
+          "label": "Face Masks",
+          "href": "/collections/face-protection"
+        },
+        {
+          "label": "FDA Gear",
+          "href": "/collections/fda-gear"
+        }
+      ]
+    },
+    {
+      "id": "hero-2",
+      "tabLabel": "Industrial",
+      "overline": "Hand & body protection",
+      "headline": "Protect your workforce. Protect your operation.",
+      "subheadline": "Nitrile, latex, and work gloves built for manufacturing floors, food lines, and healthcare restocks — with contract pricing for qualified accounts.",
+      "primaryCtaLabel": "Shop hand protection",
+      "primaryCtaHref": "/collections/hand-protection",
+      "secondaryCtaLabel": "Create business account",
+      "secondaryCtaHref": "/signup",
+      "image": "https://esmproducts.com/cdn/shop/products/ESM-61_1500x.jpg?v=1675442172",
+      "trustPoints": [
+        "5 mil & 7 mil nitrile in stock",
+        "Volume discounts from 5+ cases",
+        "Same-day processing on in-stock SKUs"
+      ],
+      "productSpotlights": [
+        {
+          "slug": "nitrile-glove-5-mil-disposable-glove",
+          "name": "Nitrile Glove 5 mil - Disposable Glove - 2,000pcs",
+          "sku": "GL-076-B-XS",
+          "price": 192,
+          "image": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-61.jpg?v=1675442172"
+        },
+        {
+          "slug": "nitrile-glove-7-mil-disposable-glove",
+          "name": "Nitrile Glove 7 mil - Disposable Glove - 2,000pcs",
+          "sku": "GL-074-B-S",
+          "price": 362.7,
+          "image": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-61_2d56c1a8-aeb7-4f96-818e-eae9a43a989b.jpg?v=1675442609"
+        },
+        {
+          "slug": "work-gloves-sandy-green-nitrile-gloves",
+          "name": "Work Gloves - Sandy Green Nitrile Gloves - 144 pairs",
+          "sku": "GL-22-XS",
+          "price": 146.05,
+          "image": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/WorkGloves.jpg?v=1675447985"
+        }
+      ],
+      "categoryLinks": [
+        {
+          "label": "Nitrile Gloves",
+          "href": "/collections/hand-protection"
+        },
+        {
+          "label": "Work Gloves",
+          "href": "/collections/hand-protection"
+        },
+        {
+          "label": "Body Protection",
+          "href": "/collections/body-protection"
+        }
+      ]
+    },
+    {
+      "id": "hero-3",
+      "tabLabel": "FDA Gear",
+      "overline": "Food-safe · Lot traceability",
+      "headline": "Audit-ready PPE for regulated environments",
+      "subheadline": "Exclusive FDA Gear brand — 21 CFR compliant bouffants, hairnets, and apparel with lot-coded cases for SQF and USDA inspections.",
+      "primaryCtaLabel": "Shop FDA Gear",
+      "primaryCtaHref": "/collections/fda-gear",
+      "secondaryCtaLabel": "Talk to sales",
+      "secondaryCtaHref": "/contact",
+      "image": "https://esmproducts.com/cdn/shop/files/FDA_GearImage_1500x.png?v=1675288609",
+      "trustPoints": [
+        "21 CFR 177 compliant materials",
+        "Lot numbers on every case",
+        "Engineered for food & cleanroom use"
+      ],
+      "productSpotlights": [
+        {
+          "slug": "bouffants-cap",
+          "name": "Bouffant Cap - 2000pcs",
+          "sku": "BFF-21-W",
+          "price": 136.5,
+          "image": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-57.jpg?v=1673907252"
+        },
+        {
+          "slug": "hairnet-2-000-pcs",
+          "name": "Hairnet - 2,000pcs",
+          "sku": "HT-21-W",
+          "price": 162.24,
+          "image": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-50.jpg?v=1673908121"
+        },
+        {
+          "slug": "face-mask",
+          "name": "N95 Face Masks - 2 Style Options - 20pcs",
+          "sku": "N95-8225",
+          "price": 19.5,
+          "image": "https://cdn.shopify.com/s/files/1/0623/1388/9958/products/ESM-83.jpg?v=1673479027"
+        }
+      ],
+      "categoryLinks": [
+        {
+          "label": "Bouffants",
+          "href": "/products/bouffants-cap"
+        },
+        {
+          "label": "Hairnets",
+          "href": "/products/hairnet-2-000-pcs"
+        },
+        {
+          "label": "All FDA Gear",
+          "href": "/collections/fda-gear"
+        }
+      ]
+    }
+  ],
+  "trustBadges": [
+    {
+      "id": "ship",
+      "label": "Ships in 1 business day",
+      "description": "In-stock cases leave our West Chicago warehouse fast",
+      "icon": "truck"
+    },
+    {
+      "id": "cases",
+      "label": "Case-quantity pricing",
+      "description": "Volume tiers and contract rates for qualified accounts",
+      "icon": "package"
+    },
+    {
+      "id": "fda",
+      "label": "FDA registered",
+      "description": "Products manufactured in registered facilities",
+      "icon": "shield-check"
+    },
+    {
+      "id": "wbe",
+      "label": "Women-owned supplier",
+      "description": "Certified WBE/MBE — diversity spend eligible",
+      "icon": "badge-check"
+    }
+  ],
+  "clientLogos": [
+    {
+      "id": "client-1",
+      "name": "Midwest Food Processing Co.",
+      "wordmark": "Midwest Foods"
+    },
+    {
+      "id": "client-2",
+      "name": "Regional Healthcare Network",
+      "wordmark": "Regional Health"
+    },
+    {
+      "id": "client-3",
+      "name": "Great Lakes Industrial",
+      "wordmark": "Great Lakes Industrial"
+    },
+    {
+      "id": "client-4",
+      "name": "Prairie State Manufacturing",
+      "wordmark": "Prairie State Mfg."
+    },
+    {
+      "id": "client-5",
+      "name": "Chicago Metro Labs",
+      "wordmark": "Metro Labs"
+    },
+    {
+      "id": "client-6",
+      "name": "Heartland Protein Group",
+      "wordmark": "Heartland Protein"
+    }
+  ],
+  "whyEsm": {
+    "overline": "Why ESM",
+    "headline": "Built for buyers who can't afford downtime",
+    "subheadline": "From SQF audits to hospital restocks, ESM delivers the consistency, documentation, and case economics procurement teams expect.",
+    "items": [
+      {
+        "id": "fulfillment",
+        "title": "Reliable fulfillment",
+        "description": "Same-day processing on in-stock SKUs with transparent lead times on made-to-order lines.",
+        "icon": "truck"
+      },
+      {
+        "id": "traceability",
+        "title": "Lot traceability",
+        "description": "FDA Gear cases coded for audit trails — critical for food and pharmaceutical environments.",
+        "icon": "scan-line"
+      },
+      {
+        "id": "pricing",
+        "title": "Case economics",
+        "description": "Published tier pricing and custom contract rates so you can forecast spend accurately.",
+        "icon": "trending-down"
+      },
+      {
+        "id": "support",
+        "title": "Dedicated support",
+        "description": "Real people in West Chicago — not a ticket queue. Call, email, or request a formal quote.",
+        "icon": "headphones"
+      }
+    ]
+  },
+  "heritage": {
+    "overline": "Our story",
+    "headline": "West Chicago roots. Nationwide reach.",
+    "body": "For nearly three decades, ESM Products has supplied case-quantity PPE to procurement teams who need reliable stock, transparent pricing, and a supplier that answers the phone. From our West Chicago warehouse, we serve food processors, healthcare systems, and industrial operators across the country.",
+    "image": "https://esmproducts.com/cdn/shop/products/ESM-61_1500x.jpg?v=1675442172",
+    "stats": [
+      {
+        "value": "1998",
+        "label": "Founded"
+      },
+      {
+        "value": "6",
+        "label": "PPE categories"
+      },
+      {
+        "value": "1 day",
+        "label": "Standard ship time"
+      },
+      {
+        "value": "WBE",
+        "label": "Certified supplier"
+      }
+    ]
+  },
+  "featuredProductIds": [
+    "prod_7680195002534",
+    "prod_7680124387494",
+    "prod_7603269566630"
+  ],
+  "fdaGearSpotlight": {
+    "overline": "FDA Gear",
+    "headline": "Audit-ready apparel for regulated environments",
+    "description": "Our FDA Gear line is engineered for food processing, cleanrooms, and USDA-inspected facilities. Every case is lot-coded for traceability — because your auditor will ask.",
+    "ctaLabel": "Explore FDA Gear",
+    "ctaHref": "/collections/fda-gear",
+    "productIds": [
+      "prod_7603269566630"
+    ],
+    "image": "https://esmproducts.com/cdn/shop/files/FDA_GearImage_1066x.png?v=1675288609"
+  },
+  "industrySolutions": [
+    {
+      "id": "food-processing",
+      "name": "Food Processing",
+      "description": "Hairnets, beard covers, nitrile gloves, and gowns for HACCP and SQF programs.",
+      "href": "/collections/fda-gear",
+      "image": "https://esmproducts.com/cdn/shop/files/FDA_GearImage_1066x.png?v=1675288609"
+    },
+    {
+      "id": "healthcare",
+      "name": "Healthcare",
+      "description": "Masks, gloves, and isolation gowns for clinics, labs, and long-term care.",
+      "href": "/collections/face-protection",
+      "image": "https://esmproducts.com/cdn/shop/products/FaceMask_750x.jpg?v=1675430760"
+    },
+    {
+      "id": "industrial",
+      "name": "Industrial",
+      "description": "Cut-resistant and chemical-resistant hand protection for manufacturing floors.",
+      "href": "/collections/hand-protection",
+      "image": "https://esmproducts.com/cdn/shop/products/ESM-61_750x.jpg?v=1675442172"
+    },
+    {
+      "id": "government",
+      "name": "Government",
+      "description": "WBE-certified supplier for municipal, state, and federal procurement.",
+      "href": "/contact",
+      "image": "https://esmproducts.com/cdn/shop/files/ESM_Graphic_750x.png?v=1673985411"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t1",
+      "quote": "ESM is our go-to for nitrile gloves and bouffants. Cases ship next day and lot numbers are always documented for our SQF audits.",
+      "author": "Maria Chen",
+      "role": "Plant Operations Manager",
+      "industry": "Food Processing"
+    },
+    {
+      "id": "t2",
+      "quote": "Switching to ESM cut our PPE spend by 12% without changing specs. Their tier pricing is transparent — no surprise invoices.",
+      "author": "James Whitfield",
+      "role": "Procurement Director",
+      "industry": "Healthcare"
+    },
+    {
+      "id": "t3",
+      "quote": "As a WBE supplier, ESM helps us meet diversity spend targets while delivering consistent quality across six product categories.",
+      "author": "Angela Torres",
+      "role": "Supply Chain Lead",
+      "industry": "Government"
+    }
+  ],
+  "sustainability": {
+    "headline": "Responsible sourcing, practical sustainability",
+    "subheadline": "We prioritize suppliers who meet recognized standards and work continuously to reduce packaging waste across our case shipments.",
+    "image": "https://esmproducts.com/cdn/shop/files/shutterstock_1229815867_copy-1_1066x.png?v=1672851678",
+    "points": [
+      {
+        "id": "packaging",
+        "title": "Reduced packaging waste",
+        "description": "Case packs optimized to minimize void fill and excess corrugated on every shipment."
+      },
+      {
+        "id": "materials",
+        "title": "Material transparency",
+        "description": "Specification sheets document material composition for every SKU in our catalog."
+      },
+      {
+        "id": "local",
+        "title": "Regional distribution",
+        "description": "West Chicago hub reduces transit miles for Midwest and Great Lakes customers."
+      }
+    ]
+  },
+  "newsletter": {
+    "headline": "Secure your supply chain",
+    "subheadline": "Promotions, product updates, and tiered-pricing access — for business accounts only."
+  }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ups_ground",
+    "name": "UPS Ground",
+    "carrier": "UPS",
+    "estimatedDays": "3–5 business days",
+    "price": 45
+  },
+  {
+    "id": "ups_2day",
+    "name": "UPS 2nd Day Air",
+    "carrier": "UPS",
+    "estimatedDays": "2 business days",
+    "price": 78
+  },
+  {
+    "id": "ups_next",
+    "name": "UPS Next Day Air",
+    "carrier": "UPS",
+    "estimatedDays": "1 business day",
+    "price": 124
+  }
+]

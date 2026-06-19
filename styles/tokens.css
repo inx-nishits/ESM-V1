@@ -1,0 +1,94 @@
+/**
+ * ESM Products — Design Tokens (Phase 0)
+ * Primary: #0C294C · Accent: #F77D4D · Surface: #F4F1F1
+ */
+
+:root {
+  /* Brand */
+  --esm-navy-900: #061525;
+  --esm-navy-800: #081e38;
+  --esm-navy-700: #0c294c;
+  --esm-navy-600: #134072;
+  --esm-navy-500: #1a5088;
+  --esm-navy-100: #e8eef4;
+  --esm-navy-50: #f5f8fb;
+
+  --esm-coral-600: #e5663a;
+  --esm-coral-500: #f77d4d;
+  --esm-coral-400: #f99574;
+  --esm-coral-100: #fef0ea;
+
+  --esm-gray-950: #0f172a;
+  --esm-gray-700: #374151;
+  --esm-gray-500: #6b7280;
+  --esm-gray-300: #d1d5db;
+  --esm-gray-200: #e5e7eb;
+  --esm-gray-100: #f3f4f6;
+  --esm-gray-50: #f4f1f1;
+
+  /* Semantic */
+  --success: #059669;
+  --warning: #d97706;
+  --info: #0284c7;
+
+  /* ShadCN mapped tokens */
+  --background: var(--esm-gray-50);
+  --foreground: var(--esm-navy-700);
+
+  --card: #ffffff;
+  --card-foreground: var(--esm-navy-700);
+
+  --popover: #ffffff;
+  --popover-foreground: var(--esm-navy-700);
+
+  --primary: var(--esm-navy-700);
+  --primary-foreground: #ffffff;
+
+  --secondary: var(--esm-navy-100);
+  --secondary-foreground: var(--esm-navy-700);
+
+  --muted: var(--esm-gray-100);
+  --muted-foreground: var(--esm-gray-500);
+
+  --accent: var(--esm-coral-500);
+  --accent-foreground: #ffffff;
+
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+
+  --border: var(--esm-gray-200);
+  --input: var(--esm-gray-300);
+  --ring: var(--esm-coral-500);
+
+  --radius: 0.5rem;
+
+  /* Layout — single grid for header, hero copy, sections, and pages */
+  --container-max: 1280px;
+  --container-wide: 1280px;
+  --container-padding-x: 1rem;
+  --section-spacing-y: 4rem;
+  --section-spacing-y-md: 5rem;
+  --section-spacing-y-lg: 6rem;
+  --page-spacing-y: 3rem;
+  --header-height: 4.5rem;
+}
+
+.dark {
+  --background: var(--esm-navy-900);
+  --foreground: #ffffff;
+  --card: var(--esm-navy-800);
+  --card-foreground: #ffffff;
+  --popover: var(--esm-navy-800);
+  --popover-foreground: #ffffff;
+  --primary: var(--esm-coral-500);
+  --primary-foreground: var(--esm-navy-900);
+  --secondary: var(--esm-navy-700);
+  --secondary-foreground: #ffffff;
+  --muted: var(--esm-navy-700);
+  --muted-foreground: var(--esm-gray-300);
+  --accent: var(--esm-coral-500);
+  --accent-foreground: var(--esm-navy-900);
+  --border: var(--esm-navy-600);
+  --input: var(--esm-navy-600);
+  --ring: var(--esm-coral-500);
+}

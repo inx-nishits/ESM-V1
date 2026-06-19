@@ -1,0 +1,73 @@
+[
+  {
+    "slug": "hand-protection",
+    "name": "Hand Protection",
+    "number": "01",
+    "description": "Nitrile, latex, and work gloves for food, healthcare, and industrial operations.",
+    "image": "https://esmproducts.com/cdn/shop/products/ESM-61_750x.jpg?v=1675442172",
+    "productCount": 9,
+    "defaultIndustryFilters": [
+      "food-processing",
+      "healthcare",
+      "industrial"
+    ]
+  },
+  {
+    "slug": "face-protection",
+    "name": "Face Protection",
+    "number": "02",
+    "description": "Surgical masks, N95 respirators, and face shields.",
+    "image": "https://esmproducts.com/cdn/shop/products/FaceMask_750x.jpg?v=1675430760",
+    "productCount": 2,
+    "defaultIndustryFilters": [
+      "healthcare",
+      "food-processing"
+    ]
+  },
+  {
+    "slug": "head-protection",
+    "name": "Head Protection",
+    "number": "03",
+    "description": "Hairnets, bouffant caps, and hoods for food and cleanroom environments.",
+    "image": "https://esmproducts.com/cdn/shop/files/1_3cf9ffa4-6e2b-4cc8-9c2e-58f0091cb8e9_750x.png?v=1744119929",
+    "productCount": 5,
+    "defaultIndustryFilters": [
+      "food-processing"
+    ]
+  },
+  {
+    "slug": "body-protection",
+    "name": "Body Protection",
+    "number": "04",
+    "description": "Gowns, coveralls, and aprons for splash and particulate protection.",
+    "image": "https://esmproducts.com/cdn/shop/products/YelllowProtectiveSleeve_750x.jpg?v=1675445183",
+    "productCount": 7,
+    "defaultIndustryFilters": [
+      "healthcare",
+      "industrial"
+    ]
+  },
+  {
+    "slug": "foot-protection",
+    "name": "Foot Protection",
+    "number": "05",
+    "description": "Boot and shoe covers for controlled environments.",
+    "image": "https://esmproducts.com/cdn/shop/products/ESM-86_044c294e-854b-4e08-a843-1bcfcfff31c5_750x.jpg?v=1675428761",
+    "productCount": 4,
+    "defaultIndustryFilters": [
+      "food-processing",
+      "healthcare"
+    ]
+  },
+  {
+    "slug": "fda-gear",
+    "name": "FDA Gear",
+    "number": "06",
+    "description": "Exclusive food-safe PPE — 21 CFR compliant, lot traceability on every case.",
+    "image": "https://esmproducts.com/cdn/shop/files/FDA_GearImage_1066x.png?v=1675288609",
+    "productCount": 9,
+    "defaultIndustryFilters": [
+      "food-processing"
+    ]
+  }
+]

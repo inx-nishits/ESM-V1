@@ -1,0 +1,2 @@
+/** CMS feature module */
+export {};

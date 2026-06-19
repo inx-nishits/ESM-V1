@@ -1,0 +1,71 @@
+[
+  {
+    "slug": "fda-gear-spring-inventory",
+    "title": "FDA Gear spring inventory refresh",
+    "excerpt": "Expanded in-stock bouffant, hairnet, and apparel cases with lot-coded traceability for SQF and USDA audits.",
+    "publishedAt": "2026-03-12",
+    "category": "Product updates",
+    "blocks": [
+      {
+        "type": "hero",
+        "data": {
+          "overline": "Product update",
+          "headline": "FDA Gear spring inventory refresh",
+          "subheadline": "More case-quantity SKUs in stock for food processors and regulated environments."
+        }
+      },
+      {
+        "type": "rich_text",
+        "data": {
+          "html": "<p>We refreshed West Chicago inventory across our FDA Gear line — bouffants, hairnets, and food-safe apparel — to support spring production schedules and audit cycles.</p><p>Every case remains lot-coded for traceability, with documentation available for vendor qualification packages upon request.</p><h3>What this means for buyers</h3><ul><li>Faster fulfillment on high-volume head and body protection SKUs</li><li>Published case pricing visible on product pages</li><li>Same-day shipping on in-stock orders placed before cutoff</li></ul><p>Need a formal quote for procurement approval? <a href=\"/contact\">Contact our sales team</a> or browse the <a href=\"/collections/fda-gear\">FDA Gear collection</a>.</p>"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "next-day-shipping-reminder",
+    "title": "In-stock cases ship within one business day",
+    "excerpt": "A reminder for procurement teams: published lead times and Midwest fulfillment from our West Chicago warehouse.",
+    "publishedAt": "2026-02-04",
+    "category": "Operations",
+    "blocks": [
+      {
+        "type": "hero",
+        "data": {
+          "overline": "Operations",
+          "headline": "In-stock cases ship within one business day",
+          "subheadline": "Reliable fulfillment when your line cannot wait on PPE."
+        }
+      },
+      {
+        "type": "rich_text",
+        "data": {
+          "html": "<p>ESM Products ships in-stock case orders within one business day from West Chicago, IL. Midwest and Great Lakes customers typically see shorter transit times from our regional hub.</p><p>Custom and made-to-order SKUs display transparent lead times on product pages and at checkout. First-time business accounts may require prepayment until credit terms are established.</p><p>Questions about a specific SKU or delivery window? Call <strong>630-915-4569</strong> or use our <a href=\"/contact\">contact form</a>.</p>"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "wbe-certified-supplier",
+    "title": "ESM Products remains WBE certified",
+    "excerpt": "Supporting diversity spend programs for healthcare, food processing, and industrial procurement teams.",
+    "publishedAt": "2026-01-15",
+    "category": "Company",
+    "blocks": [
+      {
+        "type": "hero",
+        "data": {
+          "overline": "Company",
+          "headline": "Certified women-owned supplier",
+          "subheadline": "Helping procurement teams meet diversity and ESG goals without compromising quality."
+        }
+      },
+      {
+        "type": "rich_text",
+        "data": {
+          "html": "<p>ESM Products is proud to remain a certified women-owned business (WBE), supplying disposable PPE to operations teams nationwide since 1998.</p><p>We partner with buyers who need reliable stock, transparent case pricing, and documentation for vendor qualification — including diversity spend reporting where applicable.</p><p>Learn more about our story on the <a href=\"/about\">About page</a> or speak with sales about account setup.</p>"
+        }
+      }
+    ]
+  }
+]
