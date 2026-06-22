@@ -188,6 +188,7 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
                   aria-selected={index === activeIndex}
                   aria-controls={`hero-slide-panel-${index}`}
                   tabIndex={index === activeIndex ? 0 : -1}
+                  suppressHydrationWarning
                 />
               ))}
             </div>

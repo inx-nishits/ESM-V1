@@ -1,4 +1,4 @@
-import { AnnouncementBar } from "./announcement-bar";
+
 import { CookieConsentBanner } from "./cookie-consent";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
@@ -16,7 +16,7 @@ export async function SiteShell({ children, showFooter = true }: SiteShellProps)
   return (
     <div className="flex min-h-screen flex-col">
       <div className="sticky top-0 z-50">
-        <AnnouncementBar messages={announcementMessages} enabled={announcementEnabled} />
+
         <SiteHeader categories={categories} navigation={navigation.primary} />
       </div>
       <main className="flex-1">{children}</main>
