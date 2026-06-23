@@ -10,11 +10,6 @@ export interface PageContainerProps extends React.HTMLAttributes<HTMLElement> {
   padY?: "page" | "compact" | "none";
 }
 
-const sizeClasses = {
-  default: "max-w-[var(--container-max)]",
-  narrow: "max-w-4xl",
-  prose: "max-w-3xl",
-} as const;
 
 const padYClasses = {
   page: "py-12 md:py-16 lg:py-20",

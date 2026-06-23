@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { Upload } from "lucide-react";
 import { Breadcrumbs } from "@/components/commerce/breadcrumbs";
 import { Button } from "@/components/ui/button";

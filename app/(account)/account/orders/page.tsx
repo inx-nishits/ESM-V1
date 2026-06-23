@@ -7,7 +7,6 @@ import { Breadcrumbs } from "@/components/commerce/breadcrumbs";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { formatCurrency } from "@/lib/utils";
 
 import { AccountSidebar } from "@/components/account/account-sidebar";

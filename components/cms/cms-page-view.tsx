@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+
 import { ProductCard } from "@/components/commerce/product-card";
 import { FaqPageSections } from "@/components/cms/faq-page-sections";
 import { LegalSidebar } from "@/components/cms/legal-sidebar";

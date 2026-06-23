@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { KeyRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -70,7 +69,7 @@ export default function VerifyPage() {
             </Button>
           </div>
           <div className="text-center sm:text-left text-sm text-muted-foreground mt-2">
-            Didn't receive a code? <button type="button" className="text-primary hover:text-accent font-medium transition-colors">Resend code</button>
+            Didn&apos;t receive a code? <button type="button" className="text-primary hover:text-accent font-medium transition-colors">Resend code</button>
           </div>
         </form>
       </div>

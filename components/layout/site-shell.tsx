@@ -10,7 +10,7 @@ interface SiteShellProps {
 }
 
 export async function SiteShell({ children, showFooter = true }: SiteShellProps) {
-  const { categories, navigation, announcementMessages, announcementEnabled } =
+  const { categories, navigation } =
     await getShellData();
 
   return (

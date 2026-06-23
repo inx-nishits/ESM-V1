@@ -7,7 +7,6 @@ import {
   ContactProcessSteps,
 } from "@/components/cms/contact-form";
 import type { CmsPage, HeroBlock } from "@/types/cms";
-import Image from "next/image";
 
 interface ContactPageViewProps {
   page: CmsPage;
