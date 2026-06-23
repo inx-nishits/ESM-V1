@@ -7,6 +7,8 @@ import { Check, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { toast } from "sonner";
 
 interface AuthFormProps {
   mode: "login" | "signup";
@@ -144,12 +146,11 @@ export function AuthForm({ mode }: AuthFormProps) {
               />
             </div>
             <div className="flex items-start gap-3 pt-2">
-              <input 
-                type="checkbox" 
+              <Checkbox 
                 id="terms" 
                 name="terms" 
                 required 
-                className="mt-1 h-4 w-4 shrink-0 rounded border-input text-accent focus:ring-accent accent-accent cursor-pointer transition-all"
+                className="mt-1 transition-all"
               />
               <label htmlFor="terms" className="text-sm text-muted-foreground cursor-pointer leading-relaxed">
                 I agree to the <Link href="/terms" className="font-medium text-primary hover:text-accent transition-colors">Terms of Service</Link> and <Link href="/privacy" className="font-medium text-primary hover:text-accent transition-colors">Privacy Policy</Link>. *

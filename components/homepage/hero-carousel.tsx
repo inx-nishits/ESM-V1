@@ -102,38 +102,40 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
               key={slide.id}
               className="max-w-2xl animate-in fade-in slide-in-from-bottom-3 duration-700 fill-mode-both"
             >
-              <p className="inline-flex items-center rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-white/95 backdrop-blur-sm">
+              <p className="inline-flex items-center rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.22em] text-white/95 backdrop-blur-sm">
                 {slide.overline}
               </p>
 
-              <h1 className="mt-4 font-display text-[1.75rem] font-extrabold leading-[1.08] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">
+              <h1 className="mt-3 font-display text-3xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">
                 {slide.headline}
               </h1>
 
-              <p className="mt-4 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg md:mt-5">
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/85 sm:text-lg md:mt-5">
                 {slide.subheadline}
               </p>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <div className="mt-6 flex w-full flex-row gap-3 sm:items-center">
                 <Button
                   variant="default"
                   size="lg"
-                  className="h-12 min-w-[180px] px-8 text-base font-bold shadow-xl shadow-[var(--esm-coral-500)]/30"
+                  className="flex-1 h-11 sm:h-12 sm:flex-none sm:min-w-[140px] rounded-lg px-2 sm:px-6 text-sm sm:text-base font-bold shadow-lg shadow-[var(--esm-coral-500)]/20"
                   asChild
                 >
-                  <Link href={slide.primaryCtaHref}>
+                  <Link href={slide.primaryCtaHref} className="flex items-center justify-center gap-1 sm:gap-2">
                     {slide.primaryCtaLabel}
-                    <ArrowRight className="h-4 w-4" />
+                    <ArrowRight className="h-4 w-4 shrink-0" />
                   </Link>
                 </Button>
                 {slide.secondaryCtaLabel && slide.secondaryCtaHref && (
                   <Button
                     variant="outline"
                     size="lg"
-                    className="h-12 min-w-[160px] border-2 border-white/50 bg-white/10 px-8 text-base font-semibold text-white backdrop-blur-sm hover:border-white hover:bg-white/20 hover:text-white"
+                    className="flex-1 h-11 sm:h-12 sm:flex-none sm:min-w-[140px] rounded-lg border-2 border-white/30 bg-white/10 px-2 sm:px-6 text-sm sm:text-base font-bold text-white backdrop-blur-md hover:border-white/60 hover:bg-white/20 hover:text-white transition-all"
                     asChild
                   >
-                    <Link href={slide.secondaryCtaHref}>{slide.secondaryCtaLabel}</Link>
+                    <Link href={slide.secondaryCtaHref} className="flex items-center justify-center">
+                      {slide.secondaryCtaLabel}
+                    </Link>
                   </Button>
                 )}
               </div>

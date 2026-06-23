@@ -3,7 +3,22 @@
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { SlidersHorizontal, LayoutGrid, List } from "lucide-react";
 import type { ProductSortOption } from "@/types/product";
-
+import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 const SORT_OPTIONS: { value: ProductSortOption; label: string }[] = [
   { value: "featured", label: "Featured" },
   { value: "best-selling", label: "Best selling" },
@@ -70,35 +85,95 @@ export function PlpToolbar({ total, page, pageSize, sort, inStock }: PlpToolbarP
             <List className="h-4 w-4" />
           </button>
         </div>
-        <label className="inline-flex cursor-pointer items-center gap-2 text-sm">
-          <input
-            type="checkbox"
-            checked={inStock ?? false}
-            onChange={(e) =>
-              updateParams({ inStock: e.target.checked ? "true" : null })
-            }
-            className="h-4 w-4 rounded border-input accent-[var(--esm-coral-500)]"
-          />
-          In stock only
-        </label>
+        <div className="md:hidden flex items-center">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="sm" className="h-9">
+                <SlidersHorizontal className="mr-2 h-4 w-4" />
+                Filter & Sort
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="bottom" className="h-[50vh] rounded-t-xl">
+              <SheetHeader>
+                <SheetTitle>Filter & Sort</SheetTitle>
+              </SheetHeader>
+              <div className="mt-6 flex flex-col gap-6">
+                <div className="flex flex-col space-y-3">
+                  <label htmlFor="sort-select-mobile" className="text-sm font-semibold">
+                    Sort by
+                  </label>
+                  <Select 
+                    value={sort} 
+                    onValueChange={(value) => updateParams({ sort: value as ProductSortOption })}
+                  >
+                    <SelectTrigger id="sort-select-mobile" className="w-full">
+                      <SelectValue placeholder="Sort by" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {SORT_OPTIONS.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Checkbox
+                    id="inStockOnly-mobile"
+                    checked={inStock ?? false}
+                    onCheckedChange={(checked) =>
+                      updateParams({ inStock: checked ? "true" : null })
+                    }
+                  />
+                  <label
+                    htmlFor="inStockOnly-mobile"
+                    className="text-sm font-medium leading-none cursor-pointer"
+                  >
+                    In stock only
+                  </label>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
 
-        <div className="flex items-center gap-2">
+        <div className="hidden md:flex items-center space-x-2">
+          <Checkbox
+            id="inStockOnly"
+            checked={inStock ?? false}
+            onCheckedChange={(checked) =>
+              updateParams({ inStock: checked ? "true" : null })
+            }
+          />
+          <label
+            htmlFor="inStockOnly"
+            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+          >
+            In stock only
+          </label>
+        </div>
+
+        <div className="hidden md:flex items-center gap-2">
           <SlidersHorizontal className="h-4 w-4 text-muted-foreground" aria-hidden />
           <label htmlFor="sort-select" className="sr-only">
             Sort products
           </label>
-          <select
-            id="sort-select"
-            value={sort}
-            onChange={(e) => updateParams({ sort: e.target.value })}
-            className="h-10 rounded-md border border-input bg-background px-3 text-sm font-medium text-foreground shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring cursor-pointer"
+          <Select 
+            value={sort} 
+            onValueChange={(value) => updateParams({ sort: value as ProductSortOption })}
           >
-            {SORT_OPTIONS.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
+            <SelectTrigger id="sort-select" className="w-[180px]">
+              <SelectValue placeholder="Sort by" />
+            </SelectTrigger>
+            <SelectContent>
+              {SORT_OPTIONS.map((option) => (
+                <SelectItem key={option.value} value={option.value}>
+                  {option.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
       </div>
     </div>

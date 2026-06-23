@@ -33,7 +33,7 @@ export function CheckoutStepForm({
   }
 
   return (
-    <div className="site-container max-w-xl site-page">
+    <div className="max-w-xl">
       <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
         Step {step} of {totalSteps}
       </p>

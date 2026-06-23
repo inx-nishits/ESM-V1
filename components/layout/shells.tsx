@@ -12,6 +12,8 @@ export async function CartShell({ children }: { children: React.ReactNode }) {
   return <SiteShell showFooter={false}>{children}</SiteShell>;
 }
 
+import { CheckoutLayoutGrid } from "@/components/checkout/checkout-layout-grid";
+
 export function CheckoutShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -20,7 +22,9 @@ export function CheckoutShell({ children }: { children: React.ReactNode }) {
           <span className="font-display text-lg font-bold text-primary">Checkout</span>
         </div>
       </header>
-      <main className="flex-1">{children}</main>
+      <main className="flex-1">
+        <CheckoutLayoutGrid>{children}</CheckoutLayoutGrid>
+      </main>
     </div>
   );
 }

@@ -1,8 +1,20 @@
 "use client";
 
-import { ChevronDown, LogIn, Package, MapPin, User, UserPlus } from "lucide-react";
+import { ChevronDown, LogIn, Package, MapPin, User, UserPlus, LogOut } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,6 +32,8 @@ interface AccountMenuProps {
 
 export function AccountMenu({ className }: AccountMenuProps) {
   const { user, isAuthenticated } = useSession();
+  const [showLogoutAlert, setShowLogoutAlert] = useState(false);
+  const router = useRouter();
 
   return (
     <DropdownMenu>
@@ -60,9 +74,20 @@ export function AccountMenu({ className }: AccountMenuProps) {
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
               <Link href="/account/addresses">
-                <MapPin />
+                <MapPin className="mr-2 h-4 w-4" />
                 Addresses
               </Link>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem
+              onSelect={(e) => {
+                e.preventDefault();
+                setShowLogoutAlert(true);
+              }}
+              className="text-[var(--esm-coral-600)] focus:text-[var(--esm-coral-700)]"
+            >
+              <LogOut className="mr-2 h-4 w-4" />
+              Sign out
             </DropdownMenuItem>
           </>
         ) : (
@@ -70,26 +95,48 @@ export function AccountMenu({ className }: AccountMenuProps) {
             <DropdownMenuLabel>B2B Account</DropdownMenuLabel>
             <DropdownMenuItem asChild>
               <Link href="/login">
-                <LogIn />
+                <LogIn className="mr-2 h-4 w-4" />
                 Sign in
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
               <Link href="/signup">
-                <UserPlus />
+                <UserPlus className="mr-2 h-4 w-4" />
                 Create account
               </Link>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
               <Link href="/account/orders" className="text-muted-foreground">
-                <Package />
+                <Package className="mr-2 h-4 w-4" />
                 Track an order
               </Link>
             </DropdownMenuItem>
           </>
         )}
       </DropdownMenuContent>
+      
+      <AlertDialog open={showLogoutAlert} onOpenChange={setShowLogoutAlert}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Are you sure you want to sign out?</AlertDialogTitle>
+            <AlertDialogDescription>
+              You will need to sign back in to access your B2B pricing, address book, and order history.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction 
+              onClick={() => {
+                setShowLogoutAlert(false);
+                router.push("/login");
+              }}
+            >
+              Sign out
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </DropdownMenu>
   );
 }

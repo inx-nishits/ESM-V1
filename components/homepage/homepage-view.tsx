@@ -27,10 +27,10 @@ export function HomepageView({ data }: HomepageViewProps) {
         certifications={certifications}
         clientLogos={content.clientLogos}
       />
+      <FeaturedProducts products={featuredProducts} categories={categories} />
       <CategoryDiscovery categories={categories} />
       <WhyEsmSection content={content.whyEsm} />
       <HeritageSection content={content.heritage} />
-      <FeaturedProducts products={featuredProducts} categories={categories} />
       <FdaGearSpotlightSection
         content={content.fdaGearSpotlight}
         products={fdaProducts}

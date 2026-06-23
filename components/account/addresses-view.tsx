@@ -6,12 +6,30 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 
 const US_STATES = [
   "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", 
@@ -62,6 +80,7 @@ export function AddressesView() {
   const [addresses, setAddresses] = useState<Address[]>(initialAddresses);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingAddress, setEditingAddress] = useState<Address | null>(null);
+  const [addressToDelete, setAddressToDelete] = useState<string | null>(null);
 
   const handleOpenNew = () => {
     setEditingAddress(null);
@@ -73,8 +92,11 @@ export function AddressesView() {
     setIsModalOpen(true);
   };
 
-  const handleDelete = (id: string) => {
-    setAddresses(addresses.filter(a => a.id !== id));
+  const confirmDelete = () => {
+    if (addressToDelete) {
+      setAddresses(addresses.filter(a => a.id !== addressToDelete));
+      setAddressToDelete(null);
+    }
   };
 
   const handleMakeDefault = (id: string) => {
@@ -135,7 +157,7 @@ export function AddressesView() {
                 <Edit2 className="h-4 w-4" />
                 <span className="sr-only">Edit Address</span>
               </Button>
-              <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-destructive" onClick={() => handleDelete(address.id)}>
+              <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-destructive" onClick={() => setAddressToDelete(address.id)}>
                 <Trash2 className="h-4 w-4" />
                 <span className="sr-only">Delete Address</span>
               </Button>
@@ -168,15 +190,14 @@ export function AddressesView() {
           <form onSubmit={handleSubmit} className="space-y-4 mt-4">
             <div>
               <label htmlFor="country" className="mb-1.5 block text-sm font-medium">Country / Region</label>
-              <select
-                id="country"
-                name="country"
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
-                defaultValue={editingAddress?.country || "United States"}
-                required
-              >
-                <option value="United States">United States</option>
-              </select>
+              <Select name="country" defaultValue={editingAddress?.country || "United States"} required>
+                <SelectTrigger id="country">
+                  <SelectValue placeholder="Select country" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="United States">United States</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
             
             <div className="grid gap-4 sm:grid-cols-2">
@@ -202,18 +223,16 @@ export function AddressesView() {
               </div>
               <div>
                 <label htmlFor="state" className="mb-1.5 block text-sm font-medium">State</label>
-                <select
-                  id="state"
-                  name="state"
-                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
-                  defaultValue={editingAddress?.state || ""}
-                  required
-                >
-                  <option value="" disabled>Select</option>
-                  {US_STATES.map(s => (
-                    <option key={s} value={s}>{s}</option>
-                  ))}
-                </select>
+                <Select name="state" defaultValue={editingAddress?.state || ""} required>
+                  <SelectTrigger id="state">
+                    <SelectValue placeholder="Select" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {US_STATES.map(s => (
+                      <SelectItem key={s} value={s}>{s}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
               </div>
               <div>
                 <label htmlFor="zipCode" className="mb-1.5 block text-sm font-medium">Zip Code</label>
@@ -222,7 +241,7 @@ export function AddressesView() {
             </div>
 
             <div className="flex items-center gap-2 pt-2">
-              <input type="checkbox" id="isDefault" name="isDefault" className="h-4 w-4 rounded border-gray-300 text-accent focus:ring-accent cursor-pointer" defaultChecked={editingAddress?.isDefault} />
+              <Checkbox id="isDefault" name="isDefault" defaultChecked={editingAddress?.isDefault} />
               <label htmlFor="isDefault" className="text-sm font-medium cursor-pointer">Make this my default address</label>
             </div>
 
@@ -233,6 +252,23 @@ export function AddressesView() {
           </form>
         </DialogContent>
       </Dialog>
+
+      <AlertDialog open={!!addressToDelete} onOpenChange={(open) => !open && setAddressToDelete(null)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+            <AlertDialogDescription>
+              This action cannot be undone. This will permanently delete the selected address from your account.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction onClick={confirmDelete} className="bg-destructive text-destructive-foreground hover:bg-destructive/90">
+              Delete Address
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </>
   );
 }

@@ -20,7 +20,7 @@ export default async function CheckoutConfirmationPage({ params }: PageProps) {
   const { orderId } = await params;
 
   return (
-    <div className="site-container max-w-lg site-page text-center md:py-24">
+    <div className="max-w-lg mx-auto text-center md:py-24">
       <CheckCircle2 className="mx-auto h-14 w-14 text-accent" aria-hidden />
       <h1 className="mt-6 font-display text-3xl font-extrabold text-primary">Order confirmed</h1>
       <p className="mt-3 text-muted-foreground">

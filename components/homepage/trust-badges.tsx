@@ -12,14 +12,14 @@ export function TrustBadges({ badges }: TrustBadgesProps) {
   return (
     <section className="border-b border-border bg-card" aria-label="Trust indicators">
       <div className="site-container py-6 md:py-8">
-        <ul className="flex flex-col divide-y divide-border lg:flex-row lg:divide-x lg:divide-y-0">
+        <ul className="grid grid-cols-2 gap-x-4 gap-y-6 sm:gap-x-8 lg:flex lg:flex-row lg:divide-x lg:gap-0">
           {badges.map((badge, index) => {
             const Icon = getHomepageIcon(badge.icon);
             return (
               <li
                 key={badge.id}
                 className={cn(
-                  "flex flex-1 items-center gap-4 py-5 first:pt-0 last:pb-0 lg:px-6 lg:py-0",
+                  "flex flex-col items-center text-center gap-3 lg:flex-row lg:text-left lg:gap-4 lg:px-6 lg:py-0",
                   index === 0 && "lg:pl-0",
                   index === badges.length - 1 && "lg:pr-0",
                 )}

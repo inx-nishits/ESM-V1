@@ -34,7 +34,7 @@ export function FeaturedProducts({ products, categories }: FeaturedProductsProps
           </Button>
         </div>
 
-        <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-6 sm:mt-10 grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3">
           {products.map((product) => (
             <li key={product.id} className="h-full">
               <ProductCard

@@ -5,6 +5,13 @@ import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { cn } from "@/lib/utils";
 import { SITE_EMAIL, SITE_PHONE } from "@/lib/constants";
 
@@ -73,25 +80,18 @@ export function ContactForm() {
           <Input id="company" name="company" required autoComplete="organization" />
         </Field>
         <Field label="Inquiry type" htmlFor="inquiryType">
-          <select
-            id="inquiryType"
-            name="inquiryType"
-            required
-            className={cn(
-              "flex h-11 w-full rounded-md border border-input bg-background px-4 text-sm shadow-xs",
-              "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
-            )}
-            defaultValue=""
-          >
-            <option value="" disabled>
-              Select a topic
-            </option>
-            {inquiryTypes.map((type) => (
-              <option key={type} value={type}>
-                {type}
-              </option>
-            ))}
-          </select>
+          <Select name="inquiryType" required defaultValue="">
+            <SelectTrigger id="inquiryType" className="h-11">
+              <SelectValue placeholder="Select a topic" />
+            </SelectTrigger>
+            <SelectContent>
+              {inquiryTypes.map((type) => (
+                <SelectItem key={type} value={type}>
+                  {type}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </Field>
       </div>
 

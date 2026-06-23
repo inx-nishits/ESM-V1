@@ -51,7 +51,7 @@ export function SectionHeader({
       {subheadline && (
         <p
           className={cn(
-            "mt-3 text-base leading-relaxed md:text-lg",
+            "mt-3 text-sm sm:text-base leading-relaxed md:text-lg",
             dark ? "text-white/75" : "text-muted-foreground",
           )}
         >

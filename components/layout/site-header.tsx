@@ -50,9 +50,7 @@ export function SiteHeader({ categories, navigation, className }: SiteHeaderProp
         </div>
       </div>
 
-      <div className="mx-auto site-container flex h-[var(--header-height)] items-center gap-3 md:gap-4">
-        <MobileNavDrawer categories={categories} navigation={navigation} />
-
+      <div className="mx-auto site-container flex h-[var(--header-height)] items-center justify-between gap-3 md:gap-4">
         <SiteLogo className="shrink-0" />
 
         <nav
@@ -75,6 +73,9 @@ export function SiteHeader({ categories, navigation, className }: SiteHeaderProp
           <GlobalSearch />
           <AccountMenu />
           <CartBadgeButton />
+          <div className="md:hidden">
+            <MobileNavDrawer categories={categories} navigation={navigation} />
+          </div>
         </div>
       </div>
     </header>

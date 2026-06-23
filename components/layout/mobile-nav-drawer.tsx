@@ -48,7 +48,7 @@ export function MobileNavDrawer({ categories, navigation, className }: MobileNav
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="flex w-full flex-col gap-0 p-0 sm:max-w-sm">
-        <SheetHeader className="border-b border-border px-6 py-5 text-left">
+        <SheetHeader className="border-b border-border px-6 py-5 text-left items-start">
           <SheetTitle className="sr-only">Navigation</SheetTitle>
           <SiteLogo />
         </SheetHeader>

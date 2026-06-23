@@ -14,8 +14,8 @@ export function SiteFooter({ navigation }: SiteFooterProps) {
   return (
     <footer className="border-t border-[var(--esm-navy-600)] bg-[var(--esm-navy-900)] text-white">
       <div className="mx-auto site-container py-12 md:py-16">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-          <div className="lg:col-span-1">
+        <div className="grid gap-10 text-center md:text-left md:grid-cols-2 lg:grid-cols-4">
+          <div className="lg:col-span-1 flex flex-col items-center md:items-start">
             <SiteLogo variant="onDark" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
               {SITE_NAME} delivers FDA-compliant disposable PPE for food processing, healthcare,
@@ -59,14 +59,17 @@ export function SiteFooter({ navigation }: SiteFooterProps) {
             </ul>
           </div>
 
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <h3 className="font-display text-sm font-bold uppercase tracking-wider text-white/90">
               Contact
             </h3>
-            <ul className="mt-4 space-y-3 text-sm text-white/70">
-              <li className="flex items-start gap-2.5">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[var(--esm-coral-400)]" aria-hidden />
-                <span>
+            <ul className="mt-4 space-y-3 text-sm text-white/70 text-center md:text-left flex flex-col items-center md:items-start">
+              <li className="flex items-start gap-2.5 text-left md:text-left">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[var(--esm-coral-400)] hidden md:block" aria-hidden />
+                <span className="text-center md:text-left">
+                  <span className="md:hidden block mb-1">
+                    <MapPin className="inline-block h-4 w-4 text-[var(--esm-coral-400)] mr-1" aria-hidden />
+                  </span>
                   1130 Carolina Drive Unit A
                   <br />
                   West Chicago, IL 60185
@@ -94,11 +97,11 @@ export function SiteFooter({ navigation }: SiteFooterProps) {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-between">
+        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 text-center md:text-left md:flex-row md:items-center md:justify-between">
           <p className="text-xs text-white/50">
             © {year} {SITE_NAME}. All rights reserved.
           </p>
-          <div className="flex flex-wrap gap-4 text-xs text-white/50">
+          <div className="flex flex-wrap justify-center md:justify-start gap-4 text-xs text-white/50">
             <Link href="/terms" className="transition-colors hover:text-white/80">
               Terms
             </Link>

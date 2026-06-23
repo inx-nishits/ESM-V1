@@ -23,13 +23,14 @@ export function ProductGrid({ products, categoryNames, compact, layout = "grid" 
   const isList = layout === "list";
 
   return (
-    <ul className={isList ? "flex flex-col gap-6" : "grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"}>
+    <ul className={isList ? "flex flex-col gap-6" : "grid grid-cols-2 gap-3 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"}>
       {products.map((product) => (
         <li key={product.id} className={isList ? "" : "h-full"}>
           <ProductCard
             product={product}
             categoryName={categoryNames?.get(product.categorySlug)}
             compact={compact}
+            layout={layout}
           />
         </li>
       ))}

@@ -132,8 +132,8 @@ export function GlobalSearch({ className }: GlobalSearchProps) {
       </Button>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="gap-0 overflow-hidden p-0 sm:max-w-xl">
-          <DialogHeader className="border-b border-border px-4 py-4">
+        <DialogContent className="gap-0 overflow-hidden p-0 w-full max-w-full sm:max-w-xl !top-0 !translate-y-0 sm:!top-[50%] sm:!translate-y-[-50%] rounded-none rounded-b-xl sm:rounded-lg sm:border border-x-0 border-t-0 data-[state=open]:!slide-in-from-top-0 sm:data-[state=open]:!slide-in-from-top-[48%]">
+          <DialogHeader className="border-b border-border px-4 py-4 bg-muted/30">
             <DialogTitle className="sr-only">Search products</DialogTitle>
             <div className="relative">
               <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />

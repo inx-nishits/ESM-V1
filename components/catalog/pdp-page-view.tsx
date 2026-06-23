@@ -256,7 +256,7 @@ export function PdpPageView({
             <span className="text-sm text-muted-foreground">cases (MOQ {product.moqCases})</span>
           </div>
 
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+          <div className="fixed bottom-16 left-0 right-0 z-40 flex flex-col gap-3 border-t border-border bg-background p-4 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] md:relative md:bottom-auto md:z-auto md:mt-6 md:flex-row md:border-none md:bg-transparent md:p-0 md:shadow-none">
             {isAddedToCart ? (
               <Button size="lg" className="flex-1 bg-success hover:bg-success/90" asChild>
                 <Link href="/cart">
@@ -270,7 +270,7 @@ export function PdpPageView({
                 {product.inventoryStatus === "out_of_stock" ? "Out of stock" : "Add to cart"}
               </Button>
             )}
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" className="hidden md:flex" asChild>
               <Link href="/contact">Request quote</Link>
             </Button>
           </div>
