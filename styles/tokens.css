@@ -24,7 +24,7 @@
   --esm-gray-300: #d1d5db;
   --esm-gray-200: #e5e7eb;
   --esm-gray-100: #f3f4f6;
-  --esm-gray-50: #f4f1f1;
+  --esm-gray-50: #f9fafb;
 
   /* Semantic */
   --success: #059669;
@@ -32,7 +32,7 @@
   --info: #0284c7;
 
   /* ShadCN mapped tokens */
-  --background: var(--esm-gray-50);
+  --background: #ffffff;
   --foreground: var(--esm-navy-700);
 
   --card: #ffffff;

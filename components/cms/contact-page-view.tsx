@@ -1,14 +1,13 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   ContactForm,
   ContactInfoPanel,
   ContactProcessSteps,
 } from "@/components/cms/contact-form";
-import { MarketingPageHeader } from "@/components/cms/marketing-page-header";
-import { PageHero } from "@/components/cms/page-hero";
 import type { CmsPage, HeroBlock } from "@/types/cms";
+import Image from "next/image";
 
 interface ContactPageViewProps {
   page: CmsPage;
@@ -30,8 +29,42 @@ export function ContactPageView({ page }: ContactPageViewProps) {
 
   return (
     <>
-      <MarketingPageHeader title={page.title} slug={page.slug} />
-      <PageHero data={hero} />
+      <section className="relative overflow-hidden bg-[var(--esm-navy-900)] pt-6 pb-14 md:pt-8 md:pb-20 lg:pt-10 lg:pb-24">
+        {/* Abstract Background pattern */}
+        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--esm-navy-900)] to-transparent opacity-80" />
+        
+        <div className="relative site-container">
+          {/* Integrated Breadcrumbs */}
+          <nav aria-label="Breadcrumb" className="mb-8">
+            <ol className="flex flex-wrap items-center gap-2 text-sm text-white/70">
+              <li>
+                <Link href="/" className="transition-colors hover:text-white">Home</Link>
+              </li>
+              <ChevronRight className="h-4 w-4 shrink-0 opacity-50" aria-hidden />
+              <li>
+                <span className="font-semibold text-white">{page.title}</span>
+              </li>
+            </ol>
+          </nav>
+
+          <div className="max-w-3xl">
+            {hero.overline && (
+              <p className="inline-flex items-center rounded-full border border-[var(--esm-coral-500)]/30 bg-[var(--esm-coral-500)]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-[var(--esm-coral-400)] backdrop-blur-sm mb-4">
+                {hero.overline}
+              </p>
+            )}
+            <h1 className="font-display text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl drop-shadow-sm">
+              {hero.headline}
+            </h1>
+            {hero.subheadline && (
+              <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/80 md:text-xl font-medium">
+                {hero.subheadline}
+              </p>
+            )}
+          </div>
+        </div>
+      </section>
 
       <section className="site-section-compact">
         <div className="site-container">

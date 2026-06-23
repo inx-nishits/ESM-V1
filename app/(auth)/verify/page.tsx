@@ -4,9 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { KeyRound } from "lucide-react";
-import { SiteLogo } from "@/components/layout/site-logo";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 
 export default function VerifyPage() {
@@ -39,22 +37,19 @@ export default function VerifyPage() {
   };
 
   return (
-    <Card className="overflow-hidden border-border shadow-lg">
-      <div className="border-b border-border bg-[var(--esm-navy-50)] px-6 py-8 text-center md:px-8">
-        <div className="flex justify-center">
-          <SiteLogo />
-        </div>
-        <span className="mx-auto mt-6 flex h-14 w-14 items-center justify-center rounded-full bg-[var(--esm-coral-100)] text-accent">
+    <div className="w-full">
+      <div className="mb-10 flex flex-col items-center sm:items-start text-center sm:text-left">
+        <span className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--esm-coral-500)]/10 text-[var(--esm-coral-600)]">
           <KeyRound className="h-7 w-7" aria-hidden />
         </span>
-        <h1 className="mt-5 font-display text-2xl font-extrabold text-primary">Verify your account</h1>
-        <p className="mt-2 text-sm text-muted-foreground">
+        <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">Verify your account</h1>
+        <p className="mt-3 text-base text-muted-foreground">
           We sent a 6-digit verification code to your email. Enter it below to activate your account.
         </p>
       </div>
-      <div className="p-6 md:p-8">
+      <div>
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-          <div className="flex justify-center gap-2 sm:gap-4">
+          <div className="flex justify-center sm:justify-start gap-2 sm:gap-4">
             {otp.map((digit, index) => (
               <Input
                 key={index}
@@ -65,18 +60,20 @@ export default function VerifyPage() {
                 value={digit}
                 onChange={(e) => handleChange(index, e.target.value)}
                 onKeyDown={(e) => handleKeyDown(index, e)}
-                className="h-12 w-12 text-center text-xl font-bold sm:h-14 sm:w-14"
+                className="h-12 w-12 sm:h-14 sm:w-14 text-center text-xl font-bold bg-gray-50/50"
               />
             ))}
           </div>
-          <Button type="submit" size="lg" className="w-full">
-            Verify code
-          </Button>
-          <div className="text-center text-sm text-muted-foreground">
-            Didn't receive a code? <button type="button" className="text-accent hover:underline font-semibold">Resend</button>
+          <div className="pt-2">
+            <Button type="submit" size="lg" className="w-full h-12 text-base font-bold shadow-md hover:shadow-lg transition-all">
+              Verify code
+            </Button>
+          </div>
+          <div className="text-center sm:text-left text-sm text-muted-foreground mt-2">
+            Didn't receive a code? <button type="button" className="text-primary hover:text-accent font-medium transition-colors">Resend code</button>
           </div>
         </form>
       </div>
-    </Card>
+    </div>
   );
 }

@@ -10,6 +10,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { formatCurrency } from "@/lib/utils";
 
+import { AccountSidebar } from "@/components/account/account-sidebar";
+
 const demoOrders = [
   {
     id: "ESM-10482",
@@ -45,11 +47,17 @@ export default function AccountOrdersPage() {
         <h1 className="font-display text-3xl font-extrabold text-primary">Orders</h1>
       </div>
 
-      <div className="mt-8 flex flex-col gap-4 md:flex-row md:items-center">
+      <div className="mt-8 grid gap-8 lg:grid-cols-[260px_1fr]">
+        <aside>
+          <AccountSidebar />
+        </aside>
+        
+        <div className="min-w-0">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center">
         <div className="relative flex-1 max-w-sm">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input 
-            placeholder="Search by Order ID..." 
+            placeholder="Search by Order ID, product name..." 
             className="pl-9"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
@@ -57,23 +65,24 @@ export default function AccountOrdersPage() {
         </div>
         
         <div className="flex flex-1 gap-4 md:justify-end">
-          <div className="relative">
+          <div className="relative cursor-pointer">
             <select 
-              className="flex h-10 w-full appearance-none rounded-md border border-input bg-background px-3 py-2 pr-8 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="flex h-10 w-full cursor-pointer appearance-none rounded-md border border-input bg-background px-3 py-2 pr-8 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
             >
               <option value="all">All Statuses</option>
-              <option value="in_progress">In Progress</option>
-              <option value="transit">In Transit</option>
+              <option value="order_placed">Order placed</option>
+              <option value="in_progress">In progress</option>
+              <option value="in_transit">In Transit</option>
               <option value="delivered">Delivered</option>
             </select>
             <Filter className="absolute right-2.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
           </div>
           
-          <div className="relative">
+          <div className="relative cursor-pointer">
             <select 
-              className="flex h-10 w-full appearance-none rounded-md border border-input bg-background px-3 py-2 pr-8 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="flex h-10 w-full cursor-pointer appearance-none rounded-md border border-input bg-background px-3 py-2 pr-8 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
             >
@@ -110,6 +119,8 @@ export default function AccountOrdersPage() {
           </li>
         ))}
       </ul>
+        </div>
+      </div>
     </div>
   );
 }

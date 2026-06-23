@@ -47,21 +47,21 @@ export function AccountMenu({ className }: AccountMenuProps) {
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
+              <Link href="/account/profile">
+                <User />
+                My Profile
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
               <Link href="/account/orders">
                 <Package />
-                Orders
+                My Orders
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
               <Link href="/account/addresses">
                 <MapPin />
                 Addresses
-              </Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem asChild>
-              <Link href="/account/profile">
-                <User />
-                Profile
               </Link>
             </DropdownMenuItem>
           </>
