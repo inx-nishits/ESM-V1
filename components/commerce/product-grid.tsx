@@ -30,7 +30,6 @@ export function ProductGrid({ products, categoryNames, compact, layout = "grid" 
             product={product}
             categoryName={categoryNames?.get(product.categorySlug)}
             compact={compact}
-            layout={layout}
           />
         </li>
       ))}

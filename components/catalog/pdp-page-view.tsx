@@ -38,7 +38,7 @@ export function PdpPageView({
   
   // Initialize with the first variant's attributes
   const [selectedAttributes, setSelectedAttributes] = useState<Record<string, string>>(
-    product.variants[0]?.attributes || {}
+    (product.variants[0]?.attributes as Record<string, string>) || {}
   );
   
   // Find the exact variant based on selected attributes
