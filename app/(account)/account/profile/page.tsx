@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { UserCircle, Upload } from "lucide-react";
 import { Breadcrumbs } from "@/components/commerce/breadcrumbs";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { SITE_EMAIL, SITE_PHONE } from "@/lib/constants";
@@ -41,24 +43,51 @@ export default function AccountProfilePage() {
         </nav>
 
         <Card className="p-6">
-          <h2 className="font-display text-lg font-bold text-primary">Profile</h2>
-          <dl className="mt-4 space-y-3 text-sm">
-            <div>
-              <dt className="text-muted-foreground">Company</dt>
-              <dd className="font-medium">Demo Procurement Co.</dd>
+          <h2 className="font-display text-lg font-bold text-primary">Profile Details</h2>
+          <div className="mt-6 flex flex-col sm:flex-row gap-8 items-start">
+            <div className="flex flex-col items-center gap-3">
+              <div className="relative h-24 w-24 overflow-hidden rounded-full border-2 border-border bg-muted flex items-center justify-center">
+                <UserCircle className="h-12 w-12 text-muted-foreground" />
+              </div>
+              <Button variant="outline" size="sm" className="relative overflow-hidden">
+                <Upload className="h-4 w-4 mr-2" />
+                Upload photo
+                <input type="file" className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" accept="image/*" />
+              </Button>
             </div>
-            <div>
-              <dt className="text-muted-foreground">Email</dt>
-              <dd className="font-medium">{SITE_EMAIL}</dd>
-            </div>
-            <div>
-              <dt className="text-muted-foreground">Phone</dt>
-              <dd className="font-medium">{SITE_PHONE}</dd>
-            </div>
-          </dl>
-          <Button className="mt-6" variant="outline" asChild>
-            <Link href="/contact">Update via sales</Link>
-          </Button>
+            
+            <form className="flex-1 space-y-4 w-full" onSubmit={(e) => e.preventDefault()}>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label htmlFor="firstName" className="mb-1.5 block text-sm font-medium">First name</label>
+                  <Input id="firstName" name="firstName" defaultValue="John" />
+                </div>
+                <div>
+                  <label htmlFor="lastName" className="mb-1.5 block text-sm font-medium">Last name</label>
+                  <Input id="lastName" name="lastName" defaultValue="Doe" />
+                </div>
+              </div>
+              
+              <div>
+                <label htmlFor="company" className="mb-1.5 block text-sm font-medium">Company</label>
+                <Input id="company" name="company" defaultValue="Demo Procurement Co." />
+              </div>
+              
+              <div>
+                <label htmlFor="email" className="mb-1.5 block text-sm font-medium">Email</label>
+                <Input id="email" name="email" type="email" defaultValue={SITE_EMAIL} disabled className="bg-muted cursor-not-allowed" />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="mb-1.5 block text-sm font-medium">Phone</label>
+                <Input id="phone" name="phone" type="tel" defaultValue={SITE_PHONE} />
+              </div>
+              
+              <div className="pt-2">
+                <Button type="button">Save changes</Button>
+              </div>
+            </form>
+          </div>
         </Card>
       </div>
     </div>

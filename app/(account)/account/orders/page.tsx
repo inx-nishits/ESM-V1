@@ -1,15 +1,14 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
+import { Search, Filter, ArrowUpDown } from "lucide-react";
 import { Breadcrumbs } from "@/components/commerce/breadcrumbs";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { buildPageMetadata } from "@/lib/seo/metadata";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { formatCurrency } from "@/lib/utils";
-
-export const metadata = buildPageMetadata({
-  title: "Order History",
-  path: "/account/orders",
-  noIndex: true,
-});
 
 const demoOrders = [
   {
@@ -29,6 +28,10 @@ const demoOrders = [
 ];
 
 export default function AccountOrdersPage() {
+  const [search, setSearch] = useState("");
+  const [statusFilter, setStatusFilter] = useState("all");
+  const [sortBy, setSortBy] = useState("date-desc");
+
   return (
     <div className="site-container site-page">
       <Breadcrumbs
@@ -37,9 +40,52 @@ export default function AccountOrdersPage() {
           { name: "Orders", href: "/account/orders" },
         ]}
       />
-      <h1 className="mt-4 font-display text-3xl font-extrabold text-primary">Orders</h1>
+      
+      <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <h1 className="font-display text-3xl font-extrabold text-primary">Orders</h1>
+      </div>
 
-      <ul className="mt-8 space-y-4">
+      <div className="mt-8 flex flex-col gap-4 md:flex-row md:items-center">
+        <div className="relative flex-1 max-w-sm">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Input 
+            placeholder="Search by Order ID..." 
+            className="pl-9"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
+        
+        <div className="flex flex-1 gap-4 md:justify-end">
+          <div className="relative">
+            <select 
+              className="flex h-10 w-full appearance-none rounded-md border border-input bg-background px-3 py-2 pr-8 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              value={statusFilter}
+              onChange={(e) => setStatusFilter(e.target.value)}
+            >
+              <option value="all">All Statuses</option>
+              <option value="in_progress">In Progress</option>
+              <option value="transit">In Transit</option>
+              <option value="delivered">Delivered</option>
+            </select>
+            <Filter className="absolute right-2.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
+          </div>
+          
+          <div className="relative">
+            <select 
+              className="flex h-10 w-full appearance-none rounded-md border border-input bg-background px-3 py-2 pr-8 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+            >
+              <option value="date-desc">Newest First</option>
+              <option value="date-asc">Oldest First</option>
+            </select>
+            <ArrowUpDown className="absolute right-2.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
+          </div>
+        </div>
+      </div>
+
+      <ul className="mt-6 space-y-4">
         {demoOrders.map((order) => (
           <li key={order.id}>
             <Card className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
@@ -55,7 +101,7 @@ export default function AccountOrdersPage() {
                 </p>
               </div>
               <div className="flex items-center gap-4">
-                <Badge variant="success">{order.status}</Badge>
+                <Badge variant={order.status === "Delivered" ? "outline" : "success"}>{order.status}</Badge>
                 <span className="font-display font-extrabold text-primary">
                   {formatCurrency(order.total)}
                 </span>

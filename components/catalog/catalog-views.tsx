@@ -88,7 +88,11 @@ export function PlpPageView({
           />
         </Suspense>
 
-        <ProductGrid products={result.items} categoryNames={categoryNames} />
+        <ProductGrid 
+          products={result.items} 
+          categoryNames={categoryNames} 
+          layout={(searchParams?.layout as "grid" | "list") ?? "grid"} 
+        />
 
         <CatalogPagination
           basePath={basePath}

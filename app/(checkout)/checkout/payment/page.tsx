@@ -19,17 +19,17 @@ export default function CheckoutPaymentPage() {
     >
       <fieldset className="space-y-3">
         <label className="flex cursor-pointer items-start gap-3 rounded-lg border border-border p-4 has-[:checked]:border-accent has-[:checked]:bg-accent/5">
-          <input type="radio" name="payment" defaultChecked className="mt-1" />
+          <input type="radio" name="payment" value="stripe" defaultChecked className="mt-1" />
           <span>
-            <span className="block font-semibold text-primary">Net 30 (approved accounts)</span>
-            <span className="text-sm text-muted-foreground">Invoice billed to your company</span>
+            <span className="block font-semibold text-primary">Credit Card (Stripe)</span>
+            <span className="text-sm text-muted-foreground">Secure payment via Stripe</span>
           </span>
         </label>
         <label className="flex cursor-pointer items-start gap-3 rounded-lg border border-border p-4 has-[:checked]:border-accent has-[:checked]:bg-accent/5">
-          <input type="radio" name="payment" className="mt-1" />
+          <input type="radio" name="payment" value="gpay" className="mt-1" />
           <span>
-            <span className="block font-semibold text-primary">Credit card</span>
-            <span className="text-sm text-muted-foreground">Visa, Mastercard, Amex</span>
+            <span className="block font-semibold text-primary">Google Pay</span>
+            <span className="text-sm text-muted-foreground">Fast and secure checkout with Google</span>
           </span>
         </label>
       </fieldset>

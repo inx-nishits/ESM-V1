@@ -55,6 +55,21 @@ export function CartPageView() {
                 {line.name}
               </Link>
               <p className="mt-0.5 font-mono text-xs text-muted-foreground">SKU {line.sku}</p>
+              
+              {line.variantAttributes && Object.keys(line.variantAttributes).length > 0 && (
+                <div className="mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted-foreground">
+                  {Object.entries(line.variantAttributes).map(([key, value]) => {
+                    if (!value) return null;
+                    return (
+                      <span key={key} className="flex items-center gap-1.5">
+                        <span className="font-medium capitalize text-primary">{key.replace(/([A-Z])/g, ' $1').trim()}:</span>
+                        <span>{value}</span>
+                      </span>
+                    );
+                  })}
+                </div>
+              )}
+
               <p className="mt-2 font-display font-extrabold text-primary">
                 {formatCurrency(line.effectivePricePerCase)}{" "}
                 <span className="text-sm font-normal text-muted-foreground">/ case</span>

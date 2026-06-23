@@ -3,12 +3,13 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { GitCompare, Heart, Minus, Plus, ShoppingCart } from "lucide-react";
+import { Check, GitCompare, Heart, Minus, Plus, ShoppingCart, ZoomIn } from "lucide-react";
 import { Breadcrumbs } from "@/components/commerce/breadcrumbs";
 import { ProductGrid } from "@/components/commerce/product-grid";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useCart } from "@/providers/cart-provider";
 import { useCompare } from "@/providers/compare-provider";
 import { useSavedProducts } from "@/providers/saved-products-provider";
@@ -29,13 +30,24 @@ export function PdpPageView({
   relatedProducts,
   categories,
 }: PdpPageViewProps) {
-  const { addLine } = useCart();
+  const { addLine, cart } = useCart();
   const compare = useCompare();
   const saved = useSavedProducts();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantityCases, setQuantityCases] = useState(product.moqCases);
-  const variant = product.variants[0];
+  
+  // Initialize with the first variant's attributes
+  const [selectedAttributes, setSelectedAttributes] = useState<Record<string, string>>(
+    product.variants[0]?.attributes || {}
+  );
+  
+  // Find the exact variant based on selected attributes
+  const variant = product.variants.find((v) => 
+    Object.entries(selectedAttributes).every(([key, value]) => v.attributes[key as keyof typeof v.attributes] === value)
+  ) || product.variants[0];
+
   const primaryImage = product.images[selectedImageIndex] ?? product.images[0];
+  const isAddedToCart = cart.lines.some((line) => line.variantId === variant?.id);
 
   function handleAddToCart() {
     if (!variant || !primaryImage) return;
@@ -72,18 +84,44 @@ export function PdpPageView({
 
       <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
         <div>
-          <div className="relative aspect-square overflow-hidden rounded-lg border border-border bg-muted">
-            {primaryImage && (
-              <Image
-                src={primaryImage.url}
-                alt={primaryImage.alt}
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-                priority
-              />
-            )}
-          </div>
+          <Dialog>
+            <DialogTrigger asChild>
+              <button
+                type="button"
+                className="group relative aspect-square w-full overflow-hidden rounded-lg border border-border bg-muted cursor-zoom-in"
+              >
+                {primaryImage && (
+                  <>
+                    <Image
+                      src={primaryImage.url}
+                      alt={primaryImage.alt}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
+                    <div className="absolute right-4 top-4 rounded-full bg-background/80 p-2 text-foreground backdrop-blur-sm opacity-0 transition-opacity group-hover:opacity-100 shadow-sm border border-border/50">
+                      <ZoomIn className="h-5 w-5" />
+                    </div>
+                  </>
+                )}
+              </button>
+            </DialogTrigger>
+            <DialogContent className="max-w-[90vw] md:max-w-4xl border-none bg-transparent p-0 shadow-none">
+              <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-black/20">
+                {primaryImage && (
+                  <Image
+                    src={primaryImage.url}
+                    alt={primaryImage.alt}
+                    fill
+                    className="object-contain"
+                    quality={100}
+                  />
+                )}
+              </div>
+            </DialogContent>
+          </Dialog>
           {product.images.length > 1 && (
             <ul className="mt-4 flex gap-2 overflow-x-auto pb-1">
               {product.images.map((image, index) => (
@@ -120,7 +158,42 @@ export function PdpPageView({
           <h1 className="mt-1 font-display text-2xl font-extrabold tracking-tight text-primary md:text-3xl lg:text-4xl">
             {product.name}
           </h1>
-          <p className="mt-2 font-mono text-sm text-muted-foreground">SKU {product.sku}</p>
+          <p className="mt-2 font-mono text-sm text-muted-foreground">SKU {variant?.sku || product.sku}</p>
+
+          {/* Variant Selectors */}
+          {Object.entries(product.variantOptions).length > 0 && (
+            <div className="mt-8 space-y-5">
+              {Object.entries(product.variantOptions).map(([key, options]) => {
+                if (!options || options.length === 0) return null;
+                const attrKey = key as keyof typeof variant.attributes;
+                return (
+                  <div key={key}>
+                    <p className="text-sm font-semibold capitalize text-primary">{key.replace(/([A-Z])/g, ' $1').trim()}</p>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {options.map((option) => {
+                        const isSelected = selectedAttributes[attrKey] === option;
+                        return (
+                          <button
+                            key={option}
+                            type="button"
+                            onClick={() => setSelectedAttributes((prev) => ({ ...prev, [attrKey]: option }))}
+                            className={cn(
+                              "rounded-md border px-4 py-2 text-sm font-medium transition-all duration-200 cursor-pointer",
+                              isSelected
+                                ? "border-accent bg-accent/10 text-accent ring-1 ring-accent"
+                                : "border-border bg-card text-muted-foreground hover:border-accent/50 hover:bg-accent/5",
+                            )}
+                          >
+                            {option}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
 
           <div className="mt-6 flex items-end gap-3">
             <p className="font-display text-3xl font-extrabold text-primary">
@@ -184,10 +257,19 @@ export function PdpPageView({
           </div>
 
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <Button size="lg" className="flex-1" onClick={handleAddToCart}>
-              <ShoppingCart className="h-4 w-4" />
-              Add to cart
-            </Button>
+            {isAddedToCart ? (
+              <Button size="lg" className="flex-1 bg-success hover:bg-success/90" asChild>
+                <Link href="/cart">
+                  <Check className="h-4 w-4 mr-2" />
+                  View in cart
+                </Link>
+              </Button>
+            ) : (
+              <Button size="lg" className="flex-1" onClick={handleAddToCart} disabled={!variant || product.inventoryStatus === "out_of_stock"}>
+                <ShoppingCart className="h-4 w-4 mr-2" />
+                {product.inventoryStatus === "out_of_stock" ? "Out of stock" : "Add to cart"}
+              </Button>
+            )}
             <Button variant="outline" size="lg" asChild>
               <Link href="/contact">Request quote</Link>
             </Button>

@@ -5,9 +5,10 @@ interface ProductGridProps {
   products: Product[];
   categoryNames?: Map<string, string>;
   compact?: boolean;
+  layout?: "grid" | "list";
 }
 
-export function ProductGrid({ products, categoryNames, compact }: ProductGridProps) {
+export function ProductGrid({ products, categoryNames, compact, layout = "grid" }: ProductGridProps) {
   if (products.length === 0) {
     return (
       <div className="rounded-lg border border-dashed border-border bg-muted/30 px-6 py-16 text-center">
@@ -19,14 +20,17 @@ export function ProductGrid({ products, categoryNames, compact }: ProductGridPro
     );
   }
 
+  const isList = layout === "list";
+
   return (
-    <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <ul className={isList ? "flex flex-col gap-6" : "grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"}>
       {products.map((product) => (
-        <li key={product.id} className="h-full">
+        <li key={product.id} className={isList ? "" : "h-full"}>
           <ProductCard
             product={product}
             categoryName={categoryNames?.get(product.categorySlug)}
             compact={compact}
+            layout={layout}
           />
         </li>
       ))}
