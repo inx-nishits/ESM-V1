@@ -34,97 +34,106 @@ export function CartPageView() {
         ]}
       />
 
-      <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-        <h1 className="font-display text-4xl font-extrabold text-primary tracking-tight">Your cart</h1>
+      <div className="mt-2 sm:mt-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <h1 className="font-display text-2xl sm:text-3xl font-extrabold text-primary tracking-tight">Your cart</h1>
       </div>
 
-      <div className="mt-10 grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
+      <div className="mt-4 sm:mt-8 grid grid-cols-1 items-start gap-6 lg:gap-10 lg:grid-cols-12">
         {/* Left Column: Cart Items */}
         <div className="lg:col-span-8">
-          <div className="rounded-2xl border border-gray-100 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden">
-            <div className="bg-gray-50/50 px-6 py-4 border-b border-gray-100 flex justify-between items-center">
-              <h2 className="font-semibold text-primary">Cart Items ({totals.caseCount})</h2>
+          <div className="rounded-xl sm:rounded-2xl border border-gray-100 bg-white shadow-sm overflow-hidden">
+            <div className="bg-gray-50/50 px-3 py-2.5 sm:px-5 sm:py-4 border-b border-gray-100 flex justify-between items-center">
+              <h2 className="text-base sm:text-lg font-semibold text-primary">Cart Items ({totals.caseCount})</h2>
               <Button variant="ghost" size="sm" onClick={clearCart} className="text-muted-foreground hover:text-destructive transition-colors">
                 Clear cart
               </Button>
             </div>
             <ul className="divide-y divide-gray-100">
               {cart.lines.map((line) => (
-                <li key={line.id} className="flex gap-4 p-6 sm:gap-6 hover:bg-gray-50/30 transition-colors">
-                  <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-lg border border-gray-100 bg-white sm:h-28 sm:w-28 shadow-sm">
-                    <Image src={line.imageUrl} alt={line.name} fill sizes="112px" className="object-cover" />
+                <li key={line.id} className="flex gap-3 sm:gap-5 p-3 sm:p-5 hover:bg-gray-50/30 transition-colors">
+                  <div className="relative h-20 w-20 sm:h-24 sm:w-24 shrink-0 overflow-hidden rounded-md border border-gray-100 bg-white shadow-sm">
+                    <Image src={line.imageUrl} alt={line.name} fill sizes="(max-width: 640px) 80px, 96px" className="object-cover" />
                   </div>
+                  
                   <div className="min-w-0 flex-1 flex flex-col">
-                    <div className="flex justify-between items-start gap-4">
-                      <div>
-                        <Link
-                          href={`/products/${line.slug}`}
-                          className="font-display text-lg font-bold text-primary hover:text-accent transition-colors"
-                        >
-                          {line.name}
-                        </Link>
-                        <p className="mt-1 font-mono text-xs text-muted-foreground">SKU {line.sku}</p>
-                        
-                        {line.variantAttributes && Object.keys(line.variantAttributes).length > 0 && (
-                          <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted-foreground">
-                            {Object.entries(line.variantAttributes).map(([key, value]) => {
-                              if (!value) return null;
-                              return (
-                                <span key={key} className="flex items-center gap-1.5 bg-gray-100/50 px-2 py-0.5 rounded-md">
-                                  <span className="font-medium capitalize text-primary">{key.replace(/([A-Z])/g, ' $1').trim()}:</span>
-                                  <span>{value}</span>
-                                </span>
-                              );
-                            })}
-                          </div>
-                        )}
-                      </div>
-                      <p className="shrink-0 font-display text-lg font-extrabold text-primary">
-                        {formatCurrency(line.effectivePricePerCase * line.quantityCases)}
+                    <div className="flex justify-between items-start gap-2">
+                      <Link
+                        href={`/products/${line.slug}`}
+                        className="text-[13px] sm:text-base font-semibold text-primary hover:text-accent transition-colors leading-snug line-clamp-2"
+                      >
+                        {line.name}
+                      </Link>
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        size="icon"
+                        className="text-muted-foreground hover:text-destructive -mr-2 -mt-2 h-8 w-8 sm:hidden"
+                        onClick={() => removeLine(line.id)}
+                        aria-label="Remove item"
+                      >
+                        <Trash2 className="h-4 w-4" />
+                      </Button>
+                    </div>
+                    
+                    <p className="mt-1 font-mono text-[10px] sm:text-xs text-muted-foreground">SKU {line.sku}</p>
+                    
+                    <div className="mt-1 sm:mt-1.5">
+                      <p className="text-[13px] sm:text-sm font-semibold text-primary">
+                        {formatCurrency(line.effectivePricePerCase)}{" "}
+                        <span className="text-[10px] sm:text-xs font-normal text-muted-foreground">/ case</span>
                       </p>
                     </div>
 
-                    <div className="mt-auto pt-4 flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="flex items-center gap-4">
-                          <p className="font-display font-bold text-primary">
-                            {formatCurrency(line.effectivePricePerCase)}{" "}
-                            <span className="text-sm font-normal text-muted-foreground">/ case</span>
-                          </p>
-                        </div>
+                    {line.variantAttributes && Object.keys(line.variantAttributes).length > 0 && (
+                      <div className="mt-1 flex flex-wrap gap-x-2 gap-y-1 text-[10px] sm:text-xs text-muted-foreground">
+                        {Object.entries(line.variantAttributes).map(([key, value]) => {
+                          if (!value) return null;
+                          return (
+                            <span key={key} className="flex items-center gap-1 bg-gray-100/50 px-1.5 py-0.5 rounded-sm">
+                              <span className="font-medium capitalize text-primary">{key.replace(/([A-Z])/g, ' $1').trim()}:</span>
+                              <span>{value}</span>
+                            </span>
+                          );
+                        })}
                       </div>
-                      
-                      <div className="flex items-center gap-4">
-                        <div className="flex items-center rounded-lg border border-gray-200 bg-white shadow-sm overflow-hidden h-10">
-                          <Button
-                            type="button"
-                            variant="ghost"
-                            size="icon"
-                            className="h-10 w-10 rounded-none hover:bg-gray-50 text-primary"
-                            onClick={() => updateQuantity(line.id, line.quantityCases - 1)}
-                            aria-label="Decrease quantity"
-                          >
-                            <Minus className="h-4 w-4" />
-                          </Button>
-                          <span className="min-w-10 text-center text-sm font-bold text-primary border-x border-gray-100 flex items-center justify-center h-full bg-gray-50/30">
-                            {line.quantityCases}
-                          </span>
-                          <Button
-                            type="button"
-                            variant="ghost"
-                            size="icon"
-                            className="h-10 w-10 rounded-none hover:bg-gray-50 text-primary"
-                            onClick={() => updateQuantity(line.id, line.quantityCases + 1)}
-                            aria-label="Increase quantity"
-                          >
-                            <Plus className="h-4 w-4" />
-                          </Button>
-                        </div>
+                    )}
+
+                    <div className="mt-2.5 sm:mt-auto sm:pt-3 flex items-center justify-between">
+                      <div className="flex items-center rounded-md border border-gray-200 bg-white shadow-sm overflow-hidden h-7 sm:h-9">
                         <Button
                           type="button"
                           variant="ghost"
                           size="icon"
-                          className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 h-10 w-10 rounded-lg transition-colors"
+                          className="h-7 w-7 sm:h-9 sm:w-9 rounded-none hover:bg-gray-50 text-primary"
+                          onClick={() => updateQuantity(line.id, line.quantityCases - 1)}
+                          aria-label="Decrease quantity"
+                        >
+                          <Minus className="h-3 w-3 sm:h-4 sm:w-4" />
+                        </Button>
+                        <span className="min-w-7 sm:min-w-9 text-center text-xs sm:text-sm font-semibold text-primary border-x border-gray-100 flex items-center justify-center h-full bg-gray-50/30">
+                          {line.quantityCases}
+                        </span>
+                        <Button
+                          type="button"
+                          variant="ghost"
+                          size="icon"
+                          className="h-7 w-7 sm:h-9 sm:w-9 rounded-none hover:bg-gray-50 text-primary"
+                          onClick={() => updateQuantity(line.id, line.quantityCases + 1)}
+                          aria-label="Increase quantity"
+                        >
+                          <Plus className="h-3 w-3 sm:h-4 sm:w-4" />
+                        </Button>
+                      </div>
+
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <p className="text-sm sm:text-base font-bold text-primary">
+                          {formatCurrency(line.effectivePricePerCase * line.quantityCases)}
+                        </p>
+                        <Button
+                          type="button"
+                          variant="ghost"
+                          size="icon"
+                          className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 h-10 w-10 rounded-lg transition-colors hidden sm:flex"
                           onClick={() => removeLine(line.id)}
                           aria-label="Remove item"
                         >
@@ -141,8 +150,8 @@ export function CartPageView() {
 
         {/* Right Column: Order Summary (Sticky) */}
         <div className="lg:col-span-4 lg:sticky lg:top-24">
-          <div className="rounded-2xl border border-gray-100 bg-white p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-            <h2 className="font-display text-xl font-bold text-primary mb-6">Order Summary</h2>
+          <div className="rounded-xl sm:rounded-2xl border border-gray-100 bg-white p-4 sm:p-6 shadow-sm">
+            <h2 className="text-lg sm:text-xl font-bold text-primary mb-4 sm:mb-6">Order Summary</h2>
             
             <div className="space-y-3 text-sm">
               <div className="flex justify-between text-muted-foreground">

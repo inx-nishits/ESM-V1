@@ -1,9 +1,8 @@
 import { Suspense } from "react";
-import { Breadcrumbs } from "@/components/commerce/breadcrumbs";
 import { CatalogPagination } from "@/components/commerce/catalog-pagination";
 import { PlpToolbar } from "@/components/commerce/plp-toolbar";
 import { ProductGrid } from "@/components/commerce/product-grid";
-import { SectionHeader } from "@/components/homepage/section-header";
+import { PageHeader } from "@/components/layout/page-header";
 import type { PaginatedResult } from "@/types/api";
 import type { Category } from "@/types/category";
 import type { Product, ProductSortOption } from "@/types/product";
@@ -28,23 +27,22 @@ export function SearchPageView({
   const categoryNames = new Map(categories.map((c) => [c.slug, c.name]));
 
   return (
-    <div className="site-container site-page">
-      <Breadcrumbs
-        items={[
-          { name: "Home", href: "/" },
-          { name: "Search", href: "/search" },
-        ]}
-      />
-
-      <SectionHeader
-        overline="Search"
-        headline={query ? `Results for “${query}”` : "Search products"}
-        subheadline={
+    <div>
+      <PageHeader
+        title={query ? `Results for “${query}”` : "Search products"}
+        description={
           query
             ? `${result.total} product${result.total === 1 ? "" : "s"} matched your search.`
             : "Enter a product name or SKU in the search bar above."
         }
+        breadcrumbs={[
+          { name: "Home", href: "/" },
+          { name: "Search", href: "/search" },
+        ]}
+        overline="Search"
       />
+
+      <div className="site-container mb-10 md:mb-16">
 
       {query && (
         <>
@@ -66,6 +64,7 @@ export function SearchPageView({
           />
         </>
       )}
+      </div>
     </div>
   );
 }

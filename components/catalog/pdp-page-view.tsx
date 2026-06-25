@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Check, GitCompare, Heart, Minus, Plus, ShoppingCart, ZoomIn } from "lucide-react";
-import { Breadcrumbs } from "@/components/commerce/breadcrumbs";
+import { PageHeader } from "@/components/layout/page-header";
 import { ProductGrid } from "@/components/commerce/product-grid";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -72,9 +72,9 @@ export function PdpPageView({
   const categoryNames = new Map(categories.map((c) => [c.slug, c.name]));
 
   return (
-    <div className="site-container site-page">
-      <Breadcrumbs
-        items={[
+    <div>
+      <PageHeader
+        breadcrumbs={[
           { name: "Home", href: "/" },
           { name: "Shop", href: "/shop" },
           { name: categoryName, href: `/collections/${product.categorySlug}` },
@@ -82,7 +82,8 @@ export function PdpPageView({
         ]}
       />
 
-      <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
+      <section className="site-section site-container">
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
         <div>
           <Dialog>
             <DialogTrigger asChild>
@@ -319,10 +320,10 @@ export function PdpPageView({
             </>
           )}
         </div>
-      </div>
+      </section>
 
       {relatedProducts.length > 0 && (
-        <section className="mt-20 border-t border-border pt-16" aria-labelledby="related-heading">
+        <section className="site-section border-t border-border pt-16" aria-labelledby="related-heading">
           <h2 id="related-heading" className="font-display text-2xl font-extrabold text-primary">
             Related products
           </h2>
@@ -331,6 +332,7 @@ export function PdpPageView({
           </div>
         </section>
       )}
+      </div>
     </div>
   );
 }

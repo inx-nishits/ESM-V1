@@ -48,7 +48,7 @@ export function CategoryDiscovery({ categories }: CategoryDiscoveryProps) {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--esm-navy-900)]/90 via-[var(--esm-navy-900)]/30 to-transparent" />
-                  <span className="absolute left-4 top-4 font-mono text-xs font-medium text-white/70">
+                  <span className="absolute left-4 top-4 inline-flex items-center justify-center rounded-full bg-black/40 px-2.5 py-1 font-mono text-xs font-medium text-white backdrop-blur-md">
                     {category.number}
                   </span>
                 </div>

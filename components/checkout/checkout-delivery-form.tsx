@@ -11,6 +11,31 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { cn } from "@/lib/utils";
+import { ArrowRight } from "lucide-react";
+
+const inputStyles = "flex w-full rounded-lg border-2 border-transparent bg-muted/50 px-4 py-3 text-sm shadow-sm transition-colors hover:border-border focus-visible:border-primary focus-visible:bg-transparent focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/10 h-12";
+
+function Field({
+  label,
+  htmlFor,
+  children,
+  className,
+}: {
+  label: string;
+  htmlFor: string;
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div className={className}>
+      <label htmlFor={htmlFor} className="mb-2 block text-sm font-semibold text-primary">
+        {label}
+      </label>
+      {children}
+    </div>
+  );
+}
 
 export function CheckoutDeliveryForm() {
   const router = useRouter();
@@ -21,46 +46,28 @@ export function CheckoutDeliveryForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid gap-4 sm:grid-cols-2">
-        <div>
-          <label htmlFor="firstName" className="mb-1.5 block text-sm font-medium">
-            First name
-          </label>
-          <Input id="firstName" name="firstName" required autoComplete="given-name" />
-        </div>
-        <div>
-          <label htmlFor="lastName" className="mb-1.5 block text-sm font-medium">
-            Last name
-          </label>
-          <Input id="lastName" name="lastName" required autoComplete="family-name" />
-        </div>
+    <form onSubmit={handleSubmit} className="space-y-8">
+      <div className="grid gap-6 sm:grid-cols-2">
+        <Field label="First name" htmlFor="firstName">
+          <Input id="firstName" name="firstName" required autoComplete="given-name" className={inputStyles} />
+        </Field>
+        <Field label="Last name" htmlFor="lastName">
+          <Input id="lastName" name="lastName" required autoComplete="family-name" className={inputStyles} />
+        </Field>
       </div>
-      <div>
-        <label htmlFor="company" className="mb-1.5 block text-sm font-medium">
-          Company
-        </label>
-        <Input id="company" name="company" required autoComplete="organization" />
-      </div>
-      <div>
-        <label htmlFor="address" className="mb-1.5 block text-sm font-medium">
-          Street address
-        </label>
-        <Input id="address" name="address" required autoComplete="street-address" />
-      </div>
-      <div className="grid gap-4 sm:grid-cols-3">
-        <div>
-          <label htmlFor="city" className="mb-1.5 block text-sm font-medium">
-            City
-          </label>
-          <Input id="city" name="city" required autoComplete="address-level2" />
-        </div>
-        <div>
-          <label htmlFor="state" className="mb-1.5 block text-sm font-medium">
-            State
-          </label>
+      <Field label="Company" htmlFor="company">
+        <Input id="company" name="company" required autoComplete="organization" className={inputStyles} />
+      </Field>
+      <Field label="Street address" htmlFor="address">
+        <Input id="address" name="address" required autoComplete="street-address" className={inputStyles} />
+      </Field>
+      <div className="grid gap-6 sm:grid-cols-3">
+        <Field label="City" htmlFor="city">
+          <Input id="city" name="city" required autoComplete="address-level2" className={inputStyles} />
+        </Field>
+        <Field label="State" htmlFor="state">
           <Select name="state" required defaultValue="">
-            <SelectTrigger id="state">
+            <SelectTrigger id="state" className={cn(inputStyles, "bg-muted/50")}>
               <SelectValue placeholder="Select State" />
             </SelectTrigger>
             <SelectContent>
@@ -116,26 +123,22 @@ export function CheckoutDeliveryForm() {
             <SelectItem value="WY">Wyoming</SelectItem>
             </SelectContent>
           </Select>
-        </div>
-        <div>
-          <label htmlFor="zip" className="mb-1.5 block text-sm font-medium">
-            ZIP
-          </label>
-          <Input id="zip" name="zip" required autoComplete="postal-code" />
-        </div>
+        </Field>
+        <Field label="ZIP" htmlFor="zip">
+          <Input id="zip" name="zip" required autoComplete="postal-code" className={inputStyles} />
+        </Field>
       </div>
-      <div>
-        <label htmlFor="phone" className="mb-1.5 block text-sm font-medium">
-          Phone
-        </label>
-        <Input id="phone" name="phone" type="tel" required autoComplete="tel" />
-      </div>
-      <div className="flex gap-3 pt-2">
-        <Button type="submit" size="lg">
-          Continue to shipping
+      <Field label="Phone" htmlFor="phone">
+        <Input id="phone" name="phone" type="tel" required autoComplete="tel" className={inputStyles} />
+      </Field>
+      
+      <div className="mt-10 flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between border-t border-border pt-8">
+        <Button variant="ghost" size="lg" className="h-14 font-semibold text-muted-foreground hover:text-primary" asChild>
+          <Link href="/cart">Return to cart</Link>
         </Button>
-        <Button variant="outline" size="lg" asChild>
-          <Link href="/cart">Back to cart</Link>
+        <Button type="submit" size="lg" className="h-14 px-8 text-base font-bold transition-transform hover:scale-105">
+          Continue to shipping
+          <ArrowRight className="ml-2 h-5 w-5" />
         </Button>
       </div>
     </form>

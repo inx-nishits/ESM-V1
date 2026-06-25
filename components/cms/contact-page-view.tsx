@@ -65,15 +65,21 @@ export function ContactPageView({ page }: ContactPageViewProps) {
         </div>
       </section>
 
-      <section className="site-section-compact">
+      <section className="relative z-10 -mt-16 pb-20 md:pb-32">
         <div className="site-container">
-          <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
-            <div className="lg:col-span-7">
-              <ContactForm />
+          <div className="rounded-[2.5rem] shadow-2xl shadow-black/5">
+            <div className="grid lg:grid-cols-5">
+              <div className="p-8 sm:p-12 md:p-16 lg:col-span-3 rounded-t-[2.5rem] lg:rounded-tr-none lg:rounded-l-[2.5rem] bg-white">
+                <ContactForm />
+              </div>
+              <aside className="bg-[var(--esm-navy-900)] p-8 sm:p-12 md:p-16 lg:col-span-2 relative overflow-hidden rounded-b-[2.5rem] lg:rounded-bl-none lg:rounded-r-[2.5rem]">
+                {/* Abstract pattern on right side */}
+                <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay pointer-events-none"></div>
+                <div className="relative z-10">
+                  <ContactInfoPanel />
+                </div>
+              </aside>
             </div>
-            <aside className="lg:col-span-5 lg:pt-2">
-              <ContactInfoPanel />
-            </aside>
           </div>
         </div>
       </section>

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { GitCompare, X } from "lucide-react";
-import { Breadcrumbs } from "@/components/commerce/breadcrumbs";
+import { PageHeader } from "@/components/layout/page-header";
 import { Button } from "@/components/ui/button";
 import { useCompare } from "@/providers/compare-provider";
 import { formatCurrency } from "@/lib/utils";
@@ -44,22 +44,22 @@ export function ComparePageView({ products }: ComparePageViewProps) {
   ];
 
   return (
-    <div className="site-container site-page">
-      <Breadcrumbs
-        items={[
+    <div>
+      <PageHeader
+        title="Compare products"
+        breadcrumbs={[
           { name: "Home", href: "/" },
           { name: "Compare", href: "/compare" },
         ]}
+        action={
+          <Button variant="ghost" size="sm" onClick={compare.clear}>
+            Clear all
+          </Button>
+        }
       />
 
-      <div className="mt-4 flex items-end justify-between gap-4">
-        <h1 className="font-display text-3xl font-extrabold text-primary">Compare products</h1>
-        <Button variant="ghost" size="sm" onClick={compare.clear}>
-          Clear all
-        </Button>
-      </div>
-
-      <div className="mt-8 overflow-x-auto">
+      <div className="site-container mb-10 md:mb-16">
+        <div className="overflow-x-auto">
         <table className="w-full min-w-[640px] border-collapse text-sm">
           <thead>
             <tr>

@@ -41,7 +41,7 @@ export function SectionHeader({
       <h2
         id={headlineId}
         className={cn(
-          "font-display text-2xl font-extrabold tracking-tight md:text-3xl lg:text-4xl",
+          "font-display text-2xl font-extrabold tracking-tight sm:text-3xl md:text-4xl",
           overline && "mt-2",
           dark ? "text-white" : "text-primary",
         )}

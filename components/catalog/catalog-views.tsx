@@ -2,11 +2,10 @@ import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { Breadcrumbs } from "@/components/commerce/breadcrumbs";
 import { CatalogPagination } from "@/components/commerce/catalog-pagination";
 import { PlpToolbar } from "@/components/commerce/plp-toolbar";
 import { ProductGrid } from "@/components/commerce/product-grid";
-import { SectionHeader } from "@/components/homepage/section-header";
+import { PageHeader } from "@/components/layout/page-header";
 import type { PaginatedResult } from "@/types/api";
 import type { Category } from "@/types/category";
 import type { Product, ProductSortOption } from "@/types/product";
@@ -42,42 +41,21 @@ export function PlpPageView({
 
   return (
     <div>
-      {heroImage ? (
-        <div className="relative overflow-hidden bg-[var(--esm-navy-900)]">
-          <div className="absolute inset-0">
-            <Image src={heroImage} alt="" fill sizes="100vw" className="object-cover opacity-40" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[var(--esm-navy-900)]/95 to-[var(--esm-navy-900)]/70" />
-          </div>
-          <div className="relative site-container py-14 md:py-20">
-            {overline && (
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--esm-coral-400)]">
-                {overline}
-              </p>
-            )}
-            <h1 className="mt-2 max-w-2xl font-display text-3xl font-extrabold tracking-tight text-white md:text-4xl lg:text-5xl">
-              {title}
-            </h1>
-            {description && (
-              <p className="mt-4 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
-                {description}
-              </p>
-            )}
-            <p className="mt-4 text-sm font-semibold text-[var(--esm-coral-400)]">
-              {result.total} products · Case-quantity pricing
-            </p>
-          </div>
-        </div>
-      ) : null}
-
-      <div className="site-container site-page">
-        <Breadcrumbs items={breadcrumbs} />
-
-        {!heroImage && (
-          <div className="mb-8">
-            <SectionHeader headline={title} subheadline={description} />
-          </div>
+      <PageHeader
+        title={title}
+        description={description}
+        breadcrumbs={breadcrumbs}
+        overline={overline}
+        heroImage={heroImage}
+      >
+        {heroImage && (
+          <p className="text-sm font-semibold text-[var(--esm-coral-400)]">
+            {result.total} products · Case-quantity pricing
+          </p>
         )}
+      </PageHeader>
 
+      <section className="site-section-compact site-container">
         <Suspense fallback={<div className="mb-8 h-16 animate-pulse rounded-md bg-muted" />}>
           <PlpToolbar
             total={result.total}
@@ -100,7 +78,7 @@ export function PlpPageView({
           totalPages={result.totalPages}
           searchParams={searchParams}
         />
-      </div>
+      </section>
     </div>
   );
 }
@@ -111,21 +89,19 @@ interface CollectionsPageViewProps {
 
 export function CollectionsPageView({ categories }: CollectionsPageViewProps) {
   return (
-    <div className="site-container site-page">
-      <Breadcrumbs
-        items={[
+    <div>
+      <PageHeader
+        title="Shop by protection category"
+        description="Six core categories covering hand, face, head, body, foot, and FDA-compliant gear — all available in case quantities."
+        breadcrumbs={[
           { name: "Home", href: "/" },
           { name: "Collections", href: "/collections" },
         ]}
-      />
-
-      <SectionHeader
         overline="Catalog"
-        headline="Shop by protection category"
-        subheadline="Six core categories covering hand, face, head, body, foot, and FDA-compliant gear — all available in case quantities."
       />
 
-      <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="site-section-compact site-container">
+        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {categories.map((category, index) => (
           <li
             key={category.slug}
@@ -145,7 +121,7 @@ export function CollectionsPageView({ categories }: CollectionsPageViewProps) {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--esm-navy-900)]/90 via-[var(--esm-navy-900)]/30 to-transparent" />
-                <span className="absolute left-4 top-4 font-mono text-xs font-medium text-white/70">
+                <span className="absolute left-4 top-4 inline-flex items-center justify-center rounded-full bg-black/40 px-2.5 py-1 font-mono text-xs font-medium text-white backdrop-blur-md">
                   {category.number}
                 </span>
               </div>
@@ -162,7 +138,8 @@ export function CollectionsPageView({ categories }: CollectionsPageViewProps) {
             </Link>
           </li>
         ))}
-      </ul>
+        </ul>
+      </section>
     </div>
   );
 }

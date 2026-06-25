@@ -106,7 +106,7 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
                 {slide.overline}
               </p>
 
-              <h1 className="mt-3 font-display text-3xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">
+              <h1 className="mt-2 sm:mt-3 font-display text-2xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">
                 {slide.headline}
               </h1>
 

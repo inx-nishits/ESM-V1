@@ -10,7 +10,7 @@ interface CertificationsTrustProps {
 
 export function CertificationsTrust({ certifications, clientLogos }: CertificationsTrustProps) {
   return (
-    <section className="site-section py-8 md:py-24 bg-zinc-950 relative overflow-hidden" aria-labelledby="certifications-heading">
+    <section className="site-section bg-zinc-950 relative overflow-hidden" aria-labelledby="certifications-heading">
       {/* Premium dark mode decorative elements */}
       <div className="pointer-events-none absolute left-0 top-0 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/4 rounded-full bg-accent/5 blur-[120px]" />
       <div className="pointer-events-none absolute right-0 bottom-0 h-[600px] w-[600px] translate-x-1/3 translate-y-1/3 rounded-full bg-primary/10 blur-[120px]" />

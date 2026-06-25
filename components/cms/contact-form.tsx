@@ -53,10 +53,7 @@ export function ContactForm() {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="rounded-xl border border-border bg-card p-6 shadow-sm md:p-8"
-    >
+    <form onSubmit={handleSubmit}>
       <div>
         <h2 className="font-display text-xl font-extrabold text-primary md:text-2xl">
           Send us a message
@@ -112,15 +109,15 @@ export function ContactForm() {
           rows={5}
           placeholder="Include SKU, case quantities, or delivery timeline if requesting a quote."
           className={cn(
-            "flex w-full rounded-md border border-input bg-background px-4 py-3 text-sm shadow-xs",
-            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+            "flex w-full rounded-lg border-2 border-transparent bg-muted/50 px-4 py-3 text-sm shadow-sm transition-colors",
+            "hover:border-border focus-visible:border-primary focus-visible:bg-transparent focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/10",
           )}
         />
       </Field>
 
-      <Button type="submit" size="lg" className="mt-6 w-full sm:w-auto">
+      <Button type="submit" size="lg" className="mt-8 h-14 w-full text-base font-bold sm:w-auto px-10 transition-transform hover:scale-105">
         Send message
-        <ArrowRight className="h-4 w-4" />
+        <ArrowRight className="h-4 w-4 ml-2" />
       </Button>
     </form>
   );
@@ -179,23 +176,25 @@ export function ContactInfoPanel() {
   ];
 
   return (
-    <div className="space-y-4">
-      {cards.map((card) => {
-        const Icon = card.icon;
-        return (
-          <div
-            key={card.title}
-            className="rounded-xl border border-border bg-card p-5 shadow-sm transition-shadow hover:shadow-md"
-          >
-            <div className="flex items-start gap-4">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--esm-navy-50)] text-primary">
-                <Icon className="h-5 w-5" aria-hidden />
+    <div className="space-y-8">
+      <div>
+        <h3 className="font-display text-2xl font-bold text-white">Direct Contacts</h3>
+        <p className="mt-2 text-white/70">Skip the form and reach out directly.</p>
+      </div>
+
+      <div className="grid gap-6">
+        {cards.map((card) => {
+          const Icon = card.icon;
+          return (
+            <div key={card.title} className="group flex items-start gap-5">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[var(--esm-coral-400)] transition-colors group-hover:bg-[var(--esm-coral-500)] group-hover:text-white">
+                <Icon className="h-6 w-6" aria-hidden />
               </span>
               <div className="min-w-0 flex-1">
-                <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                <p className="text-sm font-semibold text-white/60">
                   {card.title}
                 </p>
-                <p className="mt-1 whitespace-pre-line text-sm font-semibold leading-relaxed text-primary">
+                <p className="mt-1 whitespace-pre-line text-base font-medium leading-relaxed text-white">
                   {card.body}
                 </p>
                 {card.href && (
@@ -203,24 +202,24 @@ export function ContactInfoPanel() {
                     href={card.href}
                     target={card.external ? "_blank" : undefined}
                     rel={card.external ? "noopener noreferrer" : undefined}
-                    className="mt-3 inline-flex text-sm font-semibold text-accent hover:underline"
+                    className="mt-2 inline-flex text-sm font-bold text-[var(--esm-coral-400)] hover:text-white transition-colors"
                   >
-                    {card.cta}
+                    {card.cta} <ArrowRight className="ml-1 h-3.5 w-3.5" />
                   </a>
                 )}
               </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
 
-      <div className="rounded-xl border border-[var(--esm-coral-200)] bg-[var(--esm-coral-50)]/50 p-5">
-        <p className="font-display text-sm font-bold text-primary">Need answers fast?</p>
-        <p className="mt-1 text-sm text-muted-foreground">
+      <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md">
+        <p className="font-display text-base font-bold text-white">Need answers fast?</p>
+        <p className="mt-2 text-sm text-white/70">
           Browse ordering, shipping, and FDA Gear questions in our FAQ.
         </p>
-        <Button variant="outline" size="sm" className="mt-4 bg-background" asChild>
-          <Link href="/faq">View FAQ</Link>
+        <Button variant="outline" className="mt-5 h-11 border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white w-full" asChild>
+          <Link href="/faq">Visit FAQ</Link>
         </Button>
       </div>
     </div>
@@ -247,28 +246,31 @@ export function ContactProcessSteps() {
   ];
 
   return (
-    <section className="border-t border-border bg-muted/30 site-section-compact">
+    <section className="bg-[var(--esm-navy-50)] py-20 md:py-28">
       <div className="site-container">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.22em] text-accent">What to expect</p>
-          <h2 className="mt-2 font-display text-2xl font-extrabold text-primary md:text-3xl">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--esm-coral-600)]">What to expect</p>
+          <h2 className="mt-4 font-display text-3xl font-extrabold text-[var(--esm-navy-900)] md:text-4xl lg:text-5xl">
             Simple, responsive B2B support
           </h2>
         </div>
-        <ol className="mt-10 grid gap-6 md:grid-cols-3">
-          {steps.map((item) => (
-            <li
-              key={item.step}
-              className="relative rounded-xl border border-border bg-card p-6 shadow-sm"
-            >
-              <span className="font-mono text-xs font-bold text-[var(--esm-coral-500)]">
-                {item.step}
-              </span>
-              <h3 className="mt-2 font-display text-lg font-bold text-primary">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
-            </li>
-          ))}
-        </ol>
+        
+        <div className="mx-auto mt-16 max-w-5xl">
+          <div className="grid gap-12 md:grid-cols-3 relative">
+            {/* Connecting Line for Timeline */}
+            <div className="absolute top-8 left-12 right-12 h-0.5 bg-border/60 hidden md:block" />
+            
+            {steps.map((item) => (
+              <div key={item.step} className="relative z-10 flex flex-col items-center text-center">
+                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-xl shadow-black/5 border-4 border-[var(--esm-navy-50)] font-display text-xl font-bold text-[var(--esm-navy-900)] transition-transform hover:scale-110">
+                  {item.step}
+                </span>
+                <h3 className="mt-8 font-display text-xl font-bold text-[var(--esm-navy-900)]">{item.title}</h3>
+                <p className="mt-3 text-base leading-relaxed text-[var(--esm-navy-900)]/70">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

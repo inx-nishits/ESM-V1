@@ -8,11 +8,11 @@ export function CheckoutLayoutGrid({ children }: { children: React.ReactNode }) 
   const isConfirmation = pathname.includes("/confirmation");
 
   if (isConfirmation) {
-    return <div className="site-container py-10">{children}</div>;
+    return <section className="site-page site-container">{children}</section>;
   }
 
   return (
-    <div className="site-container py-10">
+    <section className="site-page site-container">
       <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
         <div className="lg:col-span-7 xl:col-span-8">
           {children}
@@ -21,6 +21,6 @@ export function CheckoutLayoutGrid({ children }: { children: React.ReactNode }) 
           <CheckoutSummary />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

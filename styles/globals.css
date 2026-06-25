@@ -164,14 +164,14 @@
   }
 
   .site-section {
-    @apply py-16 md:py-20 lg:py-24;
+    @apply py-8 sm:py-12 md:py-16 lg:py-24;
   }
 
   .site-section-compact {
-    @apply py-10 md:py-14 lg:py-16;
+    @apply py-6 sm:py-8 md:py-12 lg:py-16;
   }
 
   .site-page {
-    @apply py-12 md:py-16 lg:py-20;
+    @apply py-6 sm:py-10 md:py-12 lg:py-20;
   }
 }
