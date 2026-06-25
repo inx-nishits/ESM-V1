@@ -28,7 +28,7 @@ export function ContactPageView({ page }: ContactPageViewProps) {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-[var(--esm-navy-900)] pt-6 pb-14 md:pt-8 md:pb-20 lg:pt-10 lg:pb-24">
+      <section className="relative overflow-hidden bg-[var(--esm-navy-900)] pt-6 pb-20 sm:pb-24 md:pt-8 md:pb-28 lg:pt-10 lg:pb-32">
         {/* Abstract Background pattern */}
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--esm-navy-900)] to-transparent opacity-80" />
@@ -49,15 +49,15 @@ export function ContactPageView({ page }: ContactPageViewProps) {
 
           <div className="max-w-3xl">
             {hero.overline && (
-              <p className="inline-flex items-center rounded-full border border-[var(--esm-coral-500)]/30 bg-[var(--esm-coral-500)]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-[var(--esm-coral-400)] backdrop-blur-sm mb-4">
+              <p className="inline-flex items-center rounded-full border border-[var(--esm-coral-500)]/30 bg-[var(--esm-coral-500)]/10 px-3 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-[var(--esm-coral-400)] backdrop-blur-sm mb-3 sm:mb-4">
                 {hero.overline}
               </p>
             )}
-            <h1 className="font-display text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl drop-shadow-sm">
+            <h1 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl drop-shadow-sm leading-[1.15]">
               {hero.headline}
             </h1>
             {hero.subheadline && (
-              <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/80 md:text-xl font-medium">
+              <p className="mt-4 sm:mt-5 max-w-2xl text-base sm:text-lg leading-relaxed text-white/80 md:text-xl font-medium">
                 {hero.subheadline}
               </p>
             )}
@@ -65,14 +65,14 @@ export function ContactPageView({ page }: ContactPageViewProps) {
         </div>
       </section>
 
-      <section className="relative z-10 -mt-16 pb-20 md:pb-32">
+      <section className="relative z-10 -mt-12 sm:-mt-16 lg:-mt-20 pb-16 md:pb-32">
         <div className="site-container">
-          <div className="rounded-[2.5rem] shadow-2xl shadow-black/5">
+          <div className="rounded-3xl sm:rounded-[2.5rem] shadow-xl sm:shadow-2xl shadow-black/5">
             <div className="grid lg:grid-cols-5">
-              <div className="p-8 sm:p-12 md:p-16 lg:col-span-3 rounded-t-[2.5rem] lg:rounded-tr-none lg:rounded-l-[2.5rem] bg-white">
+              <div className="p-6 sm:p-10 md:p-16 lg:col-span-3 rounded-t-3xl sm:rounded-t-[2.5rem] lg:rounded-tr-none lg:rounded-l-[2.5rem] bg-white">
                 <ContactForm />
               </div>
-              <aside className="bg-[var(--esm-navy-900)] p-8 sm:p-12 md:p-16 lg:col-span-2 relative overflow-hidden rounded-b-[2.5rem] lg:rounded-bl-none lg:rounded-r-[2.5rem]">
+              <aside className="bg-[var(--esm-navy-900)] p-6 sm:p-10 md:p-16 lg:col-span-2 relative overflow-hidden rounded-b-3xl sm:rounded-b-[2.5rem] lg:rounded-bl-none lg:rounded-r-[2.5rem]">
                 {/* Abstract pattern on right side */}
                 <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay pointer-events-none"></div>
                 <div className="relative z-10">
@@ -88,10 +88,10 @@ export function ContactPageView({ page }: ContactPageViewProps) {
 
       <section className="site-section bg-[var(--esm-navy-900)]">
         <div className="site-container text-center">
-          <h2 className="font-display text-2xl font-extrabold text-white md:text-3xl">
+          <h2 className="font-display text-xl sm:text-2xl font-extrabold text-white md:text-3xl">
             Prefer to browse first?
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-white/75">
+          <p className="mx-auto mt-2 sm:mt-3 max-w-xl text-sm sm:text-base text-white/75">
             Explore case-quantity PPE with published pricing — or start with our FDA Gear collection.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">

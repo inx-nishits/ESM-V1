@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Check, GitCompare, Heart, Minus, Plus, ShoppingCart, ZoomIn } from "lucide-react";
+import { Check, Heart, Minus, Plus, ShoppingCart, ZoomIn } from "lucide-react";
 import { PageHeader } from "@/components/layout/page-header";
 import { ProductGrid } from "@/components/commerce/product-grid";
 import { Badge } from "@/components/ui/badge";
@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useCart } from "@/providers/cart-provider";
-import { useCompare } from "@/providers/compare-provider";
+
 import { useSavedProducts } from "@/providers/saved-products-provider";
 import { cn, formatCurrency } from "@/lib/utils";
 import type { Category } from "@/types/category";
@@ -31,7 +31,7 @@ export function PdpPageView({
   categories,
 }: PdpPageViewProps) {
   const { addLine, cart } = useCart();
-  const compare = useCompare();
+
   const saved = useSavedProducts();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantityCases, setQuantityCases] = useState(product.moqCases);
@@ -72,7 +72,7 @@ export function PdpPageView({
   const categoryNames = new Map(categories.map((c) => [c.slug, c.name]));
 
   return (
-    <div>
+    <div className="pb-24 md:pb-0">
       <PageHeader
         breadcrumbs={[
           { name: "Home", href: "/" },
@@ -82,14 +82,14 @@ export function PdpPageView({
         ]}
       />
 
-      <section className="site-section site-container">
+      <section className="site-container py-6 md:py-8 lg:py-12">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
         <div>
           <Dialog>
             <DialogTrigger asChild>
               <button
                 type="button"
-                className="group relative aspect-square w-full overflow-hidden rounded-lg border border-border bg-muted cursor-zoom-in"
+                className="group relative aspect-[4/3] md:aspect-square w-full overflow-hidden rounded-lg border border-border bg-muted cursor-zoom-in"
               >
                 {primaryImage && (
                   <>
@@ -257,16 +257,16 @@ export function PdpPageView({
             <span className="text-sm text-muted-foreground">cases (MOQ {product.moqCases})</span>
           </div>
 
-          <div className="fixed bottom-16 left-0 right-0 z-40 flex flex-col gap-3 border-t border-border bg-background p-4 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] md:relative md:bottom-auto md:z-auto md:mt-6 md:flex-row md:border-none md:bg-transparent md:p-0 md:shadow-none">
+          <div className="fixed bottom-0 left-0 right-0 z-50 flex flex-col gap-2 border-t border-border bg-background p-3 shadow-[0_-4px_12px_rgba(0,0,0,0.08)] md:relative md:bottom-auto md:z-auto md:mt-6 md:flex-row md:border-none md:bg-transparent md:p-0 md:shadow-none">
             {isAddedToCart ? (
-              <Button size="lg" className="flex-1 bg-success hover:bg-success/90" asChild>
+              <Button className="flex-1 bg-success hover:bg-success/90 h-[36px] font-semibold" asChild>
                 <Link href="/cart">
                   <Check className="h-4 w-4 mr-2" />
                   View in cart
                 </Link>
               </Button>
             ) : (
-              <Button size="lg" className="flex-1" onClick={handleAddToCart} disabled={!variant || product.inventoryStatus === "out_of_stock"}>
+              <Button className="flex-1 h-[36px] font-semibold" onClick={handleAddToCart} disabled={!variant || product.inventoryStatus === "out_of_stock"}>
                 <ShoppingCart className="h-4 w-4 mr-2" />
                 {product.inventoryStatus === "out_of_stock" ? "Out of stock" : "Add to cart"}
               </Button>
@@ -277,15 +277,7 @@ export function PdpPageView({
           </div>
 
           <div className="mt-4 flex gap-2">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => compare.add(product.id)}
-              disabled={compare.isInCompare(product.id)}
-            >
-              <GitCompare className="h-4 w-4" />
-              {compare.isInCompare(product.id) ? "In compare" : "Compare"}
-            </Button>
+
             <Button
               variant="ghost"
               size="sm"
@@ -320,10 +312,11 @@ export function PdpPageView({
             </>
           )}
         </div>
+        </div>
       </section>
 
       {relatedProducts.length > 0 && (
-        <section className="site-section border-t border-border pt-16" aria-labelledby="related-heading">
+        <section className="site-section site-container border-t border-border pt-16" aria-labelledby="related-heading">
           <h2 id="related-heading" className="font-display text-2xl font-extrabold text-primary">
             Related products
           </h2>
@@ -332,7 +325,6 @@ export function PdpPageView({
           </div>
         </section>
       )}
-      </div>
     </div>
   );
 }

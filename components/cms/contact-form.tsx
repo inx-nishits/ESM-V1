@@ -78,7 +78,7 @@ export function ContactForm() {
         </Field>
         <Field label="Inquiry type" htmlFor="inquiryType">
           <Select name="inquiryType" required defaultValue="">
-            <SelectTrigger id="inquiryType" className="h-11">
+            <SelectTrigger id="inquiryType" className="h-11 w-full">
               <SelectValue placeholder="Select a topic" />
             </SelectTrigger>
             <SelectContent>
@@ -176,25 +176,25 @@ export function ContactInfoPanel() {
   ];
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 sm:space-y-8">
       <div>
-        <h3 className="font-display text-2xl font-bold text-white">Direct Contacts</h3>
-        <p className="mt-2 text-white/70">Skip the form and reach out directly.</p>
+        <h3 className="font-display text-xl sm:text-2xl font-bold text-white">Direct Contacts</h3>
+        <p className="mt-1 sm:mt-2 text-sm sm:text-base text-white/70">Skip the form and reach out directly.</p>
       </div>
 
-      <div className="grid gap-6">
+      <div className="grid gap-4 sm:gap-6">
         {cards.map((card) => {
           const Icon = card.icon;
           return (
-            <div key={card.title} className="group flex items-start gap-5">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[var(--esm-coral-400)] transition-colors group-hover:bg-[var(--esm-coral-500)] group-hover:text-white">
-                <Icon className="h-6 w-6" aria-hidden />
+            <div key={card.title} className="group flex items-start gap-4 sm:gap-5">
+              <span className="flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[var(--esm-coral-400)] transition-colors group-hover:bg-[var(--esm-coral-500)] group-hover:text-white">
+                <Icon className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden />
               </span>
               <div className="min-w-0 flex-1">
-                <p className="text-sm font-semibold text-white/60">
+                <p className="text-xs sm:text-sm font-semibold text-white/60">
                   {card.title}
                 </p>
-                <p className="mt-1 whitespace-pre-line text-base font-medium leading-relaxed text-white">
+                <p className="mt-0.5 sm:mt-1 whitespace-pre-line text-sm sm:text-base font-medium leading-relaxed text-white">
                   {card.body}
                 </p>
                 {card.href && (
@@ -246,27 +246,29 @@ export function ContactProcessSteps() {
   ];
 
   return (
-    <section className="bg-[var(--esm-navy-50)] py-20 md:py-28">
+    <section className="bg-[var(--esm-navy-50)] py-12 sm:py-16 md:py-24">
       <div className="site-container">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--esm-coral-600)]">What to expect</p>
-          <h2 className="mt-4 font-display text-3xl font-extrabold text-[var(--esm-navy-900)] md:text-4xl lg:text-5xl">
+          <p className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.2em] text-[var(--esm-coral-600)]">What to expect</p>
+          <h2 className="mt-3 sm:mt-4 font-display text-2xl sm:text-3xl font-extrabold text-[var(--esm-navy-900)] md:text-4xl lg:text-5xl">
             Simple, responsive B2B support
           </h2>
         </div>
         
-        <div className="mx-auto mt-16 max-w-5xl">
-          <div className="grid gap-12 md:grid-cols-3 relative">
+        <div className="mx-auto mt-10 sm:mt-16 max-w-5xl">
+          <div className="grid gap-6 sm:gap-10 md:grid-cols-3 relative">
             {/* Connecting Line for Timeline */}
-            <div className="absolute top-8 left-12 right-12 h-0.5 bg-border/60 hidden md:block" />
+            <div className="absolute top-6 sm:top-8 left-12 right-12 h-0.5 bg-border/60 hidden md:block" />
             
             {steps.map((item) => (
-              <div key={item.step} className="relative z-10 flex flex-col items-center text-center">
-                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-xl shadow-black/5 border-4 border-[var(--esm-navy-50)] font-display text-xl font-bold text-[var(--esm-navy-900)] transition-transform hover:scale-110">
+              <div key={item.step} className="relative z-10 flex flex-row items-start text-left md:flex-col md:items-center md:text-center gap-4 md:gap-0 bg-white/50 md:bg-transparent p-4 md:p-0 rounded-2xl md:rounded-none">
+                <span className="shrink-0 flex h-12 w-12 md:h-16 md:w-16 items-center justify-center rounded-full bg-white shadow-md shadow-black/5 border-[3px] md:border-4 border-[var(--esm-navy-50)] font-display text-lg md:text-xl font-bold text-[var(--esm-navy-900)] transition-transform hover:scale-110">
                   {item.step}
                 </span>
-                <h3 className="mt-8 font-display text-xl font-bold text-[var(--esm-navy-900)]">{item.title}</h3>
-                <p className="mt-3 text-base leading-relaxed text-[var(--esm-navy-900)]/70">{item.body}</p>
+                <div className="flex-1">
+                  <h3 className="mt-0.5 md:mt-8 font-display text-base sm:text-lg md:text-xl font-bold text-[var(--esm-navy-900)]">{item.title}</h3>
+                  <p className="mt-1 sm:mt-1.5 md:mt-3 text-[13px] sm:text-sm md:text-base leading-relaxed text-[var(--esm-navy-900)]/75">{item.body}</p>
+                </div>
               </div>
             ))}
           </div>

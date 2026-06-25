@@ -9,16 +9,16 @@ export const SITE_LOGO_URL =
 /** White artwork — use on navy/dark backgrounds, or inside the default SiteLogo badge on light backgrounds. */
 export const SITE_LOGO_ALT = "ESM Products";
 
-export const NO_INDEX_PATHS = ["/cart", "/checkout", "/account", "/compare", "/api"];
+export const NO_INDEX_PATHS = ["/cart", "/checkout", "/account", "/api"];
 
 export const CONTENT_PROVIDER = process.env.CONTENT_PROVIDER ?? "mock";
 
 export const CART_STORAGE_KEY = "esm_cart";
-export const COMPARE_STORAGE_KEY = "esm_compare";
+
 export const SAVED_PRODUCTS_STORAGE_KEY = "esm_saved_products";
 export const CHECKOUT_STORAGE_KEY = "esm_checkout";
 
-export const MAX_COMPARE_ITEMS = 4;
+
 export const DEFAULT_PAGE_SIZE = 24;
 
 export const COOKIE_CONSENT_KEY = "esm_cookie_consent";

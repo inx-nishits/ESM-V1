@@ -99,15 +99,7 @@ export function MobileNavDrawer({ categories, navigation, className }: MobileNav
                 </Link>
               </li>
             ))}
-            <li>
-              <Link
-                href="/compare"
-                className="block rounded-md px-2 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
-                onClick={() => setOpen(false)}
-              >
-                Compare products
-              </Link>
-            </li>
+
           </ul>
         </div>
 

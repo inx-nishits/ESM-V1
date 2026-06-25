@@ -23,7 +23,7 @@ export function PageHeader({
   action,
 }: PageHeaderProps) {
   return (
-    <div className={cn(title && "mb-8")}>
+    <div>
       {breadcrumbs && breadcrumbs.length > 0 && (
         <div className="border-b border-border bg-muted/30">
           <div className="site-container py-2.5 md:py-3.5">
