@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, CalendarDays } from "lucide-react";
-import { MarketingPageHeader } from "@/components/cms/marketing-page-header";
+import { PageHeader } from "@/components/layout/page-header";
 import { PageHero } from "@/components/cms/page-hero";
 import { Button } from "@/components/ui/button";
 import type { NewsArticle } from "@/types/cms";
@@ -15,7 +15,7 @@ export function NewsArticleView({ article }: NewsArticleViewProps) {
 
   return (
     <>
-      <MarketingPageHeader title="News" slug="news" />
+      <PageHeader breadcrumbs={[{ name: "Home", href: "/" }, { name: "News", href: "/news" }, { name: article.title, href: `/news/${article.slug}` }]} />
       {hero?.type === "hero" ? (
         <PageHero data={hero.data} compact />
       ) : (

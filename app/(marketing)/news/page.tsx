@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, CalendarDays } from "lucide-react";
-import { MarketingPageHeader } from "@/components/cms/marketing-page-header";
+import { PageHeader } from "@/components/layout/page-header";
 import { PageHero } from "@/components/cms/page-hero";
 import { Button } from "@/components/ui/button";
 import { getNewsArticles } from "@/lib/cms/get-news";
@@ -17,7 +17,7 @@ export default async function NewsIndexPage() {
 
   return (
     <>
-      <MarketingPageHeader title="News" slug="news" />
+      <PageHeader breadcrumbs={[{ name: "Home", href: "/" }, { name: "News", href: "/news" }]} />
       <PageHero
         data={{
           overline: "Updates",
