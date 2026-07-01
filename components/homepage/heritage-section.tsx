@@ -17,7 +17,7 @@ const milestones = [
 export function HeritageSection({ content }: HeritageSectionProps) {
   return (
     <section
-      className="relative overflow-hidden bg-[var(--esm-navy-900)] site-section"
+      className="relative overflow-hidden bg-[var(--esm-navy-900)] site-section-compact"
       aria-labelledby="heritage-heading"
     >
       <div
@@ -81,7 +81,7 @@ export function HeritageSection({ content }: HeritageSectionProps) {
           </div>
 
           <div className="relative">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-xl shadow-2xl sm:aspect-[5/4] lg:aspect-[4/5]">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-2xl sm:aspect-[4/3] lg:aspect-[3/2]">
               <Image
                 src={content.image}
                 alt="ESM Products warehouse and PPE inventory in West Chicago"
@@ -118,20 +118,35 @@ export function HeritageSection({ content }: HeritageSectionProps) {
           </div>
         </div>
 
-        <div className="mt-16 grid gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
-          {content.stats.map((stat, index) => (
-            <div
-              key={stat.label}
-              className="flex flex-col justify-center bg-[var(--esm-navy-800)]/80 px-6 py-6 md:px-8 md:py-7"
-            >
-              <p className="font-display text-3xl font-extrabold text-white md:text-4xl">{stat.value}</p>
-              <p className="mt-1 flex items-center gap-2 text-sm font-medium text-white/65">
-                {index === 2 && <Truck className="h-4 w-4 shrink-0 text-[var(--esm-coral-400)]" aria-hidden />}
-                {index === 3 && <Award className="h-4 w-4 shrink-0 text-[var(--esm-coral-400)]" aria-hidden />}
-                {stat.label}
-              </p>
-            </div>
-          ))}
+        <div className="mt-12 relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[var(--esm-navy-800)] to-[var(--esm-navy-900)] shadow-2xl">
+          {/* Subtle glow accent */}
+          <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-64 h-32 bg-accent/15 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative grid sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+            {[
+              { value: "1998", label: "Year Founded", icon: <Award className="h-4 w-4" />, suffix: "" },
+              { value: "6", label: "PPE Categories", icon: null, suffix: "+" },
+              { value: "1", label: "Day Standard Ship Time", icon: <Truck className="h-4 w-4" />, suffix: " day" },
+              { value: "WBE", label: "Certified Supplier", icon: <Award className="h-4 w-4" />, suffix: "" },
+            ].map((item, i) => (
+              <div key={i} className="group flex flex-col items-center justify-center px-6 py-8 text-center transition-colors hover:bg-white/5">
+                <p className="font-display text-4xl font-extrabold tracking-tight text-white md:text-5xl drop-shadow-lg">
+                  {item.value}
+                  {item.suffix && (
+                    <span className="text-[var(--esm-coral-400)]">{item.suffix}</span>
+                  )}
+                </p>
+                <p className="mt-2 flex items-center justify-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-white/50 group-hover:text-white/70 transition-colors">
+                  {item.icon && (
+                    <span className="text-[var(--esm-coral-400)]">{item.icon}</span>
+                  )}
+                  {item.label}
+                </p>
+                {/* Coral underline accent on hover */}
+                <div className="mt-3 h-0.5 w-0 bg-[var(--esm-coral-400)] rounded-full transition-all duration-500 group-hover:w-8" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

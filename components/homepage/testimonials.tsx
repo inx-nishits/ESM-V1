@@ -1,114 +1,142 @@
 "use client";
 
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { useCallback, useState } from "react";
+import { Quote, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { SectionHeader } from "./section-header";
 import type { Testimonial } from "@/types/cms";
 
 interface TestimonialsSectionProps {
   testimonials: Testimonial[];
 }
 
+const industryColors: Record<string, string> = {
+  "Food Processing": "bg-orange-50 text-orange-700 border-orange-200",
+  Healthcare: "bg-sky-50 text-sky-700 border-sky-200",
+  Government: "bg-violet-50 text-violet-700 border-violet-200",
+  Industrial: "bg-amber-50 text-amber-700 border-amber-200",
+};
+
+function getInitials(name: string) {
+  return name
+    .split(" ")
+    .map((n) => n[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+}
+
+function getAvatarColor(name: string) {
+  const colors = [
+    "bg-[var(--esm-coral-100)] text-[var(--esm-coral-600)]",
+    "bg-sky-100 text-sky-700",
+    "bg-violet-100 text-violet-700",
+    "bg-emerald-100 text-emerald-700",
+  ];
+  const idx = name.charCodeAt(0) % colors.length;
+  return colors[idx];
+}
+
 export function TestimonialsSection({ testimonials }: TestimonialsSectionProps) {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const goTo = useCallback(
-    (index: number) => {
-      if (testimonials.length === 0) return;
-      setActiveIndex((index + testimonials.length) % testimonials.length);
-    },
-    [testimonials.length],
-  );
-
   if (testimonials.length === 0) return null;
 
-  const active = testimonials[activeIndex];
-
   return (
-    <section className="bg-[var(--esm-navy-800)] site-section" aria-labelledby="testimonials-heading">
+    <section
+      className="site-section-compact bg-white"
+      aria-labelledby="testimonials-heading"
+    >
       <div className="site-container">
-        <SectionHeader
-          overline="Testimonials"
-          headline="What procurement teams say"
-          align="center"
-          dark
-          headlineId="testimonials-heading"
-        />
+        {/* Header */}
+        <div className="text-center mb-12">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-3">
+            Testimonials
+          </p>
+          <h2
+            id="testimonials-heading"
+            className="font-display text-3xl font-extrabold tracking-tight text-primary sm:text-4xl"
+          >
+            What procurement teams say
+          </h2>
+          <p className="mt-3 text-base text-muted-foreground max-w-xl mx-auto">
+            Trusted by food processors, healthcare systems, and government agencies across North America.
+          </p>
+        </div>
 
-        <div className="relative mx-auto mt-12 max-w-3xl">
-          <div className="overflow-hidden rounded-lg border border-white/10 bg-white/5 p-8 md:p-10">
-            <Quote className="h-8 w-8 text-[var(--esm-coral-400)]" aria-hidden />
-            <blockquote>
-              <p className="mt-4 text-lg leading-relaxed text-white md:text-xl lg:text-2xl">
-                &ldquo;{active.quote}&rdquo;
-              </p>
-              <footer className="mt-6 border-t border-white/10 pt-6">
-                <cite className="not-italic">
-                  <p className="font-display text-lg font-bold text-white">{active.author}</p>
-                  <p className="mt-1 text-sm text-white/70">
-                    {active.role}
-                  </p>
-                  <Badge
-                    variant="outline"
-                    className="mt-3 border-white/20 bg-white/5 text-white/90"
-                  >
-                    {active.industry}
-                  </Badge>
-                </cite>
-              </footer>
-            </blockquote>
-          </div>
+        {/* Cards Grid */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {testimonials.map((item, i) => (
+            <div
+              key={item.id}
+              className={cn(
+                "group relative flex flex-col rounded-2xl border border-border bg-card p-7 shadow-sm transition-all duration-300",
+                "hover:-translate-y-1 hover:shadow-lg hover:border-[var(--esm-coral-200)]"
+              )}
+            >
+              {/* Decorative large quote mark */}
+              <div className="absolute top-5 right-6 text-[var(--esm-coral-100)] select-none pointer-events-none">
+                <Quote className="h-14 w-14 fill-current" aria-hidden />
+              </div>
 
-          {testimonials.length > 1 && (
-            <div className="mt-6 flex items-center justify-center gap-4">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => goTo(activeIndex - 1)}
-                className="h-11 w-11 text-white hover:bg-white/10 hover:text-white"
-                aria-label="Previous testimonial"
-              >
-                <ChevronLeft className="h-5 w-5" />
-              </Button>
-              <div className="flex gap-2" role="tablist" aria-label="Testimonials">
-                {testimonials.map((item, index) => (
-                  <button
-                    key={item.id}
-                    type="button"
-                    role="tab"
-                    onClick={() => goTo(index)}
-                    className={cn(
-                      "flex min-h-11 min-w-11 items-center justify-center rounded-full p-2 transition-all",
-                      index === activeIndex ? "bg-white/15" : "hover:bg-white/10",
-                    )}
-                    aria-label={`Testimonial from ${item.author}`}
-                    aria-selected={index === activeIndex}
-                  >
-                    <span
-                      className={cn(
-                        "block rounded-full transition-all",
-                        index === activeIndex ? "h-2.5 w-6 bg-accent" : "h-2.5 w-2.5 bg-white/30",
-                      )}
-                      aria-hidden
-                    />
-                  </button>
+              {/* Stars */}
+              <div className="flex gap-0.5 mb-5">
+                {[...Array(5)].map((_, s) => (
+                  <Star
+                    key={s}
+                    className="h-4 w-4 fill-[var(--esm-coral-400)] text-[var(--esm-coral-400)]"
+                    aria-hidden
+                  />
                 ))}
               </div>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => goTo(activeIndex + 1)}
-                className="h-11 w-11 text-white hover:bg-white/10 hover:text-white"
-                aria-label="Next testimonial"
-              >
-                <ChevronRight className="h-5 w-5" />
-              </Button>
+
+              {/* Quote */}
+              <blockquote className="flex-1">
+                <p className="text-base leading-relaxed text-foreground/85 relative z-10">
+                  &ldquo;{item.quote}&rdquo;
+                </p>
+              </blockquote>
+
+              {/* Divider */}
+              <div className="my-6 h-px bg-border" />
+
+              {/* Author */}
+              <div className="flex items-center gap-3">
+                {/* Avatar */}
+                <div
+                  className={cn(
+                    "flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-sm font-bold ring-2 ring-white shadow-sm",
+                    getAvatarColor(item.author)
+                  )}
+                  aria-hidden
+                >
+                  {getInitials(item.author)}
+                </div>
+                <div className="min-w-0">
+                  <p className="font-display text-sm font-bold text-primary truncate">
+                    {item.author}
+                  </p>
+                  <p className="text-xs text-muted-foreground truncate">
+                    {item.role}
+                  </p>
+                </div>
+                <div className="ml-auto shrink-0">
+                  <span
+                    className={cn(
+                      "inline-flex items-center rounded-full border px-2.5 py-0.5 text-[11px] font-semibold",
+                      industryColors[item.industry] ??
+                        "bg-zinc-50 text-zinc-600 border-zinc-200"
+                    )}
+                  >
+                    {item.industry}
+                  </span>
+                </div>
+              </div>
             </div>
-          )}
+          ))}
         </div>
+
+        {/* Bottom trust line */}
+        <p className="mt-10 text-center text-sm text-muted-foreground">
+          Serving <span className="font-semibold text-primary">150+</span> enterprise accounts across North America
+        </p>
       </div>
     </section>
   );

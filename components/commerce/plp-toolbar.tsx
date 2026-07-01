@@ -25,6 +25,7 @@ const SORT_OPTIONS: { value: ProductSortOption; label: string }[] = [
   { value: "price-asc", label: "Price: low to high" },
   { value: "price-desc", label: "Price: high to low" },
   { value: "name-asc", label: "Name: A–Z" },
+  { value: "name-desc", label: "Name: Z–A" },
   { value: "newest", label: "Newest" },
 ];
 

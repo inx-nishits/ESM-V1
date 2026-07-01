@@ -58,7 +58,7 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
             )}
             aria-hidden={index !== activeIndex}
           >
-            {item.video && index === activeIndex ? (
+            {item.video ? (
               <video
                 key={item.video}
                 className="absolute inset-0 h-full w-full object-cover"
@@ -66,8 +66,7 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
                 muted
                 loop
                 playsInline
-                poster={item.image}
-                preload="none"
+                preload="auto"
                 disablePictureInPicture
                 controlsList="nodownload nofullscreen noremoteplayback"
                 aria-hidden

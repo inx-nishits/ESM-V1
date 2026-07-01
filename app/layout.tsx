@@ -33,6 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${raleway.variable} ${dmSans.variable} ${jetbrainsMono.variable} antialiased`}
+        suppressHydrationWarning
       >
         <AppProviders>{children}</AppProviders>
       </body>

@@ -1,9 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { ArrowRight, ShoppingCart } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ProductCardAddButton } from "@/components/commerce/product-card-add-button";
-import { formatCurrency } from "@/lib/utils";
+import { cn, formatCurrency } from "@/lib/utils";
 import type { Product } from "@/types/product";
 
 interface ProductCardProps {
@@ -24,23 +29,26 @@ const inventoryLabels: Record<Product["inventoryStatus"], string> = {
 
 export function ProductCard({ product, categoryName, compact = false, layout = "grid" }: ProductCardProps) {
   const primaryImage = product.images.find((img) => img.isPrimary) ?? product.images[0];
+  const [activeImage, setActiveImage] = useState(primaryImage);
   const isList = layout === "list";
 
   if (isList) {
     return (
       <Card className="group flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-lg sm:flex-row p-4 gap-4 sm:gap-6 items-center">
         {/* Left Column: Image */}
-        <Link href={`/products/${product.slug}`} className="block w-full sm:w-[160px] shrink-0">
+        <div className="w-full sm:w-[160px] shrink-0">
           <div className="relative aspect-[4/3] sm:aspect-square overflow-hidden rounded-md bg-muted">
-            {primaryImage && (
-              <Image
-                src={primaryImage.url}
-                alt={primaryImage.alt}
-                fill
-                sizes="(max-width: 768px) 100vw, 160px"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            )}
+            <Link href={`/products/${product.slug}`} className="absolute inset-0 z-0 block">
+              {activeImage && (
+                <Image
+                  src={activeImage.url}
+                  alt={activeImage.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 160px"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              )}
+            </Link>
             <div className="absolute left-2 top-2 flex flex-col gap-1.5">
               {product.fdaGear && (
                 <Badge variant="coral" className="bg-accent text-accent-foreground text-[10px] px-1.5 py-0">
@@ -49,13 +57,13 @@ export function ProductCard({ product, categoryName, compact = false, layout = "
               )}
               <Badge
                 variant={product.inventoryStatus === "in_stock" ? "success" : "outline"}
-                className="bg-white/95 backdrop-blur-sm text-[10px] px-1.5 py-0"
+                className="bg-white/95 backdrop-blur-sm text-[10px] px-1.5 py-0 pointer-events-none"
               >
                 {inventoryLabels[product.inventoryStatus]}
               </Badge>
             </div>
           </div>
-        </Link>
+        </div>
 
         {/* Middle Column: Details */}
         <div className="flex flex-1 flex-col justify-center min-w-0">
@@ -90,7 +98,12 @@ export function ProductCard({ product, categoryName, compact = false, layout = "
             </div>
           </div>
           <div className="w-full">
-            <ProductCardAddButton product={product} />
+            <Button asChild className="w-full bg-[var(--esm-coral-500)] hover:bg-[var(--esm-coral-600)] text-white font-bold h-10 rounded-full px-5 transition-transform hover:scale-[1.02]">
+              <Link href={`/products/${product.slug}`} className="flex items-center justify-between">
+                <span>Add to cart</span>
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </Card>
@@ -99,19 +112,23 @@ export function ProductCard({ product, categoryName, compact = false, layout = "
 
   // Grid Layout
   return (
-    <Card className="group flex h-full flex-col overflow-hidden transition-shadow duration-300 hover:shadow-lg">
-      <Link href={`/products/${product.slug}`} className="block">
-        <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-          {primaryImage && (
+    <div className={cn(
+      "group flex w-full h-full flex-col rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden transition-shadow duration-300 hover:shadow-lg",
+      compact ? "max-w-sm" : ""
+    )}>
+      <div className={cn("relative overflow-hidden bg-muted", compact ? "aspect-[3/2]" : "aspect-[4/3]")}>
+        <Link href={`/products/${product.slug}`} className="absolute inset-0 z-0 block">
+          {activeImage && (
             <Image
-              src={primaryImage.url}
-              alt={primaryImage.alt}
+              src={activeImage.url}
+              alt={activeImage.alt}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
           )}
-          <div className="absolute left-3 top-3 flex flex-wrap gap-1.5">
+        </Link>
+        <div className="absolute left-3 top-3 flex flex-wrap gap-1.5 pointer-events-none">
             {product.fdaGear && (
               <Badge variant="coral" className="bg-accent text-accent-foreground">
                 FDA Gear
@@ -124,17 +141,55 @@ export function ProductCard({ product, categoryName, compact = false, layout = "
               {inventoryLabels[product.inventoryStatus]}
             </Badge>
           </div>
+          {/* Variant Swatches */}
+          {product.images.length > 1 && (
+            <div className="absolute right-2 top-3 bottom-3 flex flex-col gap-2 items-center justify-start z-10">
+              {product.images.slice(0, 5).map((img) => {
+                const isActive = activeImage?.url === img.url;
+                return (
+                  <button
+                    type="button"
+                    key={img.url}
+                    onMouseEnter={() => setActiveImage(img)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setActiveImage(img);
+                    }}
+                    className={cn(
+                      "h-7 w-7 rounded-full bg-white overflow-hidden relative transition-transform hover:scale-110",
+                      isActive ? "ring-2 ring-[var(--esm-coral-500)] ring-offset-1 ring-offset-white" : "border border-border/50 shadow-sm"
+                    )}
+                  >
+                    <Image
+                      src={img.url}
+                      alt={img.alt}
+                      fill
+                      sizes="28px"
+                      className="object-cover"
+                    />
+                  </button>
+                );
+              })}
+              {product.images.length > 5 && (
+                <div className="flex h-6 w-6 items-center justify-center rounded-full border border-border bg-white shadow-sm text-[9px] font-bold text-[var(--esm-navy-900)]">
+                  +{product.images.length - 5}
+                </div>
+              )}
+            </div>
+          )}
+          
+          {/* Removed Overlay Quick View to simplify and make it standard one-box */}
         </div>
-      </Link>
 
-      <div className="flex flex-1 flex-col p-4 md:p-5">
+      <div className={cn("flex flex-1 flex-col", compact ? "p-3" : "p-4 md:p-5")}>
         <Link href={`/products/${product.slug}`} className="flex flex-1 flex-col">
           {categoryName && (
             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               {categoryName}
             </p>
           )}
-          <h3 className="mt-1 line-clamp-2 min-h-[2.75rem] font-display text-base font-bold leading-snug text-primary group-hover:text-[var(--esm-navy-600)] md:text-lg">
+          <h3 className={cn("font-display font-bold leading-snug text-primary group-hover:text-[var(--esm-navy-600)]", compact ? "mt-1 text-sm md:text-base line-clamp-1" : "mt-1 text-base md:text-lg line-clamp-2 min-h-[2.75rem]")}>
             {product.name}
           </h3>
           <p className="mt-1 font-mono text-xs text-muted-foreground">SKU {product.sku}</p>
@@ -143,19 +198,25 @@ export function ProductCard({ product, categoryName, compact = false, layout = "
               {product.shortDescription}
             </p>
           )}
-
-          <div className="mt-auto pt-4">
-            <p className="font-display text-xl font-extrabold text-primary">
-              {formatCurrency(product.basePrice)}
-            </p>
-            <p className="text-xs text-muted-foreground">
-              per case · {product.caseQuantity.toLocaleString()} units
-            </p>
-          </div>
         </Link>
 
-        <ProductCardAddButton product={product} className="mt-3" />
+        <div className="mt-auto pt-3 flex items-center justify-between gap-2">
+          <Link href={`/products/${product.slug}`} className="block">
+            <p className={cn("font-display font-extrabold text-primary shrink-0", compact ? "text-[15px]" : "text-lg xl:text-xl")}>
+              {formatCurrency(product.basePrice)}
+            </p>
+          </Link>
+          <Button asChild className={cn(
+            "bg-[var(--esm-coral-500)] hover:bg-[var(--esm-coral-600)] text-white font-bold rounded-full transition-transform hover:scale-[1.02] shrink-0 flex-1 max-w-[140px]",
+            compact ? "h-8 px-3 text-[11px]" : "h-10 px-4 text-sm"
+          )}>
+            <Link href={`/products/${product.slug}`} className="flex items-center justify-center gap-1.5 w-full">
+              <ShoppingCart className={cn("shrink-0", compact ? "h-3.5 w-3.5" : "h-4 w-4")} />
+              <span className="truncate">Add to cart</span>
+            </Link>
+          </Button>
+        </div>
       </div>
-    </Card>
+    </div>
   );
 }

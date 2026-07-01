@@ -32,6 +32,7 @@ export interface StatRowBlock {
 }
 
 export interface FaqItem {
+  id: string;
   question: string;
   answer: string;
 }
@@ -215,6 +216,7 @@ export interface HomepageContent {
     headline: string;
     subheadline: string;
   };
+  faq: FaqItem[];
 }
 
 export interface NavItem {

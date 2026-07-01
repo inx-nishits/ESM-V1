@@ -10,6 +10,7 @@ import { SustainabilitySection } from "./sustainability-section";
 import { TestimonialsSection } from "./testimonials";
 import { TrustBadges } from "./trust-badges";
 import { WhyEsmSection } from "./why-esm";
+import { FaqSection } from "./faq-section";
 import type { HomepageData } from "@/lib/homepage/get-homepage-data";
 
 interface HomepageViewProps {
@@ -38,6 +39,7 @@ export function HomepageView({ data }: HomepageViewProps) {
       <IndustrySolutions solutions={content.industrySolutions} />
       <TestimonialsSection testimonials={content.testimonials} />
       <SustainabilitySection content={content.sustainability} />
+      <FaqSection faq={content.faq} />
       <NewsletterCta
         headline={content.newsletter.headline}
         subheadline={content.newsletter.subheadline}

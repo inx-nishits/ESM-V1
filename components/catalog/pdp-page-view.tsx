@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Check, Heart, Minus, Plus, ShoppingCart, ZoomIn } from "lucide-react";
+import { Check, Heart, Minus, Plus, ShoppingCart, ZoomIn, ZoomOut, Maximize } from "lucide-react";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { PageHeader } from "@/components/layout/page-header";
 import { ProductGrid } from "@/components/commerce/product-grid";
 import { Badge } from "@/components/ui/badge";
@@ -46,7 +47,16 @@ export function PdpPageView({
     Object.entries(selectedAttributes).every(([key, value]) => v.attributes[key as keyof typeof v.attributes] === value)
   ) || product.variants[0];
 
-  const primaryImage = product.images[selectedImageIndex] ?? product.images[0];
+  // Reorder images so "Coming Soon" images are at the end
+  const sortedImages = [...product.images].sort((a, b) => {
+    const aIsComingSoon = a.url.toLowerCase().includes("comingsoon");
+    const bIsComingSoon = b.url.toLowerCase().includes("comingsoon");
+    if (aIsComingSoon && !bIsComingSoon) return 1;
+    if (!aIsComingSoon && bIsComingSoon) return -1;
+    return 0;
+  });
+
+  const primaryImage = sortedImages[selectedImageIndex] ?? sortedImages[0];
   const isAddedToCart = cart.lines.some((line) => line.variantId === variant?.id);
 
   function handleAddToCart() {
@@ -112,20 +122,64 @@ export function PdpPageView({
             <DialogContent className="max-w-[90vw] md:max-w-4xl border-none bg-transparent p-0 shadow-none">
               <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-black/20">
                 {primaryImage && (
-                  <Image
-                    src={primaryImage.url}
-                    alt={primaryImage.alt}
-                    fill
-                    className="object-contain"
-                    quality={100}
-                  />
+                  <TransformWrapper
+                    initialScale={1}
+                    minScale={0.5}
+                    maxScale={4}
+                    centerOnInit
+                  >
+                    {({ zoomIn, zoomOut, resetTransform }) => (
+                      <>
+                        <div className="absolute right-4 top-4 z-50 flex flex-col gap-2">
+                          <Button
+                            variant="secondary"
+                            size="icon"
+                            className="h-10 w-10 rounded-full bg-background/80 backdrop-blur-md shadow-sm border border-border/50 hover:bg-background"
+                            onClick={() => zoomIn()}
+                            title="Zoom In"
+                          >
+                            <ZoomIn className="h-5 w-5" />
+                          </Button>
+                          <Button
+                            variant="secondary"
+                            size="icon"
+                            className="h-10 w-10 rounded-full bg-background/80 backdrop-blur-md shadow-sm border border-border/50 hover:bg-background"
+                            onClick={() => zoomOut()}
+                            title="Zoom Out"
+                          >
+                            <ZoomOut className="h-5 w-5" />
+                          </Button>
+                          <Button
+                            variant="secondary"
+                            size="icon"
+                            className="h-10 w-10 rounded-full bg-background/80 backdrop-blur-md shadow-sm border border-border/50 hover:bg-background"
+                            onClick={() => resetTransform()}
+                            title="Reset Zoom"
+                          >
+                            <Maximize className="h-5 w-5" />
+                          </Button>
+                        </div>
+                        <TransformComponent wrapperClass="!w-full !h-full" contentClass="!w-full !h-full">
+                          <div className="relative aspect-square w-full">
+                            <Image
+                              src={primaryImage.url}
+                              alt={primaryImage.alt}
+                              fill
+                              className="object-contain"
+                              quality={100}
+                            />
+                          </div>
+                        </TransformComponent>
+                      </>
+                    )}
+                  </TransformWrapper>
                 )}
               </div>
             </DialogContent>
           </Dialog>
-          {product.images.length > 1 && (
+          {sortedImages.length > 1 && (
             <ul className="mt-4 flex gap-2 overflow-x-auto pb-1">
-              {product.images.map((image, index) => (
+              {sortedImages.map((image, index) => (
                 <li key={image.url}>
                   <button
                     type="button"

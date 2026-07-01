@@ -18,7 +18,7 @@ export function WhyEsmSection({ content }: WhyEsmSectionProps) {
           headlineId="why-esm-heading"
         />
 
-        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-8 lg:mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {content.items.map((item) => {
             const Icon = getHomepageIcon(item.icon);
             return (

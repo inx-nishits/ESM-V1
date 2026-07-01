@@ -22,8 +22,8 @@
       "id": "hero-1",
       "tabLabel": "Overview",
       "overline": "Certified women-owned · Since 1998",
-      "headline": "Professional PPE. Shipped next day.",
-      "subheadline": "Case-quantity gloves, masks & FDA Gear — in stock with published B2B pricing.",
+      "headline": "Stock PPE your team can count on — shipped next business day",
+      "subheadline": "Case-quantity gloves, masks, and FDA Gear from a trusted West Chicago supplier. Published pricing, volume tiers, and dedicated B2B support.",
       "primaryCtaLabel": "Shop all products",
       "primaryCtaHref": "/shop",
       "secondaryCtaLabel": "Request a quote",
@@ -298,7 +298,16 @@
   "featuredProductIds": [
     "prod_7680195002534",
     "prod_7680124387494",
-    "prod_7603269566630"
+    "prod_7603269566630",
+    "prod_7696729669798",
+    "prod_7680218824870",
+    "prod_7680212172966",
+    "prod_7680196837542",
+    "prod_7680188907686",
+    "prod_7680185139366",
+    "prod_7680151421094",
+    "prod_7680114491558",
+    "prod_7680113377446"
   ],
   "fdaGearSpotlight": {
     "overline": "FDA Gear",
@@ -389,5 +398,52 @@
   "newsletter": {
     "headline": "Secure your supply chain",
     "subheadline": "Promotions, product updates, and tiered-pricing access — for business accounts only."
-  }
+  },
+  "faq": [
+    {
+      "id": "faq-1",
+      "question": "What products are offered by ESM Products?",
+      "answer": "<p>We sell high quality disposable personal protective equipment (nitrile & latex gloves, masks, hair nets, booties, aprons, earplugs, etc.) at great prices. We offer multiple styles, sizes, colors etc. to meet your needs. Our stock products can be found in our catalogue. We also supply custom PPE for our customers. <a href='/contact' title='Contact' class='underline hover:text-[var(--esm-coral-400)] transition-colors'>Contact us</a> to learn more.</p>"
+    },
+    {
+      "id": "faq-2",
+      "question": "What makes ESM different?",
+      "answer": "<p>We offer the best service and high quality products at the best price. Your satisfaction is <span class='underline font-bold'>guaranteed</span>.</p>"
+    },
+    {
+      "id": "faq-3",
+      "question": "What are your order lead times?",
+      "answer": "<p>Stock items ship within 1 business day. Custom items will be available in approximately 90 days for the first order and then the items will ship within 1 business day once in our warehouse. <em>(Minimum order quantities required)</em></p>"
+    },
+    {
+      "id": "faq-4",
+      "question": "How do you ensure uninterrupted product availability?",
+      "answer": "<p>We source our products from 12 different plants in 4 different countries. Our redundant supplier network ensures product is always available to us. We understand that you cannot operate without PPE, so we stock a minimum of months of inventory for our contract customers to ensure our products are always available to you. Our policies allowed us to fill 100% of our customers’ needs during the pandemic when many PPE suppliers were unable to meet the needs of their customers.</p>"
+    },
+    {
+      "id": "faq-5",
+      "question": "Can I trust that your products are of high quality?",
+      "answer": "<p>Yes...Our brand, FDA Gear, is synonymous with quality…we supply medical grade personal protective equipment. FDA gear is guaranteed to be food safe and CFR 21 p.177 compliant. We have stringent product standards with strict quality control throughout the manufacturing process in our state-of-the-art production facilities. All cases are coded with lot numbers to ensure traceability. <em>We guarantee 100% product satisfaction</em>.</p>"
+    },
+    {
+      "id": "faq-6",
+      "question": "What geography, industries and customers do you service?",
+      "answer": "<p>We service locations throughout North America. The size of our customers ranges from several hundred thousand to multi-billions in annual dollars sales. Industries we service include food processors, health care, industrial and government organizations.</p>"
+    },
+    {
+      "id": "faq-7",
+      "question": "Can ESM help me meet my sustainability, diversity and ESG goals?",
+      "answer": "<p>Yes. ESM only works with partners who are verified to not participate in abusive labor practices.</p><ul class='list-disc pl-5 mt-2 space-y-1'><li>We can provide disposable PPE which is recyclable or biodegradable in a normal land fill.</li><li>We consistently increase the number of partners who have a sustainability focus and carbon neutral goals.</li><li>ESM Products is proud to be a certified women owned business with a diverse and talented team.</li><li>ESM only works with partners who are verified to not participate in abusive labor practices.</li></ul>"
+    },
+    {
+      "id": "faq-8",
+      "question": "How can I place my first order with ESM Products?",
+      "answer": "<p>Give us a call. Your first orders will require prepayment via credit card or fund transfer. Once set-up, you will be able to order in a manner which is most convenient for you via website, telephone or email.</p>"
+    },
+    {
+      "id": "faq-9",
+      "question": "Want to learn more?",
+      "answer": "<p>Please contact us by calling 630-915-4569 or fill out the contact form <a href='/contact' title='Contact' class='underline hover:text-[var(--esm-coral-400)] transition-colors'>here.</a></p>"
+    }
+  ]
 }

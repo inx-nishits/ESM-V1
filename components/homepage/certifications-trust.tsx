@@ -31,17 +31,17 @@ export function CertificationsTrust({ certifications, clientLogos }: Certificati
           />
           
           {/* Certification Seals */}
-          <div className="mt-8 sm:mt-16 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-12 w-full max-w-3xl px-2 sm:px-0">
+          <div className="mt-8 sm:mt-16 flex flex-wrap justify-center gap-3 sm:gap-6 w-full max-w-5xl px-2 sm:px-0">
             {certifications.map((cert) => (
               <div
                 key={cert.id}
-                className="group relative flex flex-col items-center gap-2 sm:gap-5 rounded-xl sm:rounded-2xl border border-zinc-800/60 bg-zinc-900/40 p-3 sm:p-8 shadow-lg backdrop-blur-sm transition-all duration-500 hover:border-accent/40 hover:bg-zinc-900/80 hover:-translate-y-2 hover:shadow-[0_10px_40px_-15px_rgba(var(--accent),0.3)]"
+                className="group relative flex flex-row items-center gap-3 sm:gap-4 rounded-xl sm:rounded-2xl border border-zinc-800/60 bg-zinc-900/40 p-3 sm:px-6 sm:py-4 shadow-lg backdrop-blur-sm transition-all duration-500 hover:border-accent/40 hover:bg-zinc-900/80 hover:-translate-y-1 hover:shadow-[0_5px_20px_-10px_rgba(var(--accent),0.3)]"
               >
-                <div className="relative flex h-10 w-10 sm:h-20 sm:w-20 items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br from-zinc-800 to-zinc-900 shadow-inner ring-1 ring-white/5 transition-transform duration-500 group-hover:scale-110">
-                  <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-accent/20 opacity-0 blur-md transition-opacity duration-500 group-hover:opacity-100" />
-                  <ShieldCheck className="relative z-10 h-5 w-5 sm:h-10 sm:w-10 text-zinc-300 transition-colors duration-500 group-hover:text-accent" aria-hidden />
+                <div className="relative flex shrink-0 h-10 w-10 sm:h-14 sm:w-14 items-center justify-center rounded-xl bg-gradient-to-br from-zinc-800 to-zinc-900 shadow-inner ring-1 ring-white/5 transition-transform duration-500 group-hover:scale-105">
+                  <div className="absolute inset-0 rounded-xl bg-accent/20 opacity-0 blur-md transition-opacity duration-500 group-hover:opacity-100" />
+                  <ShieldCheck className="relative z-10 h-5 w-5 sm:h-7 sm:w-7 text-zinc-300 transition-colors duration-500 group-hover:text-accent" aria-hidden />
                 </div>
-                <span className="text-center font-display text-[11px] sm:text-base font-bold tracking-wide text-zinc-200 transition-colors duration-300 group-hover:text-white leading-tight">
+                <span className="text-left font-display text-[11px] sm:text-base font-bold tracking-wide text-zinc-200 transition-colors duration-300 group-hover:text-white leading-tight whitespace-nowrap">
                   {cert.label}
                 </span>
               </div>
