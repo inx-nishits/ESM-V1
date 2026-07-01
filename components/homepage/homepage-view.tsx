@@ -1,5 +1,5 @@
 import { CategoryDiscovery } from "./category-discovery";
-import { CertificationsTrust } from "./certifications-trust";
+
 import { FdaGearSpotlightSection } from "./fda-gear-spotlight";
 import { FeaturedProducts } from "./featured-products";
 import { HeritageSection } from "./heritage-section";
@@ -24,10 +24,7 @@ export function HomepageView({ data }: HomepageViewProps) {
     <>
       <HeroCarousel slides={content.heroSlides} />
       <TrustBadges badges={content.trustBadges} />
-      <CertificationsTrust
-        certifications={certifications}
-        clientLogos={content.clientLogos}
-      />
+
       <FeaturedProducts products={featuredProducts} categories={categories} />
       <CategoryDiscovery categories={categories} />
       <WhyEsmSection content={content.whyEsm} />

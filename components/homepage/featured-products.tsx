@@ -20,6 +20,7 @@ export function FeaturedProducts({ products, categories }: FeaturedProductsProps
   const categoryMap = new Map(categories.map((category) => [category.slug, category.name]));
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isDown, setIsDown] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
@@ -57,6 +58,7 @@ export function FeaturedProducts({ products, categories }: FeaturedProductsProps
 
   const onMouseDown = (e: React.MouseEvent) => {
     setIsDown(true);
+    setIsDragging(false);
     if (!scrollRef.current) return;
     setStartX(e.pageX - scrollRef.current.offsetLeft);
     setScrollLeft(scrollRef.current.scrollLeft);
@@ -70,6 +72,9 @@ export function FeaturedProducts({ products, categories }: FeaturedProductsProps
     e.preventDefault();
     const x = e.pageX - scrollRef.current.offsetLeft;
     const walk = (x - startX) * 2;
+    if (Math.abs(walk) > 10) {
+      setIsDragging(true);
+    }
     scrollRef.current.scrollLeft = scrollLeft - walk;
   };
 
@@ -140,7 +145,15 @@ export function FeaturedProducts({ products, categories }: FeaturedProductsProps
           >
             {products.map((product) => (
               <div key={product.id} className="snap-start shrink-0 w-[240px] sm:w-[260px] flex pointer-events-auto">
-                <div className={cn("w-full h-full", isDown ? "pointer-events-none" : "")}>
+                <div 
+                  className="w-full h-full"
+                  onClickCapture={(e) => {
+                    if (isDragging) {
+                      e.preventDefault();
+                      e.stopPropagation();
+                    }
+                  }}
+                >
                   <ProductCard
                     product={product}
                     categoryName={categoryMap.get(product.categorySlug)}

@@ -325,38 +325,10 @@ export function PdpPageView({
                 {product.inventoryStatus === "out_of_stock" ? "Out of stock" : "Add to cart"}
               </Button>
             )}
-            <Button variant="outline" size="lg" className="hidden md:flex" asChild>
-              <Link href="/contact">Request quote</Link>
-            </Button>
+
           </div>
 
-          <div className="mt-4 flex gap-2">
 
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => saved.toggle(product.id)}
-            >
-              <Heart className={cn("h-4 w-4", saved.isSaved(product.id) && "fill-accent text-accent")} />
-              {saved.isSaved(product.id) ? "Saved" : "Save"}
-            </Button>
-          </div>
-
-          {product.certifications.length > 0 && (
-            <>
-              <Separator className="my-8" />
-              <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                Certifications
-              </p>
-              <ul className="mt-2 flex flex-wrap gap-2">
-                {product.certifications.map((cert) => (
-                  <li key={cert}>
-                    <Badge variant="outline">{cert.replace(/-/g, " ")}</Badge>
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
 
           {product.description && (
             <>
