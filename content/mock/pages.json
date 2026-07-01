@@ -4,15 +4,15 @@
     "title": "About ESM Products",
     "seo": {
       "title": "About Us",
-      "description": "Learn about ESM Products — a certified women-owned PPE supplier serving food processing, healthcare, and industrial buyers since 1998."
+      "description": "ESM Products is a certified women-owned and minority-owned business, dedicated to providing the best customer service, price, and quality."
     },
     "blocks": [
       {
         "type": "hero",
         "data": {
-          "overline": "About ESM",
-          "headline": "West Chicago roots. Nationwide reach.",
-          "subheadline": "Since 1998, ESM Products has supplied disposable PPE to procurement teams who can't afford downtime — with case pricing, lot traceability, and same-day fulfillment on in-stock SKUs.",
+          "overline": "About ESM Products",
+          "headline": "Irina Kutek, CEO",
+          "subheadline": "ESM Products is a certified women-owned and minority-owned business, dedicated to providing the best customer service, price, and quality.",
           "image": "https://esmproducts.com/cdn/shop/files/ESM_Graphic_1066x.png?v=1673985411"
         }
       },
@@ -20,33 +20,107 @@
         "type": "stat_row",
         "data": {
           "stats": [
-            { "value": "1998", "label": "Founded" },
-            { "value": "27+", "label": "SKUs in stock" },
-            { "value": "1 day", "label": "Standard ship time" },
-            { "value": "WBE", "label": "Certified supplier" }
+            { "value": "2015", "label": "Founded" },
+            { "value": "24/7", "label": "Support Staff" },
+            { "value": "100%", "label": "On-Time Priority" },
+            { "value": "WBE", "label": "Certified Woman-Owned" }
           ]
         }
       },
       {
         "type": "rich_text",
         "data": {
-          "html": "<p>ESM Products grew from a regional glove distributor into a trusted B2B partner for food processors, healthcare systems, and industrial operators across the Midwest and beyond. As a certified women-owned and minority-owned business, we help procurement teams meet diversity spend goals without compromising on quality or service.</p><p>Our West Chicago warehouse stocks case-quantity gloves, masks, hairnets, gowns, and our exclusive FDA Gear line — all with published tier pricing and documentation available for vendor qualification packages.</p>"
+          "html": "<h2>Who We Are</h2><p>Since 2015, ESM Products has provided North American food processors with quality disposable Personal Protective Equipment at unbeatable prices. We take pride in offering quality products, including sustainable products, and tailored services at the lowest cost from an organization committed to inclusion and fairness.</p>"
+        }
+      },
+      {
+        "type": "image_gallery",
+        "data": {
+          "images": [
+            {
+              "image": "https://cdn.shopify.com/s/files/1/0623/1388/9958/files/download_480x480.jpg?v=1708454424",
+              "alt": "WBENC Certified Women's Business Enterprise",
+              "aspectRatio": "square"
+            },
+            {
+              "image": "https://cdn.shopify.com/s/files/1/0623/1388/9958/files/HACCP_WI_480x480.jpg?v=1708460314",
+              "alt": "UW Madison HACCP Principles Training Certificate",
+              "aspectRatio": "auto"
+            },
+            {
+              "image": "https://cdn.shopify.com/s/files/1/0623/1388/9958/files/HACCP_PA_480x480.jpg?v=1708460312",
+              "alt": "PennState HACCP Training Certificate",
+              "aspectRatio": "auto"
+            },
+            {
+              "image": "https://cdn.shopify.com/s/files/1/0623/1388/9958/files/FSVP_cert_480x480.jpg?v=1708460309",
+              "alt": "FSPCA Foreign Supplier Verification Programs Certificate",
+              "aspectRatio": "auto"
+            },
+            {
+              "image": "https://cdn.shopify.com/s/files/1/0623/1388/9958/files/Food_Safety_Sanitiation_PA_480x480.jpg?v=1708460307",
+              "alt": "PennState Food Safety and Sanitation Certificate",
+              "aspectRatio": "auto"
+            },
+            {
+              "image": "https://cdn.shopify.com/s/files/1/0623/1388/9958/files/0_480x480.jpg?v=1708460301",
+              "alt": "ESM at B2B Conference Event",
+              "aspectRatio": "tall"
+            },
+            {
+              "image": "https://cdn.shopify.com/s/files/1/0623/1388/9958/files/20240120_180227_480x480.jpg?v=1708460305",
+              "alt": "ESM B2B Procurement Team",
+              "aspectRatio": "auto"
+            },
+            {
+              "image": "https://cdn.shopify.com/s/files/1/0623/1388/9958/files/20200511_143410_480x480.jpg?v=1708462381",
+              "alt": "Fulfillment Operations & Logistics",
+              "aspectRatio": "auto"
+            }
+          ]
         }
       },
       {
         "type": "image_text",
         "data": {
-          "headline": "Built for regulated environments",
-          "body": "Our FDA Gear brand is engineered for SQF-audited food plants, cleanrooms, and USDA-inspected facilities. Every case is lot-coded for traceability — because your auditor will ask.",
+          "headline": "Quality Products You Can Trust",
+          "body": "FDA Gear, the brand you can trust, is available exclusively through ESM Products. FDA Gear exceeds all standards for food production and handling. We offer a large variety of stock items and the ability to supply custom items to meet your specific needs.",
           "image": "https://esmproducts.com/cdn/shop/files/FDA_GearImage_1066x.png?v=1675288609",
           "imagePosition": "right"
         }
       },
       {
+        "type": "image_text",
+        "data": {
+          "headline": "Tailored Service Built for Operations",
+          "body": "We understand that PPE is vital to your operation; therefore, on-time, in-full delivery every time is our #1 priority. We provide no-cost audits of your facilities to increase efficiency and effectiveness while reducing costs, share insights on PPE markets to help forecast costs, and support multiple order options (website, email, phone) with 24/7 staff availability.",
+          "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+          "imagePosition": "left"
+        }
+      },
+      {
+        "type": "image_text",
+        "data": {
+          "headline": "Commitment to Sustainability",
+          "body": "FDA Gear offers a line of biodegradable PPE with no quality trade-offs — it looks, feels, and performs exactly like our traditional line of PPE. There are no changes required to your operations: simply dispose of used PPE in your normal trash and the product will decompose within 2 weeks after entering a landfill.",
+          "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80",
+          "imagePosition": "right"
+        }
+      },
+      {
+        "type": "image_text",
+        "data": {
+          "headline": "Inclusion & Fairness",
+          "body": "Founded by CEO Irina Kutek, ESM Products is a certified woman-owned business. Our strength lies in our differences, and ESM Products is committed to an open culture that values diverse backgrounds. We look to partner with customers and suppliers who share our commitment to fair and equal treatment of all.",
+          "image": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80",
+          "imagePosition": "left"
+        }
+      },
+      {
         "type": "cta_band",
         "data": {
-          "headline": "Ready to set up a business account?",
-          "subheadline": "Get tiered pricing, dedicated support, and contract rates for qualified procurement teams.",
+          "headline": "Ready to partner with a certified supplier?",
+          "subheadline": "Get tiered B2B pricing, dedicated support, and custom contract rates for your organization.",
           "primaryCtaLabel": "Contact sales",
           "primaryCtaHref": "/contact",
           "secondaryCtaLabel": "Browse catalog",

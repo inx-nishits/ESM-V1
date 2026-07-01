@@ -38,7 +38,7 @@ import { SiteLogo } from "@/components/layout/site-logo";
 
 export function AuthShell({ children }: { children: React.ReactNode }) {
   return (
-    <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
+    <div className="grid h-screen grid-cols-1 overflow-hidden lg:grid-cols-2">
       {/* Left Pane - Branding */}
       <div className="relative hidden flex-col items-center justify-center overflow-hidden bg-[var(--esm-navy-900)] p-12 lg:flex">
         {/* Ambient Glows & Patterns */}
@@ -73,8 +73,9 @@ export function AuthShell({ children }: { children: React.ReactNode }) {
         </div>
       </div>
 
-      {/* Right Pane - Form */}
-      <div className="flex flex-col justify-center bg-white p-6 sm:p-12 lg:p-24 shadow-[-20px_0_40px_-10px_rgba(0,0,0,0.1)] relative z-20">
+      {/* Right Pane - Form (scrollable) */}
+      <div className="flex flex-col overflow-y-auto bg-white shadow-[-20px_0_40px_-10px_rgba(0,0,0,0.1)] relative z-20">
+        <div className="flex flex-1 flex-col justify-center p-6 sm:p-12 lg:p-24">
         {/* Mobile Logo */}
         <div className="mb-8 flex justify-center lg:hidden">
           <SiteLogo />
@@ -83,6 +84,7 @@ export function AuthShell({ children }: { children: React.ReactNode }) {
         <main className="mx-auto w-full max-w-md">
           {children}
         </main>
+        </div>
       </div>
     </div>
   );

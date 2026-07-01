@@ -1,5 +1,9 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Award, ShieldCheck, Eye, X, Users, Sparkles, Check } from "lucide-react";
 
 import { ProductCard } from "@/components/commerce/product-card";
 import { FaqPageSections } from "@/components/cms/faq-page-sections";
@@ -22,10 +26,12 @@ function CmsBlockRenderer({
   block,
   products,
   pageSlug: _pageSlug,
+  onImageClick,
 }: {
   block: CmsBlock;
   products?: Product[];
   pageSlug: CmsPageSlug;
+  onImageClick?: (url: string, alt: string) => void;
 }) {
   switch (block.type) {
     case "hero":
@@ -120,39 +126,87 @@ function CmsBlockRenderer({
         </section>
       );
 
-    case "image_text":
+    case "image_text": {
+      // Split the body into sentences to create bullet lists for long descriptions
+      const cleanBody = block.data.body.replace(/\.{3}/g, "…");
+      const sentences = cleanBody
+        .split(/(?<=[.!?])\s+/)
+        .map((s) => s.trim())
+        .filter(Boolean);
+
+      const leadSentence = sentences[0] || "";
+      const bulletSentences = sentences.slice(1);
+
       return (
-        <section className="bg-[var(--esm-navy-50)]">
-          <div className="w-full">
+        <section className="py-20 lg:py-28 overflow-hidden bg-white odd:bg-neutral-50/50 border-y border-neutral-100/30">
+          <div className="site-container">
             <div
               className={cn(
-                "grid items-center lg:grid-cols-2",
+                "grid items-center gap-12 lg:grid-cols-12 lg:gap-16",
                 block.data.imagePosition === "left" && "lg:[direction:rtl] lg:*:[direction:ltr]",
               )}
             >
-              <div className="relative aspect-square lg:aspect-auto lg:h-[650px] overflow-hidden">
-                <Image
-                  src={block.data.image}
-                  alt={block.data.headline}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-[1.5s] hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+              {/* Image Column */}
+              <div className="lg:col-span-5 flex justify-center">
+                <div className="relative w-full max-w-[500px] aspect-[4/3] sm:aspect-square overflow-hidden rounded-3xl border border-neutral-200/60 p-2 bg-white shadow-xl shadow-neutral-100 hover:shadow-2xl hover:scale-[1.01] transition-all duration-500">
+                  <div className="relative w-full h-full overflow-hidden rounded-2xl">
+                    <Image
+                      src={block.data.image}
+                      alt={block.data.headline}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 40vw"
+                      className="object-cover transition-transform duration-[1.5s] hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-col justify-center px-6 py-16 sm:px-12 md:px-16 lg:px-24 xl:px-32">
-                <h2 className="font-display text-3xl font-extrabold tracking-tight text-primary md:text-4xl lg:text-5xl">
-                  {block.data.headline}
-                </h2>
-                <div className="mt-8 h-1 w-16 bg-[var(--esm-coral-400)] rounded-full shadow-sm" />
-                <p className="mt-8 text-lg leading-relaxed text-muted-foreground md:text-xl">
-                  {block.data.body}
-                </p>
+
+              {/* Text Column */}
+              <div className="lg:col-span-7 space-y-6">
+                <div className="space-y-3">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--esm-coral-50)] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[var(--esm-coral-600)]">
+                    ESM Advantage
+                  </span>
+                  <h2 className="font-display text-3xl font-extrabold tracking-tight text-primary md:text-4xl lg:text-5xl leading-[1.1]">
+                    {block.data.headline}
+                  </h2>
+                  <div className="h-1 w-20 bg-[var(--esm-coral-400)] rounded-full shadow-sm" />
+                </div>
+
+                <div className="space-y-6">
+                  {leadSentence && (
+                    <p className="text-lg font-bold text-neutral-800 leading-relaxed md:text-xl">
+                      {leadSentence}
+                    </p>
+                  )}
+
+                  {bulletSentences.length > 0 ? (
+                    <ul className="grid gap-4">
+                      {bulletSentences.map((sentence, idx) => (
+                        <li key={idx} className="flex items-start gap-3 group">
+                          <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+                            <Check className="h-3 w-3" />
+                          </span>
+                          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                            {sentence}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    // Fallback for single sentence paragraphs
+                    <p className="text-base text-muted-foreground leading-relaxed md:text-lg">
+                      {cleanBody}
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
           </div>
         </section>
       );
+    }
 
     case "product_grid": {
       const gridProducts = products?.filter((p) => block.data.productIds.includes(p.id)) ?? [];
@@ -172,18 +226,172 @@ function CmsBlockRenderer({
       );
     }
 
+    case "image_gallery": {
+      const certImages = block.data.images.slice(0, 5);
+      const teamImages = block.data.images.slice(5);
+
+      return (
+        <section className="site-section bg-neutral-50/50 py-16">
+          <div className="site-container space-y-16">
+            {/* Certifications Group */}
+            <div className="space-y-8">
+              <div className="text-center max-w-3xl mx-auto space-y-3">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-xs font-semibold uppercase tracking-wider">
+                  <ShieldCheck className="h-4 w-4" />
+                  Compliance & Quality
+                </div>
+                <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-primary tracking-tight">
+                  Verified Certifications & Training
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  ESM Products holds accredited compliance credentials to meet USDA, food plant safety, and corporate diversity spend requirements.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:gap-6">
+                {certImages.map((img, idx) => (
+                  <div
+                    key={`cert-${idx}`}
+                    onClick={() => onImageClick?.(img.image, img.alt)}
+                    className="group relative cursor-pointer overflow-hidden rounded-2xl bg-white p-4 border border-border shadow-xs hover:shadow-md hover:border-emerald-300 transition-all duration-300 flex flex-col justify-between"
+                  >
+                    <div className="flex items-center justify-between border-b border-neutral-100 pb-2 mb-3">
+                      <span className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-600 uppercase tracking-wide">
+                        <Award className="h-3 w-3" />
+                        Accredited
+                      </span>
+                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                    </div>
+
+                    <div className="relative w-full aspect-square overflow-hidden rounded-xl bg-neutral-50 p-2 flex items-center justify-center">
+                      <Image
+                        src={img.image}
+                        alt={img.alt}
+                        fill
+                        sizes="(max-width: 640px) 50vw, 20vw"
+                        className="object-contain transition-transform duration-500 group-hover:scale-[1.03] p-1"
+                      />
+                      {/* Zoom overlay */}
+                      <div className="absolute inset-0 bg-neutral-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white gap-1.5">
+                        <Eye className="h-5 w-5 animate-bounce" />
+                        <span className="text-[10px] font-bold uppercase tracking-wider">Enlarge View</span>
+                      </div>
+                    </div>
+
+                    <div className="mt-3">
+                      <p className="text-xs font-semibold text-primary line-clamp-2 text-center min-h-[2rem]">
+                        {img.alt}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Team / Operations Group */}
+            <div className="space-y-8 pt-6 border-t border-neutral-200/60">
+              <div className="text-center max-w-3xl mx-auto space-y-3">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-100 text-amber-700 text-xs font-semibold uppercase tracking-wider">
+                  <Users className="h-4 w-4" />
+                  Our Team & Culture
+                </div>
+                <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-primary tracking-tight">
+                  Logistics & Operational Excellence
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  Meet the people driving the same-day B2B fulfillment and service infrastructure that keeps food plants compliant.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                {teamImages.map((img, idx) => (
+                  <div
+                    key={`team-${idx}`}
+                    onClick={() => onImageClick?.(img.image, img.alt)}
+                    className="group relative cursor-pointer overflow-hidden rounded-2xl bg-white border border-border shadow-xs hover:shadow-lg hover:border-amber-300 transition-all duration-300 flex flex-col justify-between"
+                  >
+                    <div className="relative w-full aspect-[4/3] overflow-hidden">
+                      <Image
+                        src={img.image}
+                        alt={img.alt}
+                        fill
+                        sizes="(max-width: 640px) 100vw, 33vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      {/* Zoom overlay */}
+                      <div className="absolute inset-0 bg-neutral-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white gap-2">
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1.5 text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
+                          <Eye className="h-4 w-4" />
+                          View Photo
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-4 bg-white border-t border-neutral-100 flex items-center justify-between gap-3">
+                      <div className="space-y-1">
+                        <span className="text-[10px] font-bold text-amber-600 uppercase tracking-wider flex items-center gap-1">
+                          <Sparkles className="h-3 w-3" />
+                          ESM Operations
+                        </span>
+                        <p className="text-sm font-bold text-primary">
+                          {img.alt}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
     default:
       return null;
   }
 }
 
 export function CmsPageView({ page, products }: CmsPageViewProps) {
+  const [activeImage, setActiveImage] = useState<{ url: string; alt: string } | null>(null);
   const isLegalPage = legalSlugs.includes(page.slug);
   const firstFaqIndex = page.blocks.findIndex((block) => block.type === "faq_group");
   const hasFaqGroups = firstFaqIndex >= 0;
   const faqGroups = page.blocks
     .filter((block): block is Extract<CmsBlock, { type: "faq_group" }> => block.type === "faq_group")
     .map((block) => block.data);
+
+  const lightboxElement = activeImage && (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md transition-opacity duration-300 animate-in fade-in cursor-pointer"
+      onClick={() => setActiveImage(null)}
+    >
+      <button
+        className="absolute right-6 top-6 rounded-full bg-white/10 p-3 text-white backdrop-blur-md transition-all hover:bg-white/20 hover:scale-105"
+        onClick={() => setActiveImage(null)}
+      >
+        <X className="h-6 w-6" />
+      </button>
+      <div
+        className="relative max-h-[85vh] max-w-[90vw] overflow-hidden rounded-2xl border border-white/10 bg-neutral-950 p-2 shadow-2xl animate-in zoom-in-95 duration-300"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="relative aspect-auto max-h-[75vh] min-h-[320px] w-[80vw] max-w-[900px]">
+          <Image
+            src={activeImage.url}
+            alt={activeImage.alt}
+            fill
+            className="object-contain"
+            sizes="90vw"
+            priority
+          />
+        </div>
+        <div className="mt-4 px-4 pb-2 text-center">
+          <p className="text-sm font-semibold text-white/90">{activeImage.alt}</p>
+        </div>
+      </div>
+    </div>
+  );
 
   if (isLegalPage) {
     const richTextBlocks = page.blocks.filter((block) => block.type === "rich_text");
@@ -203,6 +411,7 @@ export function CmsPageView({ page, products }: CmsPageViewProps) {
             block={block}
             products={products}
             pageSlug={page.slug}
+            onImageClick={(url, alt) => setActiveImage({ url, alt })}
           />
         ))}
         {richTextBlocks.length > 0 && (
@@ -223,6 +432,7 @@ export function CmsPageView({ page, products }: CmsPageViewProps) {
             </div>
           </section>
         )}
+        {lightboxElement}
       </>
     );
   }
@@ -247,6 +457,7 @@ export function CmsPageView({ page, products }: CmsPageViewProps) {
             block={block}
             products={products}
             pageSlug={page.slug}
+            onImageClick={(url, alt) => setActiveImage({ url, alt })}
           />
         ))}
         <FaqPageSections groups={faqGroups} />
@@ -256,8 +467,10 @@ export function CmsPageView({ page, products }: CmsPageViewProps) {
             block={block}
             products={products}
             pageSlug={page.slug}
+            onImageClick={(url, alt) => setActiveImage({ url, alt })}
           />
         ))}
+        {lightboxElement}
       </>
     );
   }
@@ -276,8 +489,10 @@ export function CmsPageView({ page, products }: CmsPageViewProps) {
           block={block}
           products={products}
           pageSlug={page.slug}
+          onImageClick={(url, alt) => setActiveImage({ url, alt })}
         />
       ))}
+      {lightboxElement}
     </>
   );
 }

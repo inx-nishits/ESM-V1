@@ -7,7 +7,8 @@ export type CmsBlockType =
   | "faq_group"
   | "cta_band"
   | "image_text"
-  | "product_grid";
+  | "product_grid"
+  | "image_gallery";
 
 export interface HeroBlock {
   overline?: string;
@@ -62,6 +63,16 @@ export interface ProductGridBlock {
   productIds: string[];
 }
 
+export interface ImageGalleryItem {
+  image: string;
+  alt: string;
+  aspectRatio?: "square" | "video" | "auto" | "tall";
+}
+
+export interface ImageGalleryBlock {
+  images: ImageGalleryItem[];
+}
+
 export type CmsBlock =
   | { type: "hero"; data: HeroBlock }
   | { type: "rich_text"; data: RichTextBlock }
@@ -69,7 +80,8 @@ export type CmsBlock =
   | { type: "faq_group"; data: FaqGroupBlock }
   | { type: "cta_band"; data: CtaBandBlock }
   | { type: "image_text"; data: ImageTextBlock }
-  | { type: "product_grid"; data: ProductGridBlock };
+  | { type: "product_grid"; data: ProductGridBlock }
+  | { type: "image_gallery"; data: ImageGalleryBlock };
 
 export interface CmsPageSeo {
   title: string;
