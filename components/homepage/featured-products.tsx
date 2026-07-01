@@ -26,8 +26,6 @@ export function FeaturedProducts({ products, categories }: FeaturedProductsProps
   const [canScrollNext, setCanScrollNext] = useState(true);
   const [progress, setProgress] = useState(0);
 
-  if (products.length === 0) return null;
-
   // Card width + gap ~= 276px on sm
   const SCROLL_AMOUNT = 276 * 2; // scroll 2 cards at a time
 
@@ -47,6 +45,8 @@ export function FeaturedProducts({ products, categories }: FeaturedProductsProps
     el.addEventListener("scroll", updateScrollState, { passive: true });
     return () => el.removeEventListener("scroll", updateScrollState);
   }, [updateScrollState]);
+
+  if (products.length === 0) return null;
 
   const scrollPrev = () => {
     if (scrollRef.current) scrollRef.current.scrollBy({ left: -SCROLL_AMOUNT, behavior: "smooth" });

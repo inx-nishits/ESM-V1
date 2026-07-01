@@ -1,7 +1,7 @@
 "use client";
 
 import { Quote, Star } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+
 import { cn } from "@/lib/utils";
 import type { Testimonial } from "@/types/cms";
 
@@ -63,7 +63,7 @@ export function TestimonialsSection({ testimonials }: TestimonialsSectionProps) 
 
         {/* Cards Grid */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((item, i) => (
+          {testimonials.map((item, _i) => (
             <div
               key={item.id}
               className={cn(

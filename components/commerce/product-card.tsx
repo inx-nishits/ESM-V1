@@ -7,7 +7,7 @@ import { ArrowRight, ShoppingCart } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ProductCardAddButton } from "@/components/commerce/product-card-add-button";
+
 import { cn, formatCurrency } from "@/lib/utils";
 import type { Product } from "@/types/product";
 

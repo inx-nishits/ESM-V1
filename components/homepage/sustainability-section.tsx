@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Leaf, Recycle, Globe2 } from "lucide-react";
-import { SectionHeader } from "./section-header";
+
 import type { SustainabilityContent } from "@/types/cms";
 
 interface SustainabilitySectionProps {

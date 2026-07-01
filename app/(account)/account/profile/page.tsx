@@ -4,7 +4,7 @@ import { Upload } from "lucide-react";
 import { Breadcrumbs } from "@/components/commerce/breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
+
 import { SITE_EMAIL, SITE_PHONE } from "@/lib/constants";
 import { useState } from "react";
 import { AccountSidebar } from "@/components/account/account-sidebar";

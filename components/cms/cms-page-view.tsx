@@ -21,7 +21,7 @@ const legalSlugs: CmsPageSlug[] = ["terms", "privacy", "disclaimer"];
 function CmsBlockRenderer({
   block,
   products,
-  pageSlug,
+  pageSlug: _pageSlug,
 }: {
   block: CmsBlock;
   products?: Product[];
