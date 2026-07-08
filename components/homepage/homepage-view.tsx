@@ -4,7 +4,6 @@ import { FdaGearSpotlightSection } from "./fda-gear-spotlight";
 import { FeaturedProducts } from "./featured-products";
 import { HeritageSection } from "./heritage-section";
 import { HeroCarousel } from "./hero-carousel";
-import { IndustrySolutions } from "./industry-solutions";
 import { NewsletterCta } from "./newsletter-cta";
 import { SustainabilitySection } from "./sustainability-section";
 import { TestimonialsSection } from "./testimonials";
@@ -33,7 +32,6 @@ export function HomepageView({ data }: HomepageViewProps) {
         content={content.fdaGearSpotlight}
         products={fdaProducts}
       />
-      <IndustrySolutions solutions={content.industrySolutions} />
       <TestimonialsSection testimonials={content.testimonials} />
       <SustainabilitySection content={content.sustainability} />
       <FaqSection faq={content.faq} />
